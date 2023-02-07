@@ -4,18 +4,22 @@
 import os
 # 3rd party packages
 from flask import Flask
-import flask_sqlalchemy
+from flask_sqlalchemy import SQLAlchemy
 from wekzeug.contrib.fixers import ProxyFix
 # local source
-from .common.database import init_db
-from .common.middleware import after_request_middleware, before_request_middleware, teardown_appcontext_middleware
-from .common.middleware import response
+from .database import init_db
+from .middleware import after_request_middleware, before_request_middleware, teardown_appcontext_middleware
+from .middleware import response
 from .foss import bp as foss_bp
 
 
-def create_app():
+def create_app(config_filename):
     # initialize flask application
     app = Flask(__name__)
+    app.config.from_pyfile(config_filename)
+
+    # rigister database
+    db=SQLAlchemy()
 
     # register all blueprints
     app.register_blueprint(foss_bp)
