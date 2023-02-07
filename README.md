@@ -1,4 +1,4 @@
-#[132 ](Welcome to my website )[lzyatshcn.top](https://www.lzyatshcn.top/))
+# Welcome to my website @ [lzyatshcn.top](https://www.lzyatshcn.top/)
 
 ## About
 
