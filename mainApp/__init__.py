@@ -1,45 +1,55 @@
 #!/usr/bin/env python
+# __init__.py
+__author__ = "lavandejoey, Ziyi LIU"
+__copyright__ = "Copyright 2021-2023"
+__license__ = ""
+__version__ = "0.0.1"
+__maintainer__ = "lavandejoey"
+__email__ = "lavandejoey@outlook.com"
 
 # standard library
 import os
+
 # 3rd party packages
-from flask import Flask
+from flask import Flask, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from wekzeug.contrib.fixers import ProxyFix
+
 # local source
-from .database import init_db
-from .middleware import after_request_middleware, before_request_middleware, teardown_appcontext_middleware
-from .middleware import response
-from .foss import bp as foss_bp
+
+db = SQLAlchemy()
 
 
-def create_app(config_filename):
-    # initialize flask application
-    app = Flask(__name__)
-    app.config.from_pyfile(config_filename)
+def create_app(test_config=None):
+    # create and configure the app
+    app = Flask(__name__, instance_relative_config=True)
+    app.config['SECRET_KEY'] = 'dev'
+    app.config['DATABASE'] = os.path.join(app.instance_path, )
 
-    # rigister database
-    db=SQLAlchemy()
+    if test_config is None:
+        # load the instance config, if it exists, when not testing
+        app.config.from_pyfile('config.py', silent=True)
+    else:
+        # load the test config if passed in
+        app.config.from_mapping(test_config)
 
-    # register all blueprints
-    app.register_blueprint(foss_bp)
+    # ensure the instance folder exists
+    try:
+        os.makedirs(app.instance_path)
+    except OSError:
+        pass
 
-    # register custom response class
-    app.response_class = response.JSONResponse
+    # configure the database connection
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@host/database'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    # register before request middleware
-    before_request_middleware(app=app)
+    # initialize the database connection
+    db.init_app(app)
 
-    # register after request middleware
-    after_request_middleware(app=app)
+    from mainApp import routes
+    routes.create_routes(app)
 
-    # register after app context teardown middleware
-    teardown_appcontext_middleware(app=app)
-
-    # register custom error handler
-    response.json_error_handler(app=app)
-
-    # initialize the database
-    init_db()
+    @app.errorhandler(404)
+    def page_not_found(e):
+        return redirect(url_for('index'))
 
     return app

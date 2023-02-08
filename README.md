@@ -3,20 +3,25 @@
 ## About
 
 ### source code structure
-
-这里稍作介绍，首先是第一级目录的话，主要分为两类，一类是目录，另一类是运行相关的文件；其中目录有：
-
-- application：项目所有逻辑代码都放这
-- config：项目的配置文件，按不同环境各占一份
-- deploy：部署相关的文件，后续将使用到
-- tests：单元测试代码所在的目录
-
-文件部分：
-
-- manage.py：Flask-Script 运行文件，后面介绍
-- pylintrc：静态分析代码使用的 pylint 标准
-- requirements.txt：项目依赖库的列表
-- wsgi.py：wsgi 运行的文件
+```text
+├── LICENSE
+├── README.md
+├── __init__.py
+├── instance 特定于应用程序特定实例的配置文件，例如数据库 URI 或密钥。
+│        └── config.py
+├── mainApp 应用程序mainApp的主要代码
+│        ├── __init__.py 使用应用程序工厂模式创建 Flask 应用程序对象。它设置数据库和其他配置选项。
+│        ├── models.py 定义将在应用程序中使用的数据库模型。
+│        ├── routes.py 定义应用程序的端点和路由。
+│        ├── static
+│        │       ├── css
+│        │       ├── image
+│        │       ├── js
+│        │       └── scss
+│        └── templates 应用程序将用于呈现页面的 HTML 模板。
+├── requirements.txt 运行应用程序所需的包。
+└── run.py 用于运行应用程序。它设置FLASK_APP和FLASK_ENV环境变量，然后运行flask run。
+```
 
 ### colour set
 
