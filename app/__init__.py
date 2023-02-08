@@ -12,11 +12,14 @@ import os
 
 # 3rd party packages
 from flask import Flask, redirect, url_for
+from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
 # local source
 
+
 db = SQLAlchemy()
+migrate = Migrate()
 
 
 def create_app(test_config=None):
@@ -42,14 +45,21 @@ def create_app(test_config=None):
     app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@host/database'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    # initialize the database connection
-    db.init_app(app)
+    # app.config.from_pyfile('./instance/config.py')
 
-    from mainApp import routes
-    routes.create_routes(app)
+    db.init_app(app)
+    migrate.init_app(app, db)
+
+    from app.routes.home import bp as home_bp
+    from app.routes.admin import bp as admin_bp
+    from app.routes.auth import bp as auth_bp
+
+    app.register_blueprint(home_bp)
+    app.register_blueprint(admin_bp)
+    app.register_blueprint(auth_bp)
 
     @app.errorhandler(404)
-    def page_not_found(e):
-        return redirect(url_for('index'))
+    def not_found(error):
+        return redirect(url_for('home.index'))
 
     return app

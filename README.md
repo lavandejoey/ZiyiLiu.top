@@ -4,25 +4,28 @@
 
 ### source code structure
 ```text
-├── LICENSE
-├── README.md
-├── __init__.py
+top.lzyatshcn/
+├── app/ 应用程序的主要代码
+│   ├── __init__.py 使用应用程序工厂模式创建 Flask 应用程序对象。它设置数据库和其他配置选项。
+│   ├── models/ 定义将在应用程序中使用的数据库模型。
+│   │   └── __init__.py
+│   ├── routes/ 定义应用程序的端点和路由。
+│   │   ├── home.py
+│   │   ├── admin.py
+│   │   └── auth.py
+│   ├── static/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── img/
+│   └── templates/ 应用程序将用于呈现页面的 HTML 模板。
+│       ├── home/
+│       ├── admin/
+│       └── auth/
 ├── instance 特定于应用程序特定实例的配置文件，例如数据库 URI 或密钥。
 │        └── config.py
-├── mainApp 应用程序mainApp的主要代码
-│        ├── __init__.py 使用应用程序工厂模式创建 Flask 应用程序对象。它设置数据库和其他配置选项。
-│        ├── models.py 定义将在应用程序中使用的数据库模型。
-│        ├── routes.py 定义应用程序的端点和路由。
-│        ├── static
-│        │       ├── css
-│        │       ├── image
-│        │       ├── js
-│        │       └── scss
-│        └── templates 应用程序将用于呈现页面的 HTML 模板。
 ├── requirements.txt 运行应用程序所需的包。
 └── run.py 用于运行应用程序。它设置FLASK_APP和FLASK_ENV环境变量，然后运行flask run。
 ```
-
 ### colour set
 
 | clf           | example                                                                                                                                        |

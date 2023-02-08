@@ -5,7 +5,7 @@ charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654
 click @ file:///C:/ci/click_1646056762388/work
 colorama @ file:///C:/b/abs_a9ozq0l032/croot/colorama_1672387194846/work
 cryptography @ file:///C:/b/abs_b7d7drzbky/croot/cryptography_1673298763653/work
-Flask @ file:///C:/b/abs_ef16l83sif/croot/flask_1671217367534/work
+flask~=2.2.2
 Flask-Admin @ file:///C:/b/abs_f2jr27rjn6/croot/flask-admin_1669054911105/work
 Flask-Ext==0.1
 Flask-Login @ file:///C:/b/abs_a82vthl_1_/croot/flask-login_1669052139884/work
@@ -28,3 +28,4 @@ Werkzeug @ file:///C:/b/abs_17q5kgb8bo/croot/werkzeug_1671216014857/work
 win-inet-pton @ file:///C:/ci_310/win_inet_pton_1642658466512/work
 wincertstore==0.2
 WTForms @ file:///Users/ktietz/demo/mc3/conda-bld/wtforms_1629354749392/work
+

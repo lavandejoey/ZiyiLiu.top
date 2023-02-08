@@ -94,10 +94,10 @@
     "test": "npm-run-all lint dist js-test docs-build docs-lint",
     "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all dist release-sri docs-build",
     "watch": "npm-run-all --parallel watch-*",
-    "watch-css-main": "nodemon --watch scss --ext scss --exec \\\\\\\"npm-run-all css-lint css-compile css-prefix\\\\\\\"",
+    "watch-css-main": "nodemon --watch scss --ext scss --exec \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"npm-run-all css-lint css-compile css-prefix\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"",
     "watch-css-dist": "nodemon --watch dist/css --ext css --ignore \\\\\\\"dist/css/*.rtl.*\\\\\\\" --exec \\\\\\\"npm run css-rtl\\\\\\\"",
     "watch-css-docs": "nodemon --watch site/assets/scss/ --ext scss --exec \"npm run css-lint\"",
-    "watch-js-main": "nodemon --watch js/src --ext js --exec \\\\\\\"npm-run-all js-lint js-compile\\\\\\\"",
+    "watch-js-main": "nodemon --watch js/src --ext js --exec \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"npm-run-all js-lint js-compile\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"",
     "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\""
   },
   "peerDependencies": {
