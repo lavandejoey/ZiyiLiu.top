@@ -10,6 +10,12 @@ __email__ = "lavandejoey@outlook.com"
 # standard library
 # 3rd party packages
 from flask import Blueprint, render_template
+
 # local source
 
 bp = Blueprint('admin', __name__, template_folder='templates/admin')
+
+
+@bp.route('/test')
+def test():
+    return render_template('admin/test.html', title="Test")
