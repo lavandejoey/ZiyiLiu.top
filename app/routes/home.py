@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # home.py
+"""The main pages that deploy personal portfolio and link with the other bp"""
 __author__ = "lavandejoey, Ziyi LIU"
 __copyright__ = "Copyright 2021-2023"
 __license__ = ""

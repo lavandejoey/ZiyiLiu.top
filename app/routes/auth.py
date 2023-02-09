@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # auth.py
+"""Blog and functional sections, controls user permissions to browse and use functions."""
 __author__ = "lavandejoey, Ziyi LIU"
 __copyright__ = "Copyright 2021-2023"
 __license__ = ""
