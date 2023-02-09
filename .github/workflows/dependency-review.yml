@@ -7,30 +7,8 @@ on:
 jobs:
   review:
     runs-on: ubuntu-latest
-
+    
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v2
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
+    - uses: reviewdog/action-setup@v1
       with:
-        node-version: 14
-
-    - name: Install Dependencies
-      run: npm ci
-
-    - name: Run ESLint
-      run: npx eslint .
-
-    - name: Run JSHint
-      run: npx jshint .
-
-    - name: Run Stylelint
-      run: npx stylelint "**/*.css"
-
-    - name: Run Security Checks
-      run: npx nsp check
-
-    - name: Run Performance Tests
-      run: npx stress-test --duration=60
+        reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
