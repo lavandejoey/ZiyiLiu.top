@@ -132,3 +132,7 @@ dmypy.json
 
 # npm packages
 node_modules/
+
+# private
+bash_script/
+db/

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # home.py
-"""The main pages that deploy personal portfolio and link with the other bp"""
+"""The main pages that deploy personal portfolio and link with the other home_bp"""
 __author__ = "lavandejoey, Ziyi LIU"
 __copyright__ = "Copyright 2021-2023"
 __license__ = ""
@@ -13,24 +13,24 @@ __email__ = "lavandejoey@outlook.com"
 from flask import Blueprint, render_template
 
 # local source
-bp = Blueprint('home', __name__, template_folder="templates")
+home_bp = Blueprint('home', __name__, template_folder="templates")
 
 
-@bp.route('/')
+@home_bp.route('/')
 def index():
     return render_template('home/index.html')
 
 
-@bp.route('/blog')
+@home_bp.route('/blog')
 def blog():
     return render_template('home/blog.html')
 
 
-@bp.route('/about')
+@home_bp.route('/about')
 def about():
     return render_template('home/about.html')
 
 
-@bp.route('/contact')
+@home_bp.route('/contact')
 def contact():
     return render_template('home/contact.html')

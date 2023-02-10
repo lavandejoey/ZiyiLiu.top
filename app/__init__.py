@@ -42,23 +42,24 @@ def create_app(test_config=None):
         pass
 
     # configure the database connection
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@host/database'
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://web_admin:SHlzyatshcn2069@localhost/lzyatshcn'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://lavandejoey:SHlzyatshcn2069@101.43.21.225/lzyatshcn'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     # app.config.from_pyfile('./instance/config.py')
 
     db.init_app(app)
-    migrate.init_app(app, db)
+    # migrate.init_app(app, db)
 
-    from app.routes.home import bp as home_bp
-    from app.routes.admin import bp as admin_bp
-    from app.routes.auth import bp as auth_bp
+    from app.routes.home import home_bp
+    from app.routes.admin import admin_bp
+    from app.routes.auth import auth_bp
 
     app.register_blueprint(home_bp)
     app.register_blueprint(admin_bp)
     app.register_blueprint(auth_bp)
 
-    @app.errorhandler(404)
+    @app.errorhandler(500)
     def not_found(error):
         return redirect(url_for('home.index'))
 

@@ -13,22 +13,22 @@ __email__ = "lavandejoey@outlook.com"
 from flask import Blueprint, render_template
 
 # local source
+from app.models.admin import *
 
-bp = Blueprint('admin', __name__, template_folder='templates/admin',prefix="/admin")
+admin_bp = Blueprint('admin', __name__, template_folder='templates/admin', url_prefix="/admin")
 
 
-@bp.route('/test')
-def test():
-    return render_template('admin/test.html', title="Test")
-
-@bp.route('/login')
+@admin_bp.route('/login')
 def login():
     return render_template('admin/admin_login.html', title="Welcome")
 
-@bp.route('/dashboard')
-def dashboard():
-    return render_template('admin/dashboard.html', title="Dashboard")
 
-@bp.route('/api_manage')
-def test():
+@admin_bp.route('/dashboard')
+def dashboard():
+    user_list = users.query.all()
+    return render_template('admin/dashboard.html', user_list=user_list)
+
+
+@admin_bp.route('/api_manage')
+def api_manage():
     return render_template('admin/api_manage.html', title="APIs")
