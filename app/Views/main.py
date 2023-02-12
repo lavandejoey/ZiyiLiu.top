@@ -12,6 +12,10 @@ __email__ = "lavandejoey@outlook.com"
 # 3rd party packages
 from flask import Blueprint, render_template
 from flask_login import current_user
+from pygments import highlight
+from pygments.formatters import HtmlFormatter
+from pygments.lexers import PythonLexer
+from pygments.styles import get_style_by_name
 
 # local source
 main_bp = Blueprint('main', __name__, template_folder="templates", url_prefix="/")
@@ -21,7 +25,21 @@ main_bp = Blueprint('main', __name__, template_folder="templates", url_prefix="/
 @main_bp.route('/index')
 @main_bp.route('/home')
 def index():
-    return render_template('main/index.html')
+    code = '''
+    @main_bp.route("/")
+    def hello():
+        code = """
+        def hello():
+            print("Hello, World!")
+        """
+        highlighted_code = highlight(code, PythonLexer(), HtmlFormatter())
+        return render_template("index.html", highlighted_code=highlighted_code)
+    '''
+    style = get_style_by_name("nord-darker")
+    formatter = HtmlFormatter(style=style, linenos='inline', title="", linenostart=0, linenostep=2,
+                              nobackground=False, noclasses=True)
+    highlighted_code = highlight(code, PythonLexer(), formatter)
+    return render_template('main/index.html', code=highlighted_code)
 
 
 @main_bp.route('/blog')
