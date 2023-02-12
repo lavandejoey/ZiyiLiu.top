@@ -1,19 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<table>
+<table class="table table-bordered text-center">
     <tr>
         <th>ID</th>
+        <th>User Group ID</th>
         <th>Username</th>
         <th>Email</th>
-        <th>User Group</th>
+        <th>Registration Date</th>
+        <th>Last Login</th>
+        <th>Last IP Address</th>
+        <th>Given Name</th>
+        <th>Family Name</th>
+        <th>Date of Birth</th>
+        <th>Introduction</th>
     </tr>
-    {% for row in user_list %}
+    {% for user in user_list %}
     <tr>
-        <td>{{ row[0] }}</td>
-        <td>{{ row[1] }}</td>
-        <td>{{ row[2] }}</td>
-        <td>{{ row[3] }}</td>
+        <td>{{ user.usr_id }}</td>
+        <td>{{ user.usr_grp_id }}</td>
+        <td>{{ user.usr_name }}</td>
+        <td>{{ user.usr_email }}</td>
+        <td>{{ user.usr_regi_date }}</td>
+        <td>{{ user.usr_last_login }}</td>
+        <td>{{ user.usr_last_ip_addr }}</td>
+        <td>{{ user.usr_given_name }}</td>
+        <td>{{ user.usr_family_name }}</td>
+        <td>{{ user.usr_date_birth }}</td>
+        <td>{{ user.usr_intro }}</td>
     </tr>
     {% endfor %}
 </table>

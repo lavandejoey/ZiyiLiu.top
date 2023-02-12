@@ -14,9 +14,9 @@ from flask import Blueprint, render_template
 # local source
 
 # local source
-auth_bp = Blueprint('auth', __name__, template_folder="templates")
+blog_bp = Blueprint('blog', __name__, template_folder="templates",url_prefix="/blog")
 
 
-@auth_bp.route('/auth')
+@blog_bp.route('/')
 def index():
-    return render_template('auth/sign.html')
+    return render_template('main/blog.html')

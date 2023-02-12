@@ -136,3 +136,4 @@ node_modules/
 # private
 bash_script/
 db/
+config.py
