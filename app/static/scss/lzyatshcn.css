@@ -51,9 +51,12 @@ $code-color: $pink !default; //todo! I'm not sure about its colour
 }
 
 .breadcrumb {
-  --bs-breadcrumb-bg: ;
-  --bs-breadcrumb-border-radius: ;
+  --bs-breadcrumb-bg: none;
+  --bs-breadcrumb-border-radius: none;
 }
+
+.btn {
+  --bs-btn-font-family: none;
 
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)

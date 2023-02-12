@@ -1,31 +1,12 @@
+alembic==1.9.3
 brotlipy==0.7.0
-certifi @ file:///C:/b/abs_85o_6fm0se/croot/certifi_1671487778835/work/certifi
-cffi @ file:///C:/b/abs_49n3v2hyhr/croot/cffi_1670423218144/work
-charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
-click @ file:///C:/ci/click_1646056762388/work
-colorama @ file:///C:/b/abs_a9ozq0l032/croot/colorama_1672387194846/work
-cryptography @ file:///C:/b/abs_b7d7drzbky/croot/cryptography_1673298763653/work
-flask~=2.2.2
-Flask-Admin @ file:///C:/b/abs_f2jr27rjn6/croot/flask-admin_1669054911105/work
 Flask-Ext==0.1
-Flask-Login @ file:///C:/b/abs_a82vthl_1_/croot/flask-login_1669052139884/work
+Flask-Migrate==4.0.4
 Flask-MySQLdb==1.0.1
 Flask-SQLAlchemy==3.0.3
+Flask-WTF==1.1.1
 greenlet==2.0.2
-idna @ file:///C:/b/abs_bdhbebrioa/croot/idna_1666125572046/work
-itsdangerous @ file:///tmp/build/80754af9/itsdangerous_1621432558163/work
-Jinja2 @ file:///C:/b/abs_7cdis66kl9/croot/jinja2_1666908141852/work
-MarkupSafe @ file:///C:/ci/markupsafe_1654508036328/work
+Mako==1.2.4
 mysqlclient==2.1.1
-pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
-pyOpenSSL @ file:///opt/conda/conda-bld/pyopenssl_1643788558760/work
-PySocks @ file:///C:/ci_310/pysocks_1642089375450/work
-requests @ file:///C:/ci/requests_1657735340829/work
-SQLAlchemy==2.0.1
-typing_extensions==4.4.0
-urllib3 @ file:///C:/b/abs_9bcwxczrvm/croot/urllib3_1673575521331/work
-Werkzeug @ file:///C:/b/abs_17q5kgb8bo/croot/werkzeug_1671216014857/work
-win-inet-pton @ file:///C:/ci_310/win_inet_pton_1642658466512/work
+SQLAlchemy==2.0.3
 wincertstore==0.2
-WTForms @ file:///Users/ktietz/demo/mc3/conda-bld/wtforms_1629354749392/work
-
