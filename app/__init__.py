@@ -8,61 +8,57 @@ __maintainer__ = "lavandejoey"
 __email__ = "lavandejoey@outlook.com"
 
 # standard library
+import os
 
 # 3rd party packages
 from flask import Flask, redirect, url_for
-from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
 # local source
 
+
 db = SQLAlchemy()
 migrate = Migrate()
-login = LoginManager()
 
 
-def create_app(config="../instance"):
+def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
-    app.config.from_object('config.Config')
-    # app.config.from_pyfile('../instance/config.py')
+    app.config['SECRET_KEY'] = 'dev'
+    app.config['DATABASE'] = os.path.join(app.instance_path, )
 
-    db.init_app(app=app)
-    migrate.init_app(app=app, db=db)
-    login.session_protection = 'basic'
-    login.login_view = 'auth.login'
-    login.init_app(app=app)
+    if test_config is None:
+        # load the instance config, if it exists, when not testing
+        app.config.from_pyfile('config.py', silent=True)
+    else:
+        # load the test config if passed in
+        app.config.from_mapping(test_config)
 
-    from app import Models, Views, APIs
-    with app.app_context():
-        try:
-            db.create_all()
-            print("Init data complete!")
-        except Exception as e:
-            print(f"The Exception occurs:{e}")
+    # ensure the instance folder exists
+    try:
+        os.makedirs(app.instance_path)
+    except OSError:
+        pass
 
-    from app.Models import Users
+    # configure the database connection
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@host/database'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    @login.user_loader
-    def load_user(usr_id):
-        # since the user_id is just the primary key of our user table,
-        # use it in the query for the user
-        return Users.query.get(int(usr_id))
+    # app.config.from_pyfile('./instance/config.py')
 
-    from app.Views.main import main_bp
-    app.register_blueprint(main_bp)
+    db.init_app(app)
+    migrate.init_app(app, db)
 
-    from app.Views.auth import auth_bp
+    from app.routes.home import bp as home_bp
+    from app.routes.admin import bp as admin_bp
+    from app.routes.auth import bp as auth_bp
+
+    app.register_blueprint(home_bp)
+    app.register_blueprint(admin_bp)
     app.register_blueprint(auth_bp)
 
-    from app.Views.admin import admin_bp
-    app.register_blueprint(admin_bp)
-
-    from app.Views.blog import blog_bp
-    app.register_blueprint(blog_bp)
-
-    @app.errorhandler(500)
+    @app.errorhandler(404)
     def not_found(error):
         return redirect(url_for('home.index'))
 

@@ -50,16 +50,10 @@ $code-color: $pink !default; //todo! I'm not sure about its colour
 .navbar-nav {
   --bs-nav-link-font-size: 1.25em;
 }
-
 .breadcrumb {
-  --bs-breadcrumb-bg: none;
-  --bs-breadcrumb-border-radius: none;
+  --bs-breadcrumb-bg: ;
+  --bs-breadcrumb-border-radius: ;
 }
-
-.btn {
-  --bs-btn-font-family: none;
-}
-
 $grid-breakpoints: (
         xs: 0,
         sm: 300px,
