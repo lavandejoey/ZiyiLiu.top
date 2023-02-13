@@ -64,6 +64,6 @@ def create_app(config="../instance"):
 
     @app.errorhandler(500)
     def not_found(error):
-        return redirect(url_for('home.index'))
+        return redirect(url_for('main.index'))
 
     return app
