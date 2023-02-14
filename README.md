@@ -4,27 +4,42 @@
 
 ### source code structure
 ```text
-top.lzyatshcn/
+./top.lzyatshcn/
 ├── app/ 应用程序的主要代码
-│   ├── __init__.py 使用应用程序工厂模式创建 Flask 应用程序对象。它设置数据库和其他配置选项。
-│   ├── models/ 定义将在应用程序中使用的数据库模型。
-│   │   └── __init__.py
-│   ├── routes/ 定义应用程序的端点和路由。
-│   │   ├── home.py
-│   │   ├── admin.py
-│   │   └── auth.py
-│   ├── static/
-│   │   ├── css/
-│   │   ├── js/
-│   │   └── img/
-│   └── templates/ 应用程序将用于呈现页面的 HTML 模板。
-│       ├── home/
-│       ├── admin/
-│       └── auth/
-├── instance 特定于应用程序特定实例的配置文件，例如数据库 URI 或密钥。
-│        └── config.py
+│   ├── __init__.py
+│   ├── APIs/ 内部与外部API
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   └── hash_argon.py
+│   ├── Forms/ 表单定义。
+│   │   ├── __init__.py
+│   │   └── login.py
+│   ├── Models/ 定义将在应用程序中使用的数据库模型。
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   └── blogs.py
+│   ├── static/ 静态文件。
+│   │   ├── css/ 
+│   │   ├── image/ 
+│   │   ├── js/ 
+│   │   └── scss/ 
+│   ├── templates/ 应用程序将用于呈现页面的 HTML 模板。
+│   │   ├── base.html
+│   │   ├── coming.html
+│   │   ├── admin
+│   │   ├── auth
+│   │   └── main
+│   └── Views/ 定义应用程序的视图和路由。
+│       ├── __init__.py
+│       ├── admin.py
+│       ├── auth.py
+│       ├── blog.py
+│       └── main.py
+├── config.py 应用配置文件，例如数据库URL或密码
+├── LICENSE
+├── README.md
 ├── requirements.txt 运行应用程序所需的包。
-└── run.py 用于运行应用程序。它设置FLASK_APP和FLASK_ENV环境变量，然后运行flask run。
+└── run.py 使用应用程序工厂模式创建 Flask 应用程序对象。
 ```
 ### colour set
 
