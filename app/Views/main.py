@@ -10,14 +10,19 @@ __email__ = "lavandejoey@outlook.com"
 
 # standard library
 # 3rd party packages
-from flask import Blueprint, render_template
+from flask import render_template, flash, redirect, url_for, Blueprint
 from flask_login import current_user
+from flask_mail import Message, Mail
 from pygments import highlight
 from pygments.formatters import HtmlFormatter
 from pygments.lexers import PythonLexer
 from pygments.styles import get_style_by_name
 
 # local source
+from app.Forms import *
+
+mail = Mail()
+
 main_bp = Blueprint('main', __name__, template_folder="templates", url_prefix="/")
 
 
@@ -57,9 +62,18 @@ def about():
     return render_template('main/about.html')
 
 
-@main_bp.route('/contact')
+@main_bp.route('/contact', methods=['GET', 'POST'])
 def contact():
-    return render_template('main/contact.html')
+    form = ContactForm()
+    if form.validate_on_submit():
+        msg = Message(subject='Lzyatshcn.top Contact Form Submission',
+                      recipients=['lavandejoey@outlook.com'],
+                      sender=form.email.data)
+        msg.body = f"Name: {form.name.data}\n\nEmail: {form.email.data}\n\nMessage: {form.message.data}"
+        mail.send(msg)
+        flash('Your message has been sent!', 'success')
+        return redirect(url_for('main.contact'))
+    return render_template('main/contact.html', form=form)
 
 
 @main_bp.route('/profile')

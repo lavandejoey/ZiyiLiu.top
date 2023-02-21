@@ -13,7 +13,6 @@ __email__ = "lavandejoey@outlook.com"
 from flask import Blueprint, render_template
 # local source
 
-# local source
 blog_bp = Blueprint('blog', __name__, template_folder="templates",url_prefix="/blog")
 
 

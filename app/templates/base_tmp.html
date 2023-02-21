@@ -15,16 +15,22 @@
     <link type="text/css" rel="stylesheet" href="../static/css/font-awesome.css">
     <link type="text/css" rel="stylesheet" href="../static/scss/lzyatshcn.css">
 </head>
-<body>
+<body class="container-fluid border border-5 border-danger">
 <!-- Navigation bar -->
+<header class="container border border-danger">
+    <nav>
+        this is nav
 
-<header class="container px-0 my-2 bg-secondary">
-    <nav class="navbar navbar-expand-sm navbar-light justify-content-center">
+    </nav>
+</header>
+
+<header class="container px-0 my-2">
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
         <div class="navbar-collapse collapse" id="navbarNav" style="">
             <a class="navbar-brand position-absolute start-0 bottom-0" href="/">LZYatshcn</a>
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item {% if active_link == 'index' %}active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('main.index') }}">.Home( )</a>
+                    <a class="nav-link" href="{{ url_for('main.index') }}">.Home()</a>
                 </li>
                 <li class="nav-item {% if active_link == 'blog' %}active{% endif %}">
                     <a class="nav-link" href="{{ url_for('main.blog') }}">.Blog()</a>
@@ -65,7 +71,7 @@
                     <input type="text" class="form-control" placeholder="Search">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit">
-                            <i class="fa fa-search"></i>
+                            <span class="fa fa-search"></span>
                         </button>
                     </div>
                 </div>
@@ -113,6 +119,7 @@
 </footer>
 <!-- External CSS & JS Files-->
 <script src="../static/js/bootstrap.bundle.js"></script>
+<script src="../../app/static/js/bootstrap.bundle.js"></script>
 <!-- Clarity tracking code for https://www.lzyatshcn.top/ MS -->
 <script>
     (function (c, l, a, r, i, t, y) {

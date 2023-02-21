@@ -12,6 +12,7 @@ __email__ = "lavandejoey@outlook.com"
 # 3rd party packages
 from flask import Flask, redirect, url_for
 from flask_login import LoginManager
+from flask_mail import Mail
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
@@ -20,6 +21,7 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 migrate = Migrate()
 login = LoginManager()
+email = Mail()
 
 
 def create_app(config="../instance"):
@@ -30,6 +32,7 @@ def create_app(config="../instance"):
 
     db.init_app(app=app)
     migrate.init_app(app=app, db=db)
+    email.init_app(app=app)
     login.session_protection = 'basic'
     login.login_view = 'auth.login'
     login.init_app(app=app)
@@ -61,6 +64,9 @@ def create_app(config="../instance"):
 
     from app.Views.blog import blog_bp
     app.register_blueprint(blog_bp)
+
+    from app.Views.email import email_bp
+    app.register_blueprint(email_bp)
 
     @app.errorhandler(500)
     def not_found(error):

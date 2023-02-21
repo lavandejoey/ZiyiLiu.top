@@ -11,3 +11,4 @@ __email__ = "lavandejoey@outlook.com"
 # 3rd party packages
 # local source
 from app.Forms.login import LoginForm, SignupForm
+from app.Forms.email import ContactForm
