@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container my-5">
+<div class="container my-5",style="width=max(576px,60vw)">
     <h1 class="text-center">Contact Us</h1>
     <form method="POST" action="{{ url_for('email.contact') }}">
         {{ form.hidden_tag() }}

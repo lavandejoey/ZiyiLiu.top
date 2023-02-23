@@ -27,6 +27,10 @@ main_bp = Blueprint('main', __name__, template_folder="templates", url_prefix="/
 
 
 @main_bp.route('/')
+def temp():
+    return render_template('tmp/index_tmp.html')
+
+
 @main_bp.route('/index')
 @main_bp.route('/home')
 def index():
