@@ -15,55 +15,72 @@
     <link type="text/css" rel="stylesheet" href="../static/css/font-awesome.css">
     <link type="text/css" rel="stylesheet" href="../static/scss/lzyatshcn.css">
 </head>
-<body>
+<body class="container-fluid border border-5 border-danger">
 <!-- Navigation bar -->
-<header class="container-md container-fluid fixed-top p-1 pt-4">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background: rgba(43,43,43,0.95);border-radius: 15px">
-        <div class="container">
-            <div class="navbar-collapse collapse" id="headerNavbar" style="">
-                <div class="container">
-                    <div class="row h-auto w-100">
-                        <ul class="navbar-nav d-flex justify-content-evenly px-xl-0 px-5 ps-md-auto text-muted"
-                            style="padding-left: 4ch;font-size: 20px">
-                            <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
-                                <a class="nav-link text-center active" aria-current="page" href="{{ url_for('main.index') }}">
-                                    <code class="func-name">About Me</code><code class="var"><span
-                                        class="hover-typewriter {% if active_link != 'contact' %}visually-hidden{% endif %}">(name="Liu, Ziyi")</span></code><span
-                                        class="hover-blink-caret"></span>
-                                </a>
-                            </li>
-                            <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
-                                <a class="nav-link text-center" aria-current="page" href="{{ url_for('main.contact') }}">
-                                    <code class="func-name">Contact Me</code><code class="var"><span
-                                        class="hover-typewriter {% if active_link != 'contact' %}visually-hidden{% endif %}">(email="lzy_ecust@outlook.com")</span></code><span
-                                        class="hover-blink-caret"></span>
-                                </a>
-                            </li>
-                            <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
-                                <a class="nav-link text-center" aria-current="page" href="{{ url_for('main.blog') }}">
-                                    <code class="func-name">Blogs</code><code class="var"><span
-                                        class="hover-typewriter {% if active_link != 'blogs' %}visually-hidden{% endif %}">(name="Liu, Ziyi")</span></code><span
-                                        class="hover-blink-caret"></span>
-                                </a>
-                            </li>
-                            <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
-                                <a class="nav-link text-center" aria-current="page" href="{{ url_for('main.blog') }}">
-                                    <code class="func-name">Blogs</code><code class="var"><span
-                                        class="hover-typewriter {% if active_link != 'blogs' %}visually-hidden{% endif %}">(name="Liu, Ziyi")</span></code><span
-                                        class="hover-blink-caret"></span>
-                                </a>
-                            </li>
-                        </ul>
+<header class="container border border-danger">
+    <nav>
+        this is nav
+
+    </nav>
+</header>
+
+<header class="container px-0 my-2">
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+        <div class="navbar-collapse collapse" id="navbarNav" style="">
+            <a class="navbar-brand position-absolute start-0 bottom-0" href="/">LZYatshcn</a>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item {% if active_link == 'index' %}active{% endif %}">
+                    <a class="nav-link" href="{{ url_for('main.index') }}">.Home()</a>
+                </li>
+                <li class="nav-item {% if active_link == 'blog' %}active{% endif %}">
+                    <a class="nav-link" href="{{ url_for('main.blog') }}">.Blog()</a>
+                </li>
+                <li class="nav-item {% if active_link == 'work' %}active{% endif %}">
+                    <a class="nav-link" href="{{ url_for('main.work') }}">.Work()</a>
+                </li>
+                <li class="nav-item {% if active_link == 'about' %}active{% endif %}">
+                    <a class="nav-link" href="{{ url_for('main.about') }}">.About()</a>
+                </li>
+                <li class="nav-item {% if active_link == 'contact' %}active{% endif %}">
+                    <a class="nav-link" href="{{ url_for('main.contact') }}">.Contact()</a>
+                </li>
+                {% if current_user.is_authenticated %}
+                <li class="nav-item {% if active_link == 'profile' %}active{% endif %}">
+                    <a class="nav-link"
+                       href="{{ url_for('main.profile') }}">.Profile(user={{current_user.usr_name}})</a>
+                </li>
+                {% endif %}
+                <!--li class="nav-item ">
+                    <a class="nav-link" href="/admin/dashboard">Admin</a>
+                </li-->
+                {% if active_link == 'blog' %}
+                {% if not current_user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('auth.login') }}">Sign In/Sign Up</a>
+                </li>
+                {% endif %}
+                {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
+                </li>
+                {% endif %}
+                {% endif %}
+            </ul>
+            <form class="position-absolute end-0 form-inline my-2 my-lg-0">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <span class="fa fa-search"></span>
+                        </button>
                     </div>
                 </div>
-            </div>
-            <button class="navbar-toggler collapsed align-self-center mx-auto my-1" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#headerNavbar" aria-controls="headerNavbar"
-                    aria-expanded="false" aria-label="Toggle navigation" style="border-radius: 50px">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            </form>
         </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </nav>
 </header>
 <!-- Main Information -->
@@ -102,6 +119,7 @@
 </footer>
 <!-- External CSS & JS Files-->
 <script src="../static/js/bootstrap.bundle.js"></script>
+<script src="../../app/static/js/bootstrap.bundle.js"></script>
 <!-- Clarity tracking code for https://www.lzyatshcn.top/ MS -->
 <script>
     (function (c, l, a, r, i, t, y) {

@@ -1,50 +1,88 @@
 // lzyatshcn.scss
-//@import "./bootstrap/scss/bootstrap";
-/**
 // scss-docs-start gray-color-variables custom
-$white: #F7F0EA !global; //#fff !global;
-$gray-100: #e4c3a2 !global; //#dfd8d2 !global;
-$gray-200: #ceb993 !global; //#c7c0bb !global;
-$gray-300: #b9a685 !global; //#afa9a4 !global;
-$gray-400: #a59478 !global; //#99938e !global;
-$gray-500: #90836a !global; //#827d78 !global;
-$gray-600: #7d715d !global; //#6d6763 !global;
-$gray-700: #6a6050 !global; //#58534f !global;
-$gray-800: #575044 !global; //#443f3c !global;
-$gray-900: #454038 !global; //#312d29 !global;
-$black: #1F1B18 !global; //#000 !default;
+$white: #dfe5e8 !global; //#ede3e4 #fff
+$gray-100: #c7d0d5 !global; //#e0d7d9 #dfd8d2
+$gray-200: #b0bbc3 !global; //#c9c1c3 #c7c0bb
+$gray-300: #9aa7b1 !global; //#b4adb0 #afa9a4
+$gray-400: #727c88 !global; //#aba4a8 #99938e
+$gray-500: #4e5460 !global; //#8d898c #827d78
+$gray-600: #2c2f3b !global; //#686568 #6d6763
+$gray-700: #282832 !global; //#423f42 #58534f
+$gray-800: #24222a !global; //#2e2d31 #443f3c
+$gray-900: #1f1c22 !global; //#1b1b1c #312d29
+$black: #19171a !global; //#0d0d0e #000
 // scss-docs-end gray-color-variables custom
 // scss-docs-start color-variables custom
-$blue: #576ee7 !global; //#0d6efd !default;
-$indigo: #9a7db9 !global; //#6610f2 !default;
-$purple: #b37db9 !global; //#6f42c1 !default;
+$blue: #455d8b; //#0d6efd !default;
+$indigo: #a76282 !global; //#6610f2 !default;
+$purple: #a59aca !global; //#6f42c1 !default;
 $pink: #d6748d !global; //#d63384 !default;
-$red: #d5726c !global; //#dc3545 !default;
-$orange: #e18f4b !global; //#fd7e14 !default;
-$yellow: #e7c251 !global; //#ffc107 !default;
-$green: #709c5e !global; //#198754 !default;
-$teal: #629e7a !global; //#20c997 !default;
-$cyan: #7fbcc9 !global; //#0dcaf0 !default;
+$red: #983928 !global; //#dc3545 !default;
+$orange: #ed7821 !global; //#fd7e14 !default;
+$yellow: #f2de76 !global; //#ffc107 !default;
+$green: #608f68 !global; //#198754 !default;
+$teal: #778a77 !global; //#20c997 !default;
+$cyan: #b6d7c8 !global; //#0dcaf0 !default;
 // scss-docs-end color-variables custom
 // scss-docs-start theme-color-variables
-$primary: #d99147 !global;
-$secondary: #d99147 !global;
+$primary: #b15a43 !global;
+$secondary: #f8c6b5 !global;
+$tertiary: #57648C !global;
 $success: $green !global;
-$info: $cyan !global;
+$info: $blue !global;
 $warning: $yellow !global;
 $danger: $red !global;
-$light: $gray-100 !global;
+$light: $gray-200 !global;
 $dark: $gray-900 !global;
 // scss-docs-end theme-color-variables
-*/
+$colors: (
+        "blue": $blue,
+        "indigo": $indigo,
+        "purple": $purple,
+        "pink": $pink,
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "teal": $teal,
+        "cyan": $cyan,
+        "white": $white,
+        "gray": $gray-600,
+        "gray-dark": $gray-800
+) !default;
 /*global styling by enabling or disabling optional features*/
-/*
 $enable-shadows: true !global;
-$link-color: #76591f !default;
+$link-color: $blue !default;
 $code-color: $pink !default; //todo! I'm not sure about its colour
-*/
+$breakpoints: (
+        xs: 0,
+        sm: 300px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
 :root {
   --bs-body-text-align: left;
+}
+
+.navbar {
+  /*   z-index should be above .close-navbar-toggler */
+  z-index: 2;
+}
+
+.close-navbar-toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.close-navbar-toggler.collapsed {
+  z-index: -1;
 }
 
 .navbar-nav {
@@ -60,35 +98,42 @@ $code-color: $pink !default; //todo! I'm not sure about its colour
   --bs-btn-font-family: none;
 }
 
-$grid-breakpoints: (
-        xs: 0,
-        sm: 300px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1400px
-);
-@import "bootstrap/scss/bootstrap";
 
-
-#colors {
-  --bg-light: #F7F0EA;
-  --font-active-light: #211d11;
-  --font-inactive-light: #4e4741;
-  --icon-active-light1: #FADFB0;
-  --icon-inactive-light1: #FDF8F2;
-  --icon-active-light2: #76591f;
-  --icon-inactive-light2: #706a5e;
-  --icon-active-light3: #fadfb0;
-  --icon-inactive-light3: #b3a99d;
-
-  --bg-dark: #1F1B18;
-  --font-active-dark: #4a3c2e;
-  --font-inactive-dark: #f3efec;
-  --icon-active-dark1: #f3e0c0;
-  --icon-inactive-dark1: #34312c;
-  --icon-active-dark2: #86785d;
-  --icon-inactive-dark2: #4a4740;
-  --icon-active-dark3: #fadfb0;
-  --icon-inactive-dark3: #968f87;
+body {
+  min-height: 100vh;
 }
+
+header {
+  border: 10px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  align-self: center;
+}
+
+//
+.container {
+  //background: radial-gradient(160% 107.13% at 50% 10%, transparent 37.41%, #a3bce3 69.27%, #fff 100%);
+  //border-radius: 2.4em;
+  border: 100px color($danger);
+}
+
+/*/index
+.coding-sim {
+  animation: InboundRelay_blink__eP_Iu 1.5s infinite;
+}
+
+.InboundRelay_cursor__AT2tj {
+  animation: InboundRelay_blink__eP_Iu 1.5s infinite;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: InboundRelay_blink__eP_Iu;
+}*/
+@import "../../../node_modules/bootstrap/scss/bootstrap";
