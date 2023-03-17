@@ -35,6 +35,9 @@ def temp():
 @main_bp.route('/home')
 def index():
     code = '''
+    class LzyAtShCN:
+        def __init__():
+            pass
     @main_bp.route("/")
     def hello():
         code = """
