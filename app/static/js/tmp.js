@@ -94,3 +94,25 @@ window.onscroll = function () {
     // Update the previous scroll position
     prevScrollPos = currentScrollPos;
 };
+
+/**
+ * The name opacity and change of
+ */
+const text1 = document.getElementById('text-1');
+const text2 = document.getElementById('text-2');
+const text3 = document.getElementById('text-3');
+
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition >= 200) {
+        text1.classList.add('expanded');
+        text2.classList.add('expanded');
+        text3.classList.add('expanded');
+    } else {
+        text1.classList.remove('expanded');
+        text2.classList.remove('expanded');
+        text3.classList.remove('expanded');
+    }
+});

@@ -19,3 +19,18 @@ code.str{
 code.var{
     color: #A9B7C6FF;
 }
+
+/**
+TODO!!!!!
+ */
+.text {
+    transition: all 1s;
+}
+
+.expanded {
+    font-size: 6em;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
