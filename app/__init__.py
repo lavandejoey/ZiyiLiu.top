@@ -24,11 +24,11 @@ login = LoginManager()
 email = Mail()
 
 
-def create_app(config="../instance"):
+def create_app(config="../instance/config.py"):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
-    app.config.from_object('config.Config')
-    # app.config.from_pyfile('../instance/config.py')
+    # app.config.from_object('config.Config')
+    app.config.from_pyfile('../instance/config.py')
 
     db.init_app(app=app)
     migrate.init_app(app=app, db=db)

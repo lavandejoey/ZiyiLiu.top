@@ -14,10 +14,61 @@
     <!-- External CSS & JS Files-->
     <link type="text/css" rel="stylesheet" href="../static/css/font-awesome.css">
     <link type="text/css" rel="stylesheet" href="../static/scss/lzyatshcn.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/stable.css">
 </head>
 <body>
 <!-- Navigation bar -->
 <header class="container-md container-fluid fixed-top p-1 pt-4">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: rgba(43,43,43,0.95);border-radius: 15px">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="headerNavbar" style="">
+                <div class="container">
+                    <div class="row h-auto w-100">
+                        <ul class="navbar-nav d-flex justify-content-evenly px-xl-0 px-5 ps-md-auto text-muted"
+                            style="padding-left: 4ch;font-size: 20px">
+                            <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                <a class="nav-link text-center active" aria-current="page" href="/">
+                                    <code class="func-name">About Me</code><code class="var"><span
+                                        class="hover-typewriter {% if active_link != 'contact' %}visually-hidden{% endif %}">(name="Liu, Ziyi")</span></code><span
+                                        class="hover-blink-caret"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                <a class="nav-link text-center" aria-current="page" href="/">
+                                    <code class="func-name">Contact Me</code><code class="var"><span
+                                        class="hover-typewriter {% if active_link != 'contact' %}visually-hidden{% endif %}">(email="lzy_ecust@outlook.com")</span></code><span
+                                        class="hover-blink-caret"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                <a class="nav-link text-center" aria-current="page" href="/">
+                                    <code class="func-name">Blogs</code><code class="var"><span
+                                        class="hover-typewriter {% if active_link != 'blogs' %}visually-hidden{% endif %}">(name="Liu, Ziyi")</span></code><span
+                                        class="hover-blink-caret"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                <a class="nav-link text-center" aria-current="page" href="/">
+                                    <code class="func-name">Blogs</code><code class="var"><span
+                                        class="hover-typewriter {% if active_link != 'blogs' %}visually-hidden{% endif %}">(name="Liu, Ziyi")</span></code><span
+                                        class="hover-blink-caret"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button class="navbar-toggler collapsed align-self-center mx-auto my-1" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#headerNavbar" aria-controls="headerNavbar"
+                    aria-expanded="false" aria-label="Toggle navigation" style="border-radius: 50px">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!--header-- class="container-md container-fluid fixed-top p-1 pt-4">
     <nav class="navbar navbar-expand-lg navbar-dark" style="background: rgba(43,43,43,0.95);border-radius: 15px">
         <div class="container">
             <div class="navbar-collapse collapse" id="headerNavbar" style="">
@@ -65,7 +116,7 @@
             </button>
         </div>
     </nav>
-</header>
+</header-->
 <!-- Main Information -->
 <main class="container-fluid my-5">
     {% block content %}{% endblock %}
@@ -102,6 +153,7 @@
 </footer>
 <!-- External CSS & JS Files-->
 <script src="../static/js/bootstrap.bundle.js"></script>
+<script src="../static/js/stable.js"></script>
 <!-- Clarity tracking code for https://www.lzyatshcn.top/ MS -->
 <script>
     (function (c, l, a, r, i, t, y) {
@@ -127,10 +179,5 @@
         }
     };
 </script>
-<style>
-    body > header {
-        transition: all 500ms ease-in-out;
-    }
-</style>
 </body>
 </html>
