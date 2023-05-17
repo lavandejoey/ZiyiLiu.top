@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container" style="height:15vh"></div>
+    <div class="container">
+        <div class="d-flex mx-4 align-items-start description-container">
+            <div class="d-flex flex-wrap py-0 align-items-stretch justify-content-start">
+                {#I am#}
+                <span class="pre-description flex-inline mx-0 my-2 d-inline-block"
+                      style="padding: 5px 0px;font-size: xxx-large">I am&nbsp;</span>
+                {#Descriptions#}
+                <span class="flex-inline mx-0 my-2 text-white"
+                      style="background-color:black; padding: 5px 10px;font-size: xxx-large;font-weight:bold;">
+                    <span class="text-white" id="caret">&lowbar;</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const descriptionStr = ["striving at engineering.",
+            "Journeying through the tech and design.",
+            "Luminous harnessing tech power for inclusive future.",
+            "Zealous to slightly differ the world.",
+            "Yearning to engineer awe-inspiring wonders."];
+        const targetContainer = document.getElementsByClassName('description-container')[0];
+        const containerWidth = targetContainer.offsetWidth
+        const preDescription = document.getElementsByClassName('pre-description')[0];
+        const preWidth = preDescription.offsetWidth;
+        const caretWidth = 2 * document.getElementById('caret').offsetWidth;
+        const newSpanHtml = '<span class="d-none flex-inline mx-0 my-2 text-white description" style="background-color:black; padding: 5px 10px;font-size: xxx-large;"></span>'
+        let targets = document.getElementsByClassName('description');
+        // use typewriter animation loop to change text letter by letter
+        let str_i = 2;
+        let letter_is = [0, 0, 0];
+        let letter_js = [0, 0, 0];
+        let target_i = 0;
+        let targetEmpty = false;
+        let boolFUll0 = false;
+        let boolFUll1 = false;
+        let targetFull = false;
+        let currentWord = descriptionStr[str_i];
+        let isDeleting = false;
+        let isEnd = false;
+        let boolWait = false;
+
+        /*typewriter rules:
+        * 1. from 0 to descriptionStr length, type the strings letter by letter and delete letter by letter,
+        * 1. from 0 to descriptionStr length, type the strings letter by letter and delete letter by letter,
+        * and next. loop it
+        * 2. use span of description class until it reach to the containerWidth (for the targets[0], reach
+        * to the containerWidth-preWidth).
+        * 3. when reach the containerWidth (or containerWidth-preWidth), use the next tar in targets and
+        * remove class d-none.
+        * 4. delete from current tar to targets[0], when current tar is empty add class d-none*/
+        // Typewriter effect
+        preDescription.insertAdjacentHTML('afterend', newSpanHtml);
+        targets = document.getElementsByClassName('description');
+
+        function indexTypeWriter() {
+            if (boolWait) {
+                setTimeout(indexTypeWriter, 80); // Run the function again after a delay
+                return
+            }
+            targetEmpty = targets[target_i] ? targets[target_i].innerHTML.replace(" ", "").length === 1 : true;
+            currentWord = descriptionStr[str_i];
+            if (isEnd) { // if finished, next word or first word
+                str_i = str_i < descriptionStr.length - 1 ? str_i + 1 : 0;
+                isDeleting = false;
+                boolWait = true;
+                setTimeout(function () {
+                    isEnd = false
+                    boolWait = false;
+                }, currentWord.length * 20);
+                // create span element by newSpanHtml after pre-description
+                preDescription.insertAdjacentHTML('afterend', newSpanHtml);
+                targets = document.getElementsByClassName('description');
+                setTimeout(indexTypeWriter, 80); // Run the function again after a delay
+            } else if (isDeleting) {
+                if (target_i === 0 && letter_js[target_i] === 1) { // end deleting (row=1, letter=1)
+                    targets[target_i].remove();
+                    isEnd = true
+                } else if (!targetEmpty) {// normal deleting (row>1, letter>1)
+                    letter_js[target_i]--;
+                    targets[target_i].innerHTML = currentWord.substring(letter_is[target_i], letter_js[target_i]);
+                } else if (targetEmpty) { // former row deleting (row>1, letter=1)
+                    // destroy the last element in targets
+                    targets[target_i].remove();
+                    // point to the former row
+                    target_i--;
+                }
+                setTimeout(indexTypeWriter, 50); // Run the function again after a delay
+            } else if (!isDeleting) {//typing
+                boolFUll0 = targets[target_i].offsetWidth + caretWidth >= containerWidth - preWidth;
+                boolFUll1 = targets[target_i].offsetWidth + caretWidth >= containerWidth;
+                targetFull = target_i === 0 ? boolFUll0 : boolFUll1;
+                if (targetFull && letter_js[target_i] <= currentWord.length) { // wrap row (row_letter=w)
+                    letter_is[target_i + 1] = letter_js[target_i];
+                    letter_js[target_i + 1] = letter_js[target_i] + 1;
+                    // create a new span element by newSpanHtml
+                    // append the new span element after previous span element
+                    targets[target_i].insertAdjacentHTML('afterend', newSpanHtml);
+                    targets = document.getElementsByClassName('description');
+                    target_i++;
+                    letter_js[target_i]++;
+                    targets[target_i].innerHTML = currentWord.substring(letter_is[target_i], letter_js[target_i]);
+                    targets[target_i].classList.remove('d-none');
+                } else if (letter_js[target_i] === currentWord.length) { // end typing (row_letter<w)
+                    boolWait = true;
+                    setTimeout(function () {
+                        isDeleting = true;
+                        boolWait = false;
+                    }, currentWord.length * 50);
+                } else if (!targetFull && letter_js[target_i] < currentWord.length) { // normal typing (row_letter<w)
+                    letter_js[target_i]++;
+                    targets[target_i].innerHTML = currentWord.substring(letter_is[target_i], letter_js[target_i]);
+                    targets[target_i].classList.remove('d-none');
+                }
+                setTimeout(indexTypeWriter, 60); // Run the function again after a delay
+            }
+        }
+
+        indexTypeWriter();
+    </script>
+{% endblock %}

@@ -1,0 +1,93 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: "HarmonyOS";
+  src: url("../fonts/HarmonyOS_Sans_Black.ttf");
+  src: url("../fonts/HarmonyOS_Sans_Bold.ttf");
+  src: url("../fonts/HarmonyOS_Sans_Light.ttf");
+  src: url("../fonts/HarmonyOS_Sans_Medium.ttf");
+  src: url("../fonts/HarmonyOS_Sans_Regular.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Black.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Bold.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Light.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Medium.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Regular.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Thin.ttf");
+  src: url("../fonts/HarmonyOS_Sans_Thin.ttf");
+}
+
+$white: #f2f2f2 !default;
+// scss-docs-start color-variables
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #983928 !default;
+$orange: #f49503 !default;
+$yellow: #fed300 !default;
+$green: #146654 !default;
+$teal: #20c997 !default;
+$cyan: #3c7699 !default;
+// scss-docs-end color-variables
+// scss-docs-start theme-color-variables
+$primary: #1f3b54 !default;
+$secondary: #a55d51 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+// scss-docs-end theme-color-variables
+$body-bg: #e3d1c6 !default;
+html {
+  background: $body-bg;
+  font-family: "HarmonyOS", SansSerif, serif, sans-serif;
+  z-index: auto;
+}
+
+body {
+  z-index: 0;
+  background-color: $light;
+}
+
+.y-border {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 2vmin;
+  background-color: $body-bg;
+  z-index: 9001;
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+main, footer {
+  background-color: $light;
+  font-family: "HarmonyOS", serif;
+  z-index: 1;
+}
+
+
+header.at-top {
+  background: $light;
+}
+
+header.title {
+  font-size: x-large;
+}
+
+footer {
+  font-size: 1em;
+}
+
+.nav-link {
+  font-size: 0.8em;
+  // draw  hover
+}
+
+.pre-description {
+  background-color: $light;
+}
