@@ -9,11 +9,14 @@ __email__ = "lavandejoey@outlook.com"
 
 from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField
+from wtforms.fields import EmailField
 from wtforms.validators import DataRequired, Email
-from wtforms.fields.html5 import EmailField
 
 
 class ContactForm(FlaskForm):
     name = StringField('name', validators=[DataRequired()])
     email = EmailField('email', validators=[DataRequired(), Email()])
     message = TextAreaField('message', validators=[DataRequired()])
+
+    def format(self):
+        return f"Name: {self.name.data}\n\nEmail: {self.email.data}\n\nMessage: {self.message.data}"

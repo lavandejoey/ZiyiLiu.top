@@ -12,22 +12,26 @@ __email__ = "lavandejoey@outlook.com"
 # 3rd party packages
 from flask import Flask, redirect, url_for
 from flask_mail import Mail
+from flask_wtf.csrf import CSRFProtect
 
 # local source
 from .views import main_blueprint
 
 email = Mail()
+# Initialize CSRF protection
+csrf = CSRFProtect()
 
 
 def create_main_app(config="config.py"):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
-    # app.config.from_object('config.Config')
-    app.config.from_pyfile(config)
-    app.secret_key = 'your_secret_key_here'
+    app.config.from_object('config.Config')
+    # app.config.from_pyfile(config)
+    # Check if config loaded
 
     # initialize extensions
     email.init_app(app=app)
+    csrf.init_app(app=app)
 
     # register blueprints
     app.register_blueprint(blueprint=main_blueprint)

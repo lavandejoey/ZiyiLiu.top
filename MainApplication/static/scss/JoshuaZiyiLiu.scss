@@ -1,5 +1,3 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
-
 @font-face {
   font-family: "HarmonyOS";
   src: url("../fonts/HarmonyOS_Sans_Black.ttf");
@@ -29,25 +27,52 @@ $green: #146654 !default;
 $teal: #20c997 !default;
 $cyan: #3c7699 !default;
 // scss-docs-end color-variables
+// scss-docs-start color-map
+$colors: (
+        "blue": $blue,
+        "indigo": $indigo,
+        "purple": $purple,
+        "pink": $pink,
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "teal": $teal,
+        "cyan": $cyan,
+) !default;
+// scss-docs-end color-map
 // scss-docs-start theme-color-variables
 $primary: #1f3b54 !default;
 $secondary: #a55d51 !default;
+$secondary: #bdd0ca !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: $gray-100 !default;
-$dark: $gray-900 !default;
+$light: #f2f2f2 !default;
+$dark: #000000 !default;
 // scss-docs-end theme-color-variables
+// scss-docs-start theme-color-map
+$theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark,
+) !default;
+// scss-docs-end theme-color-map
 $body-bg: #e3d1c6 !default;
 html {
   background: $body-bg;
   font-family: "HarmonyOS", SansSerif, serif, sans-serif;
-  z-index: auto;
+  z-index: 0;
 }
 
 body {
-  z-index: 0;
+  z-index: 5;
   background-color: $light;
 }
 
@@ -80,14 +105,20 @@ header.title {
 }
 
 footer {
-  font-size: 1em;
+  //font size change by screen size
+  font-size: 0.4em;
+  @media (min-width: 768px) {
+    font-size: 0.8em;
+  }
 }
 
 .nav-link {
-  font-size: 0.8em;
+  font-size: 1.2rch;
   // draw  hover
 }
 
 .pre-description {
   background-color: $light;
 }
+
+@import "../node_modules/bootstrap/scss/bootstrap";

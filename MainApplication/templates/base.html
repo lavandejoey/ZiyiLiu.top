@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
     <!--SEO-->
     <meta name="google-site-verification" content="E1oXCV_ANCQB2muNUGwjvj5K2ujmRwxgBEFkymx7k8w"/>
     <!--IE 兼容模式-->
@@ -11,13 +12,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- External CSS & JS Files-->
-    <link type="text/css" rel="stylesheet" href="../static/scss/JoshuaZiyiLiu.css">
-    <link type="text/css" rel="stylesheet" href="../static/node_modules/font-awesome/css/font-awesome.min.css">
-    <script src="../static/auto_fresh.js"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='scss/JoshuaZiyiLiu.css') }}">
+    <link type="text/css" rel="stylesheet"
+          href="{{ url_for('static', filename='node_modules/font-awesome/css/font-awesome.min.css') }}">
+    <script src="{{ url_for('static', filename='js/JoshuaZiyiLiu.js') }}"></script>
 </head>
 <body class="d-flex flex-column flex-grow-1" style="margin: 2vmin">
 <div class="y-border fixed-top"></div>
-<div class="d-flex flex-column flex-grow-1 container-fluid position-relative">
+<div class="d-flex flex-column flex-grow-1 container-fluid position-relative bg-light">
     {#Header#}
     <header class="header d-flex flex-column my-3">
         <div class="container">
@@ -45,17 +47,23 @@
                                                {% if page == 'index' %}style="text-decoration: underline"{% endif %}
                                                href="{{ url_for('main.index_page') }}">Home</a>
                                         </li>
-                                        {# Nav Contact #}
+                                        {# Nav Portfolio #}
                                         <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
                                             <a class="nav-link"
-                                               {% if page == 'contact' %}style="text-decoration: underline"{% endif %}
-                                               href="{{ url_for('main.contact_page') }}">Contact</a>
+                                               {% if page == 'portfolio' %}style="text-decoration: underline"{% endif %}
+                                               href="{{ url_for('main.portfolio_page') }}">Portfolio</a>
                                         </li>
                                         {# Nav About #}
                                         <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
                                             <a class="nav-link"
                                                {% if page == 'cv' %}style="text-decoration: underline"{% endif %}
                                                href="{{ url_for('main.cv_page') }}">About</a>
+                                        </li>
+                                        {# Nav Contact #}
+                                        <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                            <a class="nav-link"
+                                               {% if page == 'contact' %}style="text-decoration: underline"{% endif %}
+                                               href="{{ url_for('main.contact_page') }}">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -75,7 +83,8 @@
         </div>
     </header>
     {#Main Content#}
-    <main class="d-flex flex-column flex-shrink-0 flex-grow-1 mb-0 container-fluid align-items-stretch" style="flex-grow: 1;">
+    <main class="d-flex flex-column flex-shrink-0 flex-grow-1 mb-0 container-fluid align-items-stretch"
+          style="flex-grow: 1;">
         <div class="container" style="flex-grow: 1;">
             {% block content %}{% endblock %}
         </div>
@@ -117,5 +126,5 @@
 <div class="y-border fixed-bottom"></div>
 </body>
 {#External JS Files#}
-<script src="../static/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
 </html>
