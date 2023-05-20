@@ -42,20 +42,17 @@ def cv_page():
 
 
 # Contact me page
-@main_blueprint.route('contact', methods=['GET'])
+@main_blueprint.route('/contact', methods=['GET', 'POST'])
 def contact_page():
     contact_form = ContactForm()
-    return render_template("contact.html", title="Contact Me", page="contact", form=contact_form, msg_sent=False)
-
-
-@main_blueprint.route('contact', methods=['POST'])
-def contact_page_post():
-    contact_form = ContactForm()
-    if contact_form.validate_on_submit():
+    csrf_token = request.form.get('csrf_token')
+    if request.method == 'GET':
+        return render_template("contact.html", title="Contact Me", page="contact", form=contact_form, msg_sent=False)
+    elif request.method == 'POST' and contact_form.validate_on_submit():
         # send email
-        csrf_token = request.form.get('csrf_token')
         msg = Message(subject='JoshuaZiyiLiu.com Contact Form Submission',
-                      sender=contact_form.email.data,
+                      sender=current_app.config["MAIL_USERNAME"],
+                      recipients=[current_app.config["MAIL_USERNAME"]],
                       body=contact_form.format(),
                       charset="utf-8",
                       extra_headers={"X-CSRFToken": csrf_token},
