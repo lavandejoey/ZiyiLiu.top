@@ -8,6 +8,7 @@ __maintainer__ = "lavandejoey"
 __email__ = "lavandejoey@outlook.com"
 
 # standard library
+import os
 
 # 3rd party packages
 from flask import Flask, redirect, url_for
@@ -25,9 +26,8 @@ csrf = CSRFProtect()
 def create_main_app(config="config.py"):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
-    app.config.from_object('config.Config')
-    # app.config.from_pyfile(config)
-    # Check if config loaded
+    # app.config.from_object('config.Config')
+    app.config.from_pyfile(config)
 
     # initialize extensions
     email.init_app(app=app)

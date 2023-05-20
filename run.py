@@ -14,9 +14,10 @@ import os
 # local source
 from MainApplication import create_main_app
 
-MainApp = create_main_app()
+main_app = create_main_app()
+main_app.run(debug=False, host="localhost", port=1211)
 
-debug = os.environ.get("APP_DEBUG", True)
-host = os.environ.get("APP_HOST", "127.0.0.1")
-port = os.environ.get("APP_PORT", 8000)
-MainApp.run(debug=debug, host=host, port=port)
+# debug = os.environ.get("APP_DEBUG", True)
+# host = os.environ.get("APP_HOST", "127.0.0.1")
+# port = os.environ.get("APP_PORT", 8000)
+# MainApp.run(debug=debug, host=host, port=port)
