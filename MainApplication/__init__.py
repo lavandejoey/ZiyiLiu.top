@@ -11,40 +11,26 @@ __email__ = "lavandejoey@outlook.com"
 import os
 
 # 3rd party packages
+import toml
 from flask import Flask, redirect, url_for
 from flask_mail import Mail
 from flask_wtf.csrf import CSRFProtect
+from flask_sitemap import Sitemap
 
 # local source
 from .views import main_blueprint
 
 email = Mail()
-# Initialize CSRF protection
+sitemap = Sitemap()
 csrf = CSRFProtect()
 
-
-def create_main_app(config="config.py"):
-    # create and configure the app
-    app = Flask(__name__, instance_relative_config=True)
-    # app.config.from_object('config.Config')
-    app.config.from_pyfile(config)
-    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
-    app.config["MAIL_SERVER"] = "smtp-mail.outlook.com"
-    # This is the port number that your mail server uses to receive email.
-    app.config["MAIL_PORT"] = 587 # TLS:587 SSl:465 None:25
-    # This is a Boolean flag that tells Flask-Mail whether to use TLS encryption when sending emails.
-    app.config["MAIL_USE_TLS"] = True
-    # This is a Boolean flag that tells Flask-Mail whether to use SSL encryption when sending emails.
-    app.config["MAIL_USE_SSL"] = False
-    # This is the username that your application will use to log in to the mail server.
-    app.config["MAIL_USERNAME"] = "lavandejoey@outlook.com"
-    # This is the password that your application will use to log in to the mail server.
-    app.config["MAIL_PASSWORD"] = "LNms120921"
-    # This is the email address that the application will use as the "from" address for system emails. ADMIN_EMAIL = ""
-    app.config["MAIL_DEFAULT_SENDER"] = ("lavandejoey", "JoshuaZiyiLiu.com@outlook.com")
+def create_main_app():
+    app = Flask(__name__, instance_relative_config=True,)
+    app.config.from_pyfile("config.py")
 
     # initialize extensions
     email.init_app(app=app)
+    sitemap.init_app(app=app)
     csrf.init_app(app=app)
 
     # register blueprints

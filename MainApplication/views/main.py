@@ -11,6 +11,7 @@ __email__ = "lavandejoey@outlook.com"
 # 3rd party packages
 from flask import Blueprint, render_template, flash, request, current_app
 from flask_mail import Message
+from flask_sitemap import Sitemap
 
 # local source
 from MainApplication.forms import ContactForm
@@ -51,8 +52,7 @@ def contact_page():
     elif request.method == 'POST' and contact_form.validate_on_submit():
         # send email
         msg = Message(subject='JoshuaZiyiLiu.com Contact Form Submission',
-                      sender=current_app.config["MAIL_USERNAME"],
-                      recipients=[current_app.config["MAIL_USERNAME"]],
+                      recipients=[current_app.config["MAIL_DEFAULT_RECIPIENT"],],
                       body=contact_form.format(),
                       charset="utf-8",
                       extra_headers={"X-CSRFToken": csrf_token},
