@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "HarmonyOS";
+  src: url("../fonts/HarmonyOS_Sans_Black.ttf");
+  src: url("../fonts/HarmonyOS_Sans_Bold.ttf");
+  src: url("../fonts/HarmonyOS_Sans_Light.ttf");
+  src: url("../fonts/HarmonyOS_Sans_Medium.ttf");
+  src: url("../fonts/HarmonyOS_Sans_Regular.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Black.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Bold.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Light.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Medium.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Regular.ttf");
+  src: url("../fonts/HarmonyOS_Sans_SC_Thin.ttf");
+  src: url("../fonts/HarmonyOS_Sans_Thin.ttf");
+}
+
+$white: #f2f2f2 !default;
+// scss-docs-start color-variables
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #983928 !default;
+$orange: #f49503 !default;
+$yellow: #fed300 !default;
+$green: #146654 !default;
+$teal: #20c997 !default;
+$cyan: #3c7699 !default;
+// scss-docs-end color-variables
+// scss-docs-start color-map
+$colors: (
+        "blue": $blue,
+        "indigo": $indigo,
+        "purple": $purple,
+        "pink": $pink,
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "teal": $teal,
+        "cyan": $cyan,
+) !default;
+// scss-docs-end color-map
+// scss-docs-start theme-color-variables
+$primary: #1f3b54 !default;
+$secondary: #a55d51 !default;
+$secondary: #bdd0ca !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: #f2f2f2 !default;
+$dark: #000000 !default;
+// scss-docs-end theme-color-variables
+// scss-docs-start theme-color-map
+$theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark,
+) !default;
+// scss-docs-end theme-color-map
+$body-bg: #e3d1c6 !default;
+html {
+  background: $body-bg;
+  font-family: "HarmonyOS", SansSerif, serif, sans-serif;
+  z-index: 0;
+}
+
+body {
+  z-index: 5;
+  background-color: $light;
+}
+
+.y-border {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 2vmin;
+  background-color: $body-bg;
+  z-index: 9001;
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+main, footer {
+  background-color: $light;
+  font-family: "HarmonyOS", serif;
+  z-index: 1;
+}
+
+
+header.at-top {
+  background: $light;
+}
+
+header.title {
+  font-size: x-large;
+}
+
+footer {
+  //font size change by screen size
+  font-size: 0.4em;
+  @media (min-width: 768px) {
+    font-size: 0.8em;
+  }
+}
+
+.nav-link {
+  font-size: 1.2rch;
+  // draw  hover
+}
+
+.pre-description {
+  background-color: $light;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
