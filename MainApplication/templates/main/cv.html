@@ -1,334 +1,410 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="container" style="height: 30px"></div>
-    <div class="container">
-        <div class="container" id="cv">
-            <h1 id="title">Ziyi Joshua LIU</h1>
-            {# basic-info #}
-            <div class="basic-info section">
-                <div class="set">
-                    <p class="email">
-                        E-mail:&nbsp;<a href="mailto:Lzy_Ecust@Outlook.com" target="_blank"
-                                        style="text-decoration: none">Lzy_Ecust@Outlook.com</a>
-                        <span class="dot">&sect;</span>
-                        Phone: <a href="tel:+8619821122718" target="_blank"
-                                  style="text-decoration: none">(086)19821122718</a></p>
-                    <p class="address">
-                        {# TODO Map link to amap #}
-                        East China University of Science and Technology, 130 Meilong Road, Xuhui District, Shanghai,
-                        China
-                    </p>
-                </div><!-- set //-->
-                <div class="clear"></div>
-            </div>
-            <div class="section section-education">
-                <h2 class="title">Education</h2>
-                <div class="set">
-                    <div class="item">
-                        <h3><span class="course l">BEng Major in Intelligence and Robotics (Robotics).</span>
-                            <span class="date r">Sept, 2020 &mdash; Jul, 2024</span>
-                        </h3>
-                        <div class="clear"></div>
-                        <span class="school">East China University of Science and Technology</span>
-                        <div class="info"><span><span>Relevant Courses:&nbsp;</span></span>
-                            <div>
-                                <ul>
-                                    <li>
-                                        <span><span>Mathematical Foundations for Artificial Intelligence (3.7/4.0, A-),&nbsp;</span></span>
-                                    </li>
-                                    <li>
-                                        <span><span>Principles and Design of Embedded Systems (3.0/4.0, B),&nbsp;</span></span>
-                                    </li>
-                                    <li>
-                                        <span><span>Pattern Learning and Machine Learning (3.3/4.0, B+),&nbsp;</span></span>
-                                    </li>
-                                    <li><span><span>Learning Tools and Platforms (3.7/4.0, A-),&nbsp;</span></span></li>
-                                    <li><span><span>Robotics Principles and Design (2.3/4.0, C+).</span></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <span class="clear"> </span>
+    <div class="container" style="height: 50px">
+        <div class="save_tag">
+            {# A fixed arrow img #}
+            <img src="{{ url_for('static', filename='img/arrow1.png') }}" alt="arrow" class="arrow"
+                 style=" width: 40px; height: 40px;transform: rotate(180deg);">
+            {# Notice word #}
+            <span style="position: relative; top: -20px">Click to Save PDF~</span>
+        </div>
+    </div>
+    {# Set the element in it align to center horizontally #}
+    <div class="container cv">
+        <h1 id="title" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Ziyi Joshua LIU</h1>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="z-index: 5000">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">CV/Résumé PDF Downloader</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-
-                    <div class="item">
-                        <h3><span class="course l">Mini-major Diploma Major in Computer Science and Technology</span>
-                            <span class="date r">Oct, 2021 &mdash; Feb, 2023</span>
-                        </h3>
-                        <div class="clear"></div>
-                        <span class="school">East China University of Science and Technology</span>
-                        <div class="info">Relevant courses: Data Structures and Algorithms, Principles of Database
-                            Systems,
-                            Operating Systems, Software Engineering, Computer Networking.
-                        </div>
-                        <span class="clear"> </span>
+                    <div class="d-flex flex-fill flex-column modal-body">
+                        <h5>Please choose the version you want!</h5>
+                        <table style="font-size: medium">
+                            <tr>
+                                <td><a href="{{ url_for('static', filename='files/CVen.pdf') }}">English Academic CV</a></td>
+                                <td><a href="{{ url_for('static', filename='files/resume_en.pdf') }}">English Résumé</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="{{ url_for('static', filename='files/CVcn.pdf') }}">中文学术 CV</a></td>
+                                <td><a href="{{ url_for('static', filename='files/resume_cn.pdf') }}">中文简历</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        {# Close modal button #}
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
-                <div class="clear"></div>
             </div>
-            <div class="section section-work">
-                <h2 class="title">Internship</h2>
-                <div class="set">
-                    <div class="item">
-                        <h3><span class="company l">Bank of Communication Financial Technology Co,Ltd.</span>
-                            <span class="date r">Dec, 2022 &mdash; Feb, 2023</span>
-                        </h3>
-                        <div class="clear"></div>
-                        <span class="job_title">Back-end Developer</span>
-                        <div class="info">
+        </div>
+        <div class="basic-info section">
+            <div class="set">
+                <p class="email">E-mail: <a href="mailto:lzy_ecust@outlook.com" style="text-decoration: none">lzy_ecust@outlook.com</a>
+                    <span class="dot">&sect;</span>Phone: (086)19821122718 </p>
+                <p class="address">
+                    East China University of Science and Technology, Meilong Rd., Xuhui District, Shanghai,
+                    China </p>
+                <div class="clear"></div>
+            </div><!-- set //-->
+            <div class="clear"></div>
+        </div><!-- basic-info //-->
+        <div class="section section-education">
+            <h2 class="title">Education</h2>
+            <div class="set">
+                <div class="item">
+                    <h3><span class="course l">BEng Major in Intelligence and Robotics (Robotics).</span>
+                        <span class="date r">Sept, 2020 &mdash; Jul, 2024</span>
+                    </h3>
+                    <div class="clear"></div>
+                    <span class="school">East China University of Science and Technology</span>
+                    <div class="info"><span>Relevant Courses: </span>
+                        <div>
                             <ul>
                                 <li>
-                                    <div><span>Created an updated HRM using a low-code platform and its APIs, designed its relational database and automated the process from pre-employment to employee management.&nbsp;</span>
+                                    <span>Mathematical Foundations for Artificial Intelligence (3.7/4.0, A-), </span>
+                                </li>
+                                <li><span>Principles and Design of Embedded Systems (3.0/4.0, B), </span></li>
+                                <li><span>Pattern Learning and Machine Learning (3.3/4.0, B+), </span></li>
+                                <li><span>Learning Tools and Platforms (3.7/4.0, A-), </span></li>
+                                <li><span>Robotics Principles and Design (2.3/4.0, C+), </span></li>
+                                <li><span>Computer Graphic (3.7/4.0, A-).</span></li>
+                            </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="clear"> </span>
+                </div>
+
+                <div class="item">
+                    <h3><span
+                            class="course l">Mini-major Diploma Major in Computer Science and Technology</span>
+                        <span class="date r">Oct, 2021 &mdash; Feb, 2023</span>
+                    </h3>
+                    <div class="clear"></div>
+                    <span class="school">East China University of Science and Technology</span>
+                    <div class="info">Relevant courses: Data Structures and Algorithms, Principles of Database
+                        Systems,
+                        Operating Systems, Software Engineering, Computer Networking.
+                    </div>
+                    <span class="clear"> </span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="section section-work">
+            <h2 class="title">Internship</h2>
+            <div class="set">
+                <div class="item">
+                    <h3><span class="company l">Bank of Communication Financial Technology Co,Ltd.</span>
+                        <span class="date r">Dec, 2022 &mdash; Feb, 2023</span>
+                    </h3>
+                    <div class="clear"></div>
+                    <span class="job_title">Back-end Developer</span>
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <div><span>Created an updated HRM using a low-code platform and its APIs, designed its relational database and automated the process from pre-employment to employee management. </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>Developed OCR APIs for HRM (Human Resource Management) using the OpenAPI
+                                    standard,
+                                    improving the efficiency and accuracy of data capture. 
+                                </div>
+                            </li>
+                            <li>
+                                <div>Participated in the DevOps process for the company's supply chain and debt
+                                    management
+                                    platform, contributing to integration testing, compilation, deployment and
+                                    test
+                                    case
+                                    management.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="item">
+                    <h3><span class="company l">ISCAS (Institute of Software Chinese Academy of Sciences)</span>
+                        <span class="date r">Apr, 2022 &mdash; Sep, 2022</span>
+                    </h3>
+                    <div class="clear"></div>
+                    <span class="job_title">Development and Testing</span>
+                    <div class="info">
+                        <div>
+                            <ul>
+                                <li>
+                                    <div>Tested and packaged software such as Autoconf-2.13 and Pijul on the
+                                        openEuler
+                                        platform, ensuring compatibility and functionality within the openEuler
+                                        operating
+                                        system.
                                     </div>
                                 </li>
                                 <li>
-                                    <div>Developed OCR APIs for HRM (Human Resource Management) using the OpenAPI
-                                        standard,
-                                        improving the efficiency and accuracy of data capture.&nbsp;
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>Participated in the DevOps process for the company's supply chain and debt
-                                        management
-                                        platform, contributing to integration testing, compilation, deployment and test
-                                        case
-                                        management.
+                                    <div>Developed "rsensleak" partially, a document-sensitive information
+                                        recognition tool
+                                        based on Rust, which analyses documents and identifies sensitive
+                                        information
+                                        such as
+                                        passwords, key tokens, and private information.
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="clear"></div>
                     </div>
-
-                    <div class="item">
-                        <h3><span class="company l">ISCAS (Institute of Software Chinese Academy of Sciences)</span>
-                            <span class="date r">Apr, 2022 &mdash; Sept, 2022</span>
-                        </h3>
-                        <div class="clear"></div>
-                        <span class="job_title">Development and Testing</span>
-                        <div class="info">
-                            <div>
-                                <ul>
-                                    <li>
-                                        <div>Tested and packaged software such as Autoconf-2.13 and Pijul on the
-                                            openEuler
-                                            platform, ensuring compatibility and functionality within the openEuler
-                                            operating
-                                            system.
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div>Developed "rsensleak" partially, a document-sensitive information
-                                            recognition
-                                            tool
-                                            based on Rust, which analyses documents and identifies sensitive information
-                                            such as
-                                            passwords, key tokens, and private information.
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
+                    <div class="clear"></div>
                 </div>
-                <div class="clear"></div>
             </div>
-            <div class="section section-projects">
-                <h2 class="title">Academic Projects</h2>
-                <div class="set">
-                    <div class="item">
-                        <h3><span class="special-title l">Light pollution assessment and prediction (COMAP Interdisciplinary Contest in Modelling (ICM))</span>
-                            <span class="date r">Feb, 2023</span>
-                        </h3>
-                        <div class="clear"></div>
-                        <span class="special-subtitle">
-                            <span class="l">Programmer</span><span class="r"><a href="#">Github Repository</a></span>
-                        </span>
-                        <div class="info">
-                            <div style="visibility: hidden; overflow: hidden; position: absolute; top: 0; height: 1px; width: auto; padding: 0; border: 0; margin: 0; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
-                                <div id="MathJax_Hidden"></div>
-                            </div>
-                            <div id="MathJax_Message" style="display: none;"></div>
-                            <div style="visibility: hidden; overflow: hidden; position: absolute; top: 0; height: 1px; width: auto; padding: 0; border: 0; margin: 0; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
-                                <div id="MathJax_Hidden"></div>
-                            </div>
-                            <div id="MathJax_Message" style="display: none;"></div>
-                            <ul>
-                                <li><span>Developing a light pollution level evaluation system, utilising data related to social development, industrial levels, and ecological conditions as evaluation variables.&nbsp;</span></font>
-                                </li>
-                                <li><span>Collecting, cleaning and mining historical data in eight different eastern and western United States regions, and the data extracted from satellite remote sensing maps and GIS information as criteria for current light pollution levels. Fitting them to conduct the evaluation index parameters.&nbsp;</span></font>
-                                </li>
-                                <li><span>Using both subjective and objective evaluation methods, including individual evaluations using DEMATEL and network analysis (ANP). And using multiple regression analysis for accurate testing and assessment.</span></font>
-                                </li>
-                            </ul>
-                            <div id="MathJax_Message" style="display: none;"></div>
-                            <div style="position: absolute; width: 0; height: 0; overflow: hidden; padding: 0; border: 0; margin: 0;">
-                                <div id="MathJax_Font_Test"
-                                     style="position: absolute; visibility: hidden; top: 0; left: 0; width: auto; padding: 0; border: 0; margin: 0; white-space: nowrap; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
-                            </div>
-                            <script type="text/javascript"
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;delayStartupUntil=configured"></script>
-                            <script id="texAllTheThingsPageScript" type="text/javascript"
-                                    src="chrome-extension://cbimabofgmfdkicghcadidpemeenbffn/js/pageScript.js"
-                                    inlinemath="[[&quot;$&quot;,&quot;$&quot;],[&quot;[;&quot;,&quot;;]&quot;]]"
-                                    displaymath="[[&quot;$$&quot;,&quot;$$&quot;],[&quot;\\[&quot;,&quot;\\]&quot;]]"
-                                    skiptags="[&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;]"
-                                    ignoreclass="false" processclass="false"></script>
-                            <div style="position: absolute; width: 0; height: 0; overflow: hidden; padding: 0; border: 0; margin: 0;">
-                                <div id="MathJax_Font_Test"
-                                     style="position: absolute; visibility: hidden; top: 0; left: 0; width: auto; padding: 0; border: 0; margin: 0; white-space: nowrap; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
-                            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="section section-projects">
+            <h2 class="title">Academic Projects</h2>
+            <div class="set">
+                <div class="item">
+                    <h3><span class="special-title l">Light pollution assessment and prediction (COMAP Interdisciplinary Contest in Modelling (ICM))</span>
+                        <span class="date r">Feb, 2023 &mdash; Feb, 2023</span>
+                    </h3>
+                    <div class="clear"></div>
+                    <span class="position_title l">Programmer</span>
+                    <div class="info">
+                        <div style="visibility: hidden;  position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
+                            <div></div>
                         </div>
-                        <div class="clear"></div>
-                    </div>
-
-                    <div class="item">
-                        <h3><span class="special-title l">Time Series Based Climate Prediction and Attribution Analysis (APMCM Mathematical Modeling Contest)</span>
-                            <span class="date r">Dec, 2022</span>
-                        </h3>
-                        <div class="clear"></div>
-                        <span class="special-subtitle">
-                            <span class="l">Programmer</span><span class="r"><a href="#">Github Repository</a></span>
-                        </span>
-                        <div class="info">
-                            <div style="visibility: hidden; overflow: hidden; position: absolute; top: 0; height: 1px; width: auto; padding: 0; border: 0; margin: 0; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
-                                <div id="MathJax_Hidden"></div>
-                            </div>
-                            <div id="MathJax_Message" style="display: none;"></div>
-                            <div style="visibility: hidden; overflow: hidden; position: absolute; top: 0; height: 1px; width: auto; padding: 0; border: 0; margin: 0; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
-                                <div id="MathJax_Hidden"></div>
-                            </div>
-                            <div id="MathJax_Message" style="display: none;"></div>
-                            <ul>
-                                <li><span>Built ARIMA and XGboost model to predict global temperature rise, found temperature will reach 20°C in 2048.&nbsp;</span></font>
-                                </li>
-                                <li><span>Conducted hypothesis testing and got a 97.6872% probability to reject the assumption of no abnormal rise in March 2022 due to the potential effect of the global epidemic.&nbsp;</span></font>
-                                </li>
-                                <li><span>Used PC algorithm and DTW to attribute temperature change to human activities dominating natural factors.</span></font>
-                                </li>
-                            </ul>
-                            <div style="position: absolute; width: 0; height: 0; overflow: hidden; padding: 0; border: 0; margin: 0;">
-                                <div id="MathJax_Font_Test"
-                                     style="position: absolute; visibility: hidden; top: 0; left: 0; width: auto; padding: 0; border: 0; margin: 0; white-space: nowrap; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
-                            </div>
-                            <script type="text/javascript"
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;delayStartupUntil=configured"></script>
-                            <script id="texAllTheThingsPageScript" type="text/javascript"
-                                    src="chrome-extension://cbimabofgmfdkicghcadidpemeenbffn/js/pageScript.js"
-                                    inlinemath="[[&quot;$&quot;,&quot;$&quot;],[&quot;[;&quot;,&quot;;]&quot;]]"
-                                    displaymath="[[&quot;$$&quot;,&quot;$$&quot;],[&quot;\\[&quot;,&quot;\\]&quot;]]"
-                                    skiptags="[&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;]"
-                                    ignoreclass="false" processclass="false"></script>
-                            <div style="position: absolute; width: 0; height: 0; overflow: hidden; padding: 0; border: 0; margin: 0;">
-                                <div id="MathJax_Font_Test"
-                                     style="position: absolute; visibility: hidden; top: 0; left: 0; width: auto; padding: 0; border: 0; margin: 0; white-space: nowrap; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
-                            </div>
+                        <div style="display: none;"></div>
+                        <div style="visibility: hidden;  position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
+                            <div></div>
                         </div>
-                        <div class="clear"></div>
-                    </div>
-
-                    <div class="item">
-                        <h3><span class="special-title l">Signal base station siting problem (MathorCup Mathematical Modeling Program)</span>
-                            <span class="date r">Apr, 2022</span>
-                        </h3>
-                        <div class="clear"></div>
-                        <span class="special-subtitle">
-                            <span class="l">Programmer</span><span class="r"><a href="#">Github Repository</a></span>
-                        </span>
-                        <div class="info">
-                            <div style="visibility: hidden; overflow: hidden; position: absolute; top: 0; height: 1px; width: auto; padding: 0; border: 0; margin: 0; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
-                                <div id="MathJax_Hidden"></div>
-                            </div>
-                            <div id="MathJax_Message" style="display: none;"></div>
-                            <div id="MathJax_Message" style="display: none;"></div>
-                            <ul>
-                                <li><span>Implemented a particle swarm optimization model with additional coordinates as guide terms for central base station planning using K-Means clustering and incorporated coordinates based on greedy thinking for branch base station planning. I enhanced signal base station optimization by partitioning map outliers.&nbsp;</span></font>
-                                </li>
-                                <li><span>Refined base station coverage boundary into three principal directions, calculating coverage using an approximation of a circle of equal area. The line connecting the base station centre and the circle determined the main direction of signal emission.&nbsp;</span></font>
-                                </li>
-                                <li><span>The improved PSO demonstrated faster convergence and higher accuracy, with final model parameters extracted with an error of less than 2%, outperforming the traditional BOKM algorithm.</span></font>
-                                </li>
-                            </ul>
-                            <script type="text/javascript"
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;delayStartupUntil=configured"></script>
-                            <script id="texAllTheThingsPageScript" type="text/javascript"
-                                    src="chrome-extension://cbimabofgmfdkicghcadidpemeenbffn/js/pageScript.js"
-                                    inlinemath="[[&quot;$&quot;,&quot;$&quot;],[&quot;[;&quot;,&quot;;]&quot;]]"
-                                    displaymath="[[&quot;$$&quot;,&quot;$$&quot;],[&quot;\\[&quot;,&quot;\\]&quot;]]"
-                                    skiptags="[&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;]"
-                                    ignoreclass="false" processclass="false"></script>
-                            <div style="position: absolute; width: 0; height: 0; overflow: hidden; padding: 0; border: 0; margin: 0;">
-                                <div id="MathJax_Font_Test"
-                                     style="position: absolute; visibility: hidden; top: 0; left: 0; width: auto; padding: 0; border: 0; margin: 0; white-space: nowrap; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
-                            </div>
+                        <div style="display: none;"></div>
+                        <ul>
+                            <li>
+                                <div>Developing a light pollution level evaluation system, utilising data
+                                    related to
+                                    social
+                                    development, industrial levels, and ecological conditions as evaluation
+                                    variables.&nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <div>Collecting, cleaning and mining historical data in eight different eastern
+                                    and
+                                    western
+                                    United States regions, and the data extracted from satellite remote sensing
+                                    maps
+                                    and GIS
+                                    information as criteria for current light pollution levels. Fitting them to
+                                    conduct the
+                                    evaluation index parameters.&nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <div>Using both subjective and objective evaluation methods, including
+                                    individual
+                                    evaluations using DEMATEL and network analysis (ANP). And using multiple
+                                    regression
+                                    analysis for accurate testing and assessment.
+                                </div>
+                            </li>
+                        </ul>
+                        <div style="display: none;"></div>
+                        <div style="position: absolute; width: 0px; height: 0px;  padding: 0px; border: 0px; margin: 0px;">
+                            <div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
                         </div>
-                        <div class="clear"></div>
-                    </div>
-
-                    <div class="item">
-                        <h3><span
-                                class="special-title l">Speech-Recognition-Based Mechanical System for Lift Control</span>
-                            <span class="date r">Apr, 2021 &mdash; Jun, 2021</span>
-                        </h3>
-                        <div class="clear"></div>
-                        <span class="special-subtitle">
-                            <span class="l">Software Developer and Tester</span><span class="r"><a href="#">Github Repository</a></span>
-                        </span>
-                        <div class="info">
-                            <div style="visibility: hidden; overflow: hidden; position: absolute; top: 0; height: 1px; width: auto; padding: 0; border: 0; margin: 0; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
-                                <div id="MathJax_Hidden"></div>
-                            </div>
-                            <div id="MathJax_Message" style="display: none;"></div>
-                            <div id="MathJax_Message" style="display: none;"></div>
-                            <ul>
-                                <li><span>Developed a Raspberry Pi-based lift control mechanism, utilizing stepper motors, magnetic switches, and Huawei's voice recognition API for contactless operations during pandemics.&nbsp;</span></font>
-                                </li>
-                                <li><span>This Python-controlled innovation secured the second prize at the 10th Shanghai City University Students Mechanical Engineering Innovation Contest.</span></font>
-                                </li>
-                            </ul>
-                            <script type="text/javascript"
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;delayStartupUntil=configured"></script>
-                            <script id="texAllTheThingsPageScript" type="text/javascript"
-                                    src="chrome-extension://cbimabofgmfdkicghcadidpemeenbffn/js/pageScript.js"
-                                    inlinemath="[[&quot;$&quot;,&quot;$&quot;],[&quot;[;&quot;,&quot;;]&quot;]]"
-                                    displaymath="[[&quot;$$&quot;,&quot;$$&quot;],[&quot;\\[&quot;,&quot;\\]&quot;]]"
-                                    skiptags="[&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;]"
-                                    ignoreclass="false" processclass="false"></script>
-                            <div style="position: absolute; width: 0; height: 0; overflow: hidden; padding: 0; border: 0; margin: 0;">
-                                <div id="MathJax_Font_Test"
-                                     style="position: absolute; visibility: hidden; top: 0; left: 0; width: auto; padding: 0; border: 0; margin: 0; white-space: nowrap; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
-                            </div>
+                        <div style="position: absolute; width: 0px; height: 0px;  padding: 0px; border: 0px; margin: 0px;">
+                            <div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
                         </div>
-                        <div class="clear"></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
-                <div class="clear"></div>
-            </div>
-            <div class="section section-qualifications">
-                <h2 class="title">Reward and Certificates</h2>
-                <div class="set">
-                    <div class="item">
-                        <span class="info"><ul>
-                                <li><span><span>The Shanghai College Information Technology Level Examination in Big Data and Cloud Computing, Level 4 (Highest Level).</span></span></li>
-                                <li><span><span>Successful Participant in COMAP Interdisciplinary Contest in Modelling (ICM)</span></span></li>
-                                <li><span><span>Successful Participant in Asia and Pacific Mathematical Contest in Modeling</span></span></li>
-                                <li><span><span>The Shanghai College Information Technology Level Examination in C Programming and Application, Level 3 (Highest Level)</span></span></li>
-                                <li><span><span>Huawei "Smart Base" Outstanding Student Scholarship (Level B, selection rate 1%)</span></span></li>
-                                <li><span><span>The Second Prize in 10th University Students Mechanical Engineering Innovation Contest, Shanghai</span></span></li>
-                            </ul></span>
+
+                <div class="item">
+                    <h3><span class="special-title l">Time Series Based Climate Prediction and Attribution Analysis (APMCM Mathematical Modeling Contest)</span>
+                        <span class="date r">Dec, 2022 &mdash; Dec, 2022</span>
+                    </h3>
+                    <div class="clear"></div>
+                    <span class="position_title l">Programmer</span>
+                    <div class="info">
+                        <div style="visibility: hidden;  position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
+                            <div></div>
+                        </div>
+                        <div style="display: none;"></div>
+                        <div style="visibility: hidden;  position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
+                            <div></div>
+                        </div>
+                        <div style="display: none;"></div>
+                        <ul>
+                            <li>
+                                <div>Built ARIMA and XGboost model to predict global temperature rise, found
+                                    temperature
+                                    will reach 20°C in 2048.&nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <div>Conducted hypothesis testing and got a 97.6872% probability to reject the
+                                    assumption of
+                                    no abnormal rise in March 2022 due to the potential effect of the global
+                                    epidemic.&nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <div>Used PC algorithm and DTW to attribute temperature change to human
+                                    activities
+                                    dominating natural factors.
+                                </div>
+                            </li>
+                        </ul>
+                        <div style="position: absolute; width: 0px; height: 0px;  padding: 0px; border: 0px; margin: 0px;">
+                            <div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
+                        </div>
+                        <div style="position: absolute; width: 0px; height: 0px;  padding: 0px; border: 0px; margin: 0px;">
+                            <div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
+                        </div>
                     </div>
+                    <div class="clear"></div>
                 </div>
-                <div class="clear"></div>
+
+                <div class="item">
+                    <h3><span class="special-title l">Signal base station siting problem (MathorCup Mathematical Modeling Program)</span>
+                        <span class="date r">Apr, 2022 &mdash; Apr, 2022</span>
+                    </h3>
+                    <div class="clear"></div>
+                    <span class="position_title l">Programmer</span>
+                    <div class="info">
+                        <div style="visibility: hidden;  position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
+                            <div></div>
+                        </div>
+                        <div style="display: none;"></div>
+                        <div style="display: none;"></div>
+                        <ul>
+                            <li>
+                                <div>Implemented a particle swarm optimization model with additional coordinates
+                                    as
+                                    guide
+                                    terms for central base station planning using K-Means clustering and
+                                    incorporated
+                                    coordinates based on greedy thinking for branch base station planning. I
+                                    enhanced signal
+                                    base station optimization by partitioning map outliers.&nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <div>Refined base station coverage boundary into three principal directions,
+                                    calculating
+                                    coverage using an approximation of a circle of equal area. The line
+                                    connecting
+                                    the base
+                                    station centre and the circle determined the main direction of signal
+                                    emission.&nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <div>The improved PSO demonstrated faster convergence and higher accuracy, with
+                                    final model
+                                    parameters extracted with an error of less than 2%, outperforming the
+                                    traditional BOKM
+                                    algorithm.
+                                </div>
+                            </li>
+                        </ul>
+                        <div style="position: absolute; width: 0px; height: 0px;  padding: 0px; border: 0px; margin: 0px;">
+                            <div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="item">
+                    <h3><span
+                            class="special-title l">Speech-Recognition-Based Mechanical System for Lift Control</span>
+                        <span class="date r">Apr, 2021 &mdash; Jun, 2021</span>
+                    </h3>
+                    <div class="clear"></div>
+                    <span class="position_title l">Software Developer and Tester</span>
+                    <div class="info">
+                        <div style="visibility: hidden;  position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;">
+                            <div></div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div>Developed a Raspberry Pi-based lift control mechanism, utilizing stepper
+                                    motors,
+                                    magnetic switches, and Huawei's voice recognition API for contactless
+                                    operations
+                                    during
+                                    pandemics.&nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <div>This Python-controlled innovation secured the second prize at the 10th
+                                    Shanghai
+                                    City
+                                    University Students Mechanical Engineering Innovation Contest.
+                                </div>
+                            </li>
+                        </ul>
+                        <div style="position: absolute; width: 0px; height: 0px;  padding: 0px; border: 0px; margin: 0px;">
+                            <div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
             </div>
+            <div class="clear"></div>
+        </div>
+        <div class="section section-qualifications">
+            <h2 class="title">Reward and Certifications</h2>
+            <div class="set">
+                <div class="item">
+                <span class="info"><ul>
+                    <li><span>Huawei "Intelligence Base" Outstanding Student Scholarship (Level B, selection rate 1%)</span></li>
+                    <li><span>The Shanghai College Information Technology Level Examination in Big Data and Cloud Computing, Level 4 (Highest Level).</span></li>
+                    <li><span>The Shanghai College Information Technology Level Examination in C Programming and Application, Level 3 (Highest Level)</span></li>
+                    <li><span>The Second Prize in 10th University Students Mechanical Engineering Innovation Contest, Shanghai</span></li>
+                    <li><span>Successful Participant in COMAP Interdisciplinary Contest in Modelling (ICM)</span></li>
+                    <li><span>Successful Participant in Asia and Pacific Mathematical Contest in Modeling</span></li>
+                </ul></span>
+                </div>
+            </div>
+            <div class="clear"></div>
         </div>
     </div>
     <style>
-        main {
+        .save_tag {
+            position: relative;
+            top: 0;
+            left: 50%;
+            z-index: 1000;
+        }
+
+        .cv {
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0 100px;
             font-family: Georgia, serif, 'Trebuchet MS';
             line-height: 20px;
             font-size: 12px;
             color: #222;
         }
+
+        {#md screen#}
+        @media only screen and (max-width: 960px) {
+            .cv {
+                padding: 0 20px;
+            }
+        }
+
+        {# sm screen #}
+        @media only screen and (max-width: 768px) {
+            .cv {
+                padding: 0 0px;
+            }
+        }
+
+        {# xs screen #}
 
         h1, h2, h3, h4 {
             margin: 0 0 15px 0;
@@ -352,6 +428,12 @@
         }
 
         ul {
+            /*move bullet more left*/
+            margin-left: -15px;
+            margin-right: 0px;
+            /*justify the text*/
+            text-align: justify;
+            /*border: 3px solid #ccc;*/
             list-style-type: circle;
         }
 
@@ -377,8 +459,6 @@
             width: 900px;
             padding: 35px;
             margin: 0 auto 15px auto;
-            overflow: hidden;
-
             box-shadow: 0 0 6px #ccc;
         }
 
@@ -425,7 +505,6 @@
         .basic-info {
             margin: 0 auto 30px auto;
             width: 80%;
-            overflow: hidden;
             text-align: center;
         }
 
@@ -456,16 +535,12 @@
         }
 
         .section h3 span.l {
-            width: 75%;
+            width: 74%;
             float: left;
         }
 
         .section span.r {
-            width: 25%;
-            float: left;
-        }
-
-        .section span.r {
+            width: 26%;
             float: right;
             text-align: right;
         }
@@ -473,21 +548,22 @@
         div.info, span.info {
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .section ul li div,
-        .section ul li span {
-            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, serif;
-            font-size: 14px;
             text-align: justify;
         }
 
-        .special-subtitle,
         .section-education .school,
-        .section-work .job_title {
+        .section-work .job_title,
+        .section-qualifications .position_title {
             font-size: 120%;
             display: block;
-            margin: 5px 0 5px 0;
+            margin: 0px 0 0px 0;
+            font-style: italic;
+        }
+
+        .position_title {
+            font-size: 120%;
+            display: block;
+            margin: 0px 0 0px 0;
             font-style: italic;
         }
 
@@ -495,7 +571,6 @@
         #photo {
             width: 160px;
             height: 200px;
-            overflow: hidden;
             float: left;
             margin-top: 8px;
             border-radius: 4px;

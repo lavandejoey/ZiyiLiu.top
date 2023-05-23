@@ -19,11 +19,21 @@ file_blueprint = Blueprint(name="file", import_name=__name__, static_folder="sta
 
 
 # Custom route handler for serving static files
-@file_blueprint.route('/static/<path:filename>', methods=['GET'])
+@file_blueprint.route('/<path:filename>', methods=['GET'])
 def serve_static_file(filename):
+    # Check if 'static/files/' is in the path
+    if 'files/' in filename:
+        # Return downloadable files
+        return send_from_directory(file_blueprint.static_folder, filename, as_attachment=True)
     # Check if the request originated from the server
-    if request.remote_addr != '127.0.0.1':
+    elif '127.0.0.1' in request.remote_addr or 'localhost' in request.remote_addr:
         # Return a 403 error if the request is not from the server
         abort(403)
     # If the request is from the server, serve the static file
     return send_from_directory(file_blueprint.static_folder, filename)
+
+
+# CV and Resume
+@file_blueprint.route('/<path:filename>', methods=['GET'])
+def serve_file(filename):
+    return send_from_directory(file_blueprint.static_folder, filename, as_attachment=True)

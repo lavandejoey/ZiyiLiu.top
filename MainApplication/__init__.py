@@ -10,7 +10,7 @@ __email__ = "lavandejoey@outlook.com"
 # standard library
 
 # 3rd party packages
-from flask import Flask, redirect, url_for
+from flask import Flask
 from flask_mail import Mail
 from flask_sitemap import Sitemap
 from flask_wtf.csrf import CSRFProtect
@@ -37,6 +37,11 @@ def create_main_app():
     app.register_blueprint(blueprint=main_blueprint)
     app.register_blueprint(blueprint=file_blueprint)
     app.register_blueprint(blueprint=game_blueprint)
+
+    if app.config["DEBUG"]:
+        @app.route("/test")
+        def test_page():
+            return render_template("TEST.html")
 
     @sitemap.register_generator
     def register_generator():

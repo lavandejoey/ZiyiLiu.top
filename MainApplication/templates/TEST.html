@@ -1,10 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="d-flex flex-column vw-100 min-vh-100">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <!--SEO-->
+    <meta name="google-site-verification" content="E1oXCV_ANCQB2muNUGwjvj5K2ujmRwxgBEFkymx7k8w"/>
+    <meta name="msvalidate.01" content="D7C86AD854C0633A47D3D617B8C75BFC"/>
+    <!--IE 兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- External CSS & JS Files-->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='scss/JoshuaZiyiLiu.css') }}">
+    <link type="text/css" rel="stylesheet"
+          href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <script src="{{ url_for('static', filename='js/JoshuaZiyiLiu.js') }}"></script>
 </head>
-<body>
+<body class="d-flex flex-column flex-grow-1" style="margin: 2vmin">
+<div class="y-border fixed-top"></div>
+<div class="d-flex flex-column flex-grow-1 container-fluid position-relative bg-light">
+    {#Header#}
+    <header class="header d-flex flex-column my-3">
+        <div class="container">
+            <div class="row navbar navbar-expand-md navbar-light m-auto align-items-md-center{#vertical#}
+                {# justify-content-md-end #}{#horizonal#}">
+                <div class=" row-cols-1 row-cols-md-2 col-md-12 col-8 row align-items-md-center">
+                    {#Navbar Title#}
+                    <div class="title d-flex col-md-6 d-md-block m-0 p-0 h-100
+                align-items-md-center justify-content-start">
+                        <a href="/" class="d-flex flex-wrap text-black " style="text-decoration: none">
+                            <span class="m-0 p-0 d-inline">Hi, I'm &nbsp;</span>
+                            <span class="m-0 p-0 d-inline">Ziyi Joshua LIU</span>
+                        </a>
+                    </div>
+                    {#Navbar Links Section#}
+                    <div class="d-flex col-md-6  m-0 p-0 h-100">
+                        <div class="navbar-collapse collapse" id="headerNavbar">
+                            <div class="container">
+                                <div class="row h-auto w-100 text-center">
+                                    <ul class="navbar-nav d-flex justify-content-md-end px-xl-0 px-5 ps-md-auto text-muted"
+                                        style="padding-left: 4ch;font-size: 20px">
+                                        {# Nav Home #}
+                                        <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                            <a class="nav-link"
+                                               {% if page == 'index' %}style="text-decoration: underline"{% endif %}
+                                               href="{{ url_for('main.index_page') }}">Home</a>
+                                        </li>
+                                        {# Nav Portfolio #}
+                                        <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                            <a class="nav-link"
+                                               {% if page == 'portfolio' %}style="text-decoration: underline"{% endif %}
+                                               href="{{ url_for('main.portfolio_page') }}">Portfolio</a>
+                                        </li>
+                                        {# Nav About #}
+                                        <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                            <a class="nav-link"
+                                               {% if page == 'cv' %}style="text-decoration: underline"{% endif %}
+                                               href="{{ url_for('main.cv_page') }}">About</a>
+                                        </li>
+                                        {# Nav Contact #}
+                                        <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                            <a class="nav-link"
+                                               {% if page == 'contact' %}style="text-decoration: underline"{% endif %}
+                                               href="{{ url_for('main.contact_page') }}">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {#Navbar Button Section#}
+                <div class="d-flex d-md-none col-3 m-0 p-0 justify-content-center align-items-center h-100">
+                    <button class="navbar-toggler collapsed align-self-end" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="true"
+                            aria-label="Toggle navigation" style="border-radius: 50px">
+                        <img src="../static/img/logo-pic.png" alt="Menu Icon" style="width: 40px;height: 40px">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    {#Main Content#}
+    <main class="d-flex flex-column flex-shrink-0 flex-grow-1 mb-0 container-fluid align-items-stretch"
+          style="flex-grow: 1;">
+        <div class="container" style="flex-grow: 1;">
+            <div class="container cv">
+                <h1 id="title" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Ziyi Joshua LIU</h1>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">CV/Résumé PDF Downloader</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Please choose the version you want!</h5>
+                                <a href="{{ url_for('static', filename='files/CVen.pdf') }}">English Academic CV</a>&nbsp;
+                                <a href="{{ url_for('static', filename='files/resume_en.pdf') }}">English Résumé</a><br>
+                                <a href="{{ url_for('static', filename='files/CVcn.pdf') }}">中文学术 CV</a>&nbsp;
+                                <a href="{{ url_for('static', filename='files/resume_cn.pdf') }}">中文简历</a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let myModal = document.getElementById('myModal');
+                    let myInput = document.getElementById('myInput');  // <-- myInput is not defined in your HTML
 
+                    myModal.addEventListener('shown.bs.modal', function () {
+                        myInput.focus();  // This could cause a JavaScript error if myInput is null
+                    });
+                </script>
+            </div>
+        </div>
+    </main>
+
+    {#Footer#}
+    <footer class="d-flex flex-column justify-content-end m-0 pt-4 pb-4 text-center">
+        <!--Now I am using Singapore server no need to BEIAN!!!!
+        <p class="my-auto" style="align-items:baseline;text-decoration:none;height:auto;">
+            {#todo:网安备案信息#}
+            <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=320----------"
+               style="display:inline-flex;align-items: baseline;text-decoration:none;height:20px;line-height:20px;"
+               target="_blank" class="text-black-50">
+                <img src="../static/img/badge.svg" alt="" style="width: 14px;height: 14px">
+                &nbsp;沪公网安备 320-----------号&nbsp;|
+            </a>
+            <a href="https://beian.miit.gov.cn/"
+               style="display:inline-flex;align-items:baseline;text-decoration:none;height:20px;line-height:20px;"
+               target="_blank" class="text-black-50">互联网ICP备案：沪ICP备2021022886号-1 |
+            </a>
+            <a href="https://www.12377.cn/"
+               style="display:inline-flex;align-items:baseline;text-decoration:none;height:20px;line-height:20px;"
+               target="_blank" class="text-black-50">
+                <img src="//static.hdslb.com/images/12377.png" width="16" height="16" style="vertical-align: sub;"
+                     alt="">
+                中国互联网违法和不良信息举报中心&nbsp;|
+            </a>
+            <a href="https://www.shjbzx.cn"
+               style="display:inline-flex;align-items:baseline;text-decoration:none;height:20px;line-height:20px;"
+               target="_blank" class="text-black-50">上海互联网举报中心
+            </a>
+        </p>
+    -->
+        <p class="mt-auto my-2">
+            Copyright &copy; 2021-
+            <script type="text/javascript">document.write(new Date().getFullYear())</script>
+            JoshuaZiyiLiu.com&nbsp;All Rights Reserved.
+        </p>
+    </footer>
+    {#2vmin heigt, 100vw fixed container at the top of page#}
+</div>
+<div class="y-border fixed-bottom"></div>
 </body>
+{#External JS Files#}
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
 </html>
