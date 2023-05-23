@@ -82,17 +82,17 @@ body {
   width: 100vw;
   height: 2vmin;
   background-color: $body-bg;
-  z-index: 9001;
+  z-index: 10;
   display: none;
   @media (min-width: 768px) {
     display: block;
   }
 }
 
+
 main, footer {
   background-color: $light;
   font-family: "HarmonyOS", serif;
-  z-index: 1;
 }
 
 
