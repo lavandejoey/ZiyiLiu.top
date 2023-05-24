@@ -138,3 +138,4 @@ bash_script/
 db/
 config.py
 Designs/
+MainApplication/static/files/
