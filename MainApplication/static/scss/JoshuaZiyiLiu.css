@@ -1,18 +1,25 @@
 @charset "UTF-8";
 @font-face {
   font-family: "HarmonyOS";
-  src: url("../fonts/HarmonyOS_Sans_Black.ttf");
-  src: url("../fonts/HarmonyOS_Sans_Bold.ttf");
-  src: url("../fonts/HarmonyOS_Sans_Light.ttf");
-  src: url("../fonts/HarmonyOS_Sans_Medium.ttf");
-  src: url("../fonts/HarmonyOS_Sans_Regular.ttf");
-  src: url("../fonts/HarmonyOS_Sans_SC_Black.ttf");
-  src: url("../fonts/HarmonyOS_Sans_SC_Bold.ttf");
-  src: url("../fonts/HarmonyOS_Sans_SC_Light.ttf");
-  src: url("../fonts/HarmonyOS_Sans_SC_Medium.ttf");
-  src: url("../fonts/HarmonyOS_Sans_SC_Regular.ttf");
-  src: url("../fonts/HarmonyOS_Sans_SC_Thin.ttf");
-  src: url("../fonts/HarmonyOS_Sans_Thin.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Black.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Bold.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Light.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Medium.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Regular.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Black.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Bold.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Light.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Medium.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Regular.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Thin.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Thin.ttf");
+}
+@font-face {
+  font-family: "HandPurisa";
+  src: url("../fonts/tlwg/Purisa.ttf");
+  src: url("../fonts/tlwg/Purisa-Bold.ttf");
+  src: url("../fonts/tlwg/Purisa-BoldOblique.ttf");
+  src: url("../fonts/tlwg/Purisa-Oblique.ttf");
 }
 html {
   background: #e3d1c6;
