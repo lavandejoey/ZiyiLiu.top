@@ -11,3 +11,6 @@ __email__ = "lavandejoey@outlook.com"
 # 3rd party packages
 # local source
 from .main import *
+from .error import *
+from .file import *
+from .game import *

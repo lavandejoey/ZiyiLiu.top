@@ -31,7 +31,7 @@ body {
   width: 100vw;
   height: 2vmin;
   background-color: #e3d1c6;
-  z-index: 9001;
+  z-index: 10;
   display: none;
 }
 @media (min-width: 768px) {
@@ -43,7 +43,6 @@ body {
 main, footer {
   background-color: #f2f2f2;
   font-family: "HarmonyOS", serif;
-  z-index: 1;
 }
 
 header.at-top {
