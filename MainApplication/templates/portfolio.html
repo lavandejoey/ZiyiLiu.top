@@ -1,0 +1,35 @@
+{#portfolio#}
+{% extends "base.html" %}
+{% block content %}
+    <div class="svg-box d-flex flex-wrap align-content-around align-items-around justify-content-around row">
+        <object class="col-lg-4 flex-shrink-1" type="image/svg+xml"
+                data="https://gh-card.dev/repos/lavandejoey/rustysentry.svg?link_target=_blank"></object>
+        <object class="col-lg-4 flex-shrink-1" type="image/svg+xml"
+                data="https://gh-card.dev/repos/lavandejoey/JoshuaZiyiLiu.com.svg?link_target=_blank"></object>
+        <object class="col-lg-4 flex-shrink-1" type="image/svg+xml"
+                data="https://gh-card.dev/repos/lavandejoey/ElevatorVoiceControler.svg?link_target=_blank"></object>
+        <object class="col-lg-4 flex-shrink-1" type="image/svg+xml"
+                data="https://gh-card.dev/repos/lavandejoey/C_LibraryManagementSystem.svg?link_target=_blank"></object>
+    </div>
+    <style>
+        object {
+            align-content: center;
+            align-items: center;
+            width: 440px;
+            height: 160px;
+            max-width: 100%;
+        }
+
+        {#small devices (landscape phones, 576px and up)#}
+        @media (max-width: 768px) {
+            object {
+                width: 300px;
+                height: 160px;
+            }
+        }
+
+        g {
+            height: 100%;
+        }
+    </style>
+{% endblock %}
