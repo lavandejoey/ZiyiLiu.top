@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-24 23:13+0800\n"
+"POT-Creation-Date: 2023-05-25 00:21+0800\n"
 "PO-Revision-Date: 2023-05-24 18:16+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hans\n"
@@ -64,26 +64,26 @@ msgid "I will get back to you as soon as possible."
 msgstr "我会尽快回复你的信息。"
 
 #: templates/main/contact.html:21
-msgid "Why not E-mailing me to say"
-msgstr "欢迎发送邮件和我说"
-
-#: templates/main/contact.html:26
 msgid ""
-"<span>Or you can find me on</span>\n"
-"                                <div class='d-inline' id='social'></div>\n"
-"                                <span>as well!</span>"
-msgstr ""
-"<span>你还可以在</span>\n"
-"                                <div class='d-inline' id='social'></div>\n"
-"                                <span>找到我!</span>"
+"<span>Why not E-mailing me to say</span><div class='d-inline' "
+"id='hello'></div>"
+msgstr "<span>欢迎你的来信！</span>"
 
-#: templates/main/contact.html:57
+#: templates/main/contact.html:25
+msgid ""
+"<span>Or you can find me on</span><div class='d-inline' "
+"id='social'></div><span>as well!</span>"
+msgstr ""
+"<span>你还可以在</span><div class='d-inline' "
+"id='social'></div><span>找到我！</span>"
+
+#: templates/main/contact.html:54
 msgid "Say Hello"
-msgstr ""
+msgstr "Hello"
 
-#: templates/main/contact.html:112
+#: templates/main/contact.html:109
 msgid "&nbsp;&quest;"
-msgstr "&nbsp;&excl;"
+msgstr ""
 
 #: templates/main/cv.html:9
 msgid "Click to Save PDF~"
@@ -102,11 +102,10 @@ msgid "Close"
 msgstr "关闭"
 
 #: templates/main/cv.html:57
-#, fuzzy
 msgid ""
 "East China University of Science and Technology, Meilong Rd., Xuhui "
 "District, Shanghai, China"
-msgstr "上海市徐汇区梅陇路 130 号华东理工大学"
+msgstr "上海市徐汇区梅陇路130号华东理工大学"
 
 #: templates/main/cv.html:64
 msgid "Education"
@@ -312,12 +311,11 @@ msgid ""
 msgstr "建立并比较了 ARIMA、SARIMA 和 XGboost 模型来预测全球温度上升；发现温度将在 2048 年达到 20℃。"
 
 #: templates/main/cv.html:233
-#, fuzzy
 msgid ""
 "Conducted hypothesis testing and got a 97.6872&percnt; probability to "
 "reject the assumption of no abnormal rise in March 2022 due to the "
 "potential effect of the global epidemic.&nbsp;"
-msgstr "根据假设检验，得到 97.6872&percnt; 的概率拒绝 2022 年 3 月由于全球流行病的潜在影响而没有异常上升的假设。"
+msgstr "根据假设检验，得到 97.6872&percnt; 的概率拒绝 2022 年 3 月由于全球流行病的潜在影响而没有异常上升的假设。&nbsp;"
 
 #: templates/main/cv.html:237
 msgid ""
@@ -330,7 +328,7 @@ msgstr "使用 PC 算法和 DTW 将温度变化归因于人类活动主导了自
 msgid ""
 "Signal base station siting problem (MathorCup Mathematical Modeling "
 "Program)"
-msgstr "信号基站选址问题 ·MathorCup 数学建模"
+msgstr "信号基站选址问题 · MathorCup 数学建模"
 
 #: templates/main/cv.html:266
 msgid ""
@@ -401,11 +399,10 @@ msgid "Reward and Certifications"
 msgstr "奖状与证书"
 
 #: templates/main/cv.html:329
-#, fuzzy
 msgid ""
 "Huawei \"Intelligence Base\" Outstanding Student Scholarship (Level B, "
 "selection rate 1&percnt;)."
-msgstr "华为” 智慧基座” 优秀学生奖学金（2021 年 11 月，B 级）"
+msgstr "华为”智慧基座”优秀学生奖学金（2021 年 11 月，B 级）"
 
 #: templates/main/cv.html:330
 msgid ""
@@ -456,20 +453,4 @@ msgstr ""
 "future.\",\n"
 "                    \"Zealous to slightly differ the world.\",\n"
 "                    \"Yearning to engineer awe-inspiring wonders.\"];"
-
-#~ msgid "Say Hello"
-#~ msgstr ""
-
-#~ msgid ", Meilong Rd., Xuhui District, Shanghai, China"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The improved PSO demonstrated faster "
-#~ "convergence and higher accuracy, with "
-#~ "final\n"
-#~ "                                        model parameters"
-#~ " extracted with an error of less "
-#~ "than 2&percnt;, outperforming the\n"
-#~ "                                        traditional BOKM algorithm."
-#~ msgstr ""
 

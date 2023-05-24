@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-24 23:13+0800\n"
+"POT-Creation-Date: 2023-05-25 00:21+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hant\n"
@@ -57,33 +57,31 @@ msgstr "版權所有"
 
 #: templates/main/contact.html:11
 msgid "Thank you for your message!"
-msgstr "很高興收到你的來信！"
+msgstr ""
 
 #: templates/main/contact.html:13
 msgid "I will get back to you as soon as possible."
-msgstr "我會盡快回覆你的來信。"
+msgstr ""
 
 #: templates/main/contact.html:21
-msgid "Why not E-mailing me to say"
-msgstr "歡迎發送電子郵件和我說"
-
-#: templates/main/contact.html:26
 msgid ""
-"<span>Or you can find me on</span>\n"
-"                                <div class='d-inline' id='social'></div>\n"
-"                                <span>as well!</span>"
+"<span>Why not E-mailing me to say</span><div class='d-inline' "
+"id='hello'></div>"
 msgstr ""
-"<span>你還可以在</span>\n"
-"                                <div class='d-inline' id='social'></div>\n"
-"                                <span>找到我!</span>"
 
-#: templates/main/contact.html:57
+#: templates/main/contact.html:25
+msgid ""
+"<span>Or you can find me on</span><div class='d-inline' "
+"id='social'></div><span>as well!</span>"
+msgstr ""
+
+#: templates/main/contact.html:54
 msgid "Say Hello"
 msgstr ""
 
-#: templates/main/contact.html:112
+#: templates/main/contact.html:109
 msgid "&nbsp;&quest;"
-msgstr "&nbsp;&excl;"
+msgstr ""
 
 #: templates/main/cv.html:9
 msgid "Click to Save PDF~"
@@ -485,4 +483,35 @@ msgstr ""
 #~ "Student Scholarship (Level B, selection "
 #~ "rate 1%)."
 #~ msgstr ""
+
+#~ msgid "Why not E-mailing me to say"
+#~ msgstr "歡迎發送電子郵件和我說"
+
+#~ msgid "Thank you for your message!"
+#~ msgstr "很高興收到你的來信！"
+
+#~ msgid "I will get back to you as soon as possible."
+#~ msgstr "我會盡快回覆你的來信。"
+
+#~ msgid ""
+#~ "<span>Why not E-mailing me to "
+#~ "say</span><div class='d-inline' id='hello'></div>"
+#~ msgstr ""
+#~ "<span>你還可以在</span>\n"
+#~ "                                <div class='d-inline' "
+#~ "id='social'></div>\n"
+#~ "                                <span>找到我!</span>"
+
+#~ msgid ""
+#~ "<span>Or you can find me on</span><div"
+#~ " class='d-inline' id='social'></div><span>as "
+#~ "well!</span>"
+#~ msgstr ""
+#~ "<span>你還可以在</span>\n"
+#~ "                                <div class='d-inline' "
+#~ "id='social'></div>\n"
+#~ "                                <span>找到我!</span>"
+
+#~ msgid "&nbsp;&quest;"
+#~ msgstr "&nbsp;&excl;"
 

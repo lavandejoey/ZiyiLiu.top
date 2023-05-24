@@ -18,14 +18,11 @@
                     <div class="d-flex flex-fill flex-row flex-column mt-4 p-4" style="min-width: 50%">
                         {# Various language for "Say Hello!" #}
                         <div class="container">
-                            <span>{{ _("Why not E-mailing me to say") }}</span>
-                            <div class="d-inline" id="hello"></div>
+                            {{ _("<span>Why not E-mailing me to say</span><div class=\'d-inline\' id=\'hello\'></div>") }}
                         </div>
                         {# Additional information #}
                         <div class="container">
-                            {{ _("<span>Or you can find me on</span>
-                                <div class='d-inline' id='social'></div>
-                                <span>as well!</span>") }}
+                            {{ _("<span>Or you can find me on</span><div class=\'d-inline\' id=\'social\'></div><span>as well!</span>") }}
                         </div>
                     </div>
                     {#Forms and submit#}
@@ -37,7 +34,7 @@
                                 {{ form.csrf_token }}
                                 <div class="row">
                                     <div class="col form-group my-4">
-                                        {{ form.name(type="text", class="form-control", id="name", placeholder="Your preferred name?", required=True) }}
+                                        {{ form.name(type="text", class="form-control", id="name", placeholder="Your preferred name&quest;", required=True) }}
                                     </div>
                                     <div class="col form-group my-4">
                                         {#<input type="email" class="form-control" id="email" name="email"#}

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-24 23:13+0800\n"
+"POT-Creation-Date: 2023-05-25 00:21+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -57,33 +57,31 @@ msgstr "Tous les droits sont réservés"
 
 #: templates/main/contact.html:11
 msgid "Thank you for your message!"
-msgstr "Merci pour votre message!"
+msgstr ""
 
 #: templates/main/contact.html:13
 msgid "I will get back to you as soon as possible."
-msgstr "Je vous répondrai dès que possible."
+msgstr ""
 
 #: templates/main/contact.html:21
-msgid "Why not E-mailing me to say"
-msgstr "Pourquoi ne pas e-mail de"
-
-#: templates/main/contact.html:26
 msgid ""
-"<span>Or you can find me on</span>\n"
-"                                <div class='d-inline' id='social'></div>\n"
-"                                <span>as well!</span>"
+"<span>Why not E-mailing me to say</span><div class='d-inline' "
+"id='hello'></div>"
 msgstr ""
-"<span>Ou vous pouvez aussi me trouver sur</span>\n"
-"                                <div class='d-inline' id='social'></div>\n"
-"                                <span>!</span>"
 
-#: templates/main/contact.html:57
+#: templates/main/contact.html:25
+msgid ""
+"<span>Or you can find me on</span><div class='d-inline' "
+"id='social'></div><span>as well!</span>"
+msgstr ""
+
+#: templates/main/contact.html:54
 msgid "Say Hello"
 msgstr ""
 
-#: templates/main/contact.html:112
+#: templates/main/contact.html:109
 msgid "&nbsp;&quest;"
-msgstr "&nbsp;&quest;"
+msgstr ""
 
 #: templates/main/cv.html:9
 msgid "Click to Save PDF~"
@@ -485,4 +483,38 @@ msgstr ""
 #~ "Student Scholarship (Level B, selection "
 #~ "rate 1%)."
 #~ msgstr ""
+
+#~ msgid "Why not E-mailing me to say"
+#~ msgstr "Pourquoi ne pas e-mail de"
+
+#~ msgid "Thank you for your message!"
+#~ msgstr "Merci pour votre message!"
+
+#~ msgid "I will get back to you as soon as possible."
+#~ msgstr "Je vous répondrai dès que possible."
+
+#~ msgid ""
+#~ "<span>Why not E-mailing me to "
+#~ "say</span><div class='d-inline' id='hello'></div>"
+#~ msgstr ""
+#~ "<span>Ou vous pouvez aussi me trouver sur</span>\n"
+#~ "                                <div class='d-inline' "
+#~ "id='social'></div>\n"
+#~ "                                <span>!</span>"
+
+#~ msgid ""
+#~ "<span>Or you can find me on</span><div"
+#~ " class='d-inline' id='social'></div><span>as "
+#~ "well!</span>"
+#~ msgstr ""
+#~ "<span>Ou vous pouvez aussi me trouver sur</span>\n"
+#~ "                                <div class='d-inline' "
+#~ "id='social'></div>\n"
+#~ "                                <span>!</span>"
+
+#~ msgid "Say Hello"
+#~ msgstr ""
+
+#~ msgid "&nbsp;&quest;"
+#~ msgstr "&nbsp;&quest;"
 
