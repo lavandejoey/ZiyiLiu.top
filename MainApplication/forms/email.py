@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# email.py
+# forms/email.py
 __author__ = "lavandejoey, Ziyi LIU"
 __copyright__ = "Copyright 2023"
 __license__ = ""

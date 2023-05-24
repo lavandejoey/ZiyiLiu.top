@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="d-flex flex-column vw-100 min-vh-100">
+<html lang="{{ g.current_lang }}" class="d-flex flex-column vw-100 min-vh-100">
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
     <!--SEO-->
     <meta name="google-site-verification" content="E1oXCV_ANCQB2muNUGwjvj5K2ujmRwxgBEFkymx7k8w"/>
-    <meta name="msvalidate.01" content="D7C86AD854C0633A47D3D617B8C75BFC" />
+    <meta name="msvalidate.01" content="D7C86AD854C0633A47D3D617B8C75BFC"/>
     <!--IE 兼容模式-->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,47 +24,73 @@
     {#Header#}
     <header class="header d-flex flex-column my-3">
         <div class="container">
-            <div class="row navbar navbar-expand-md navbar-light m-auto align-items-md-center{#vertical#}
-                {# justify-content-md-end #}{#horizonal#}">
-                <div class=" row-cols-1 row-cols-md-2 col-md-12 col-8 row align-items-md-center">
+            <div class="d-flex row navbar navbar-expand-md navbar-light m-auto align-items-md-center{#vertical#}
+                justify-content-center{#horizonal#}">
+                <div class="row-cols-1 row-cols-md-2 col-md-12 col-10 row align-items-md-center">
                     {#Navbar Title#}
-                    <div class="title d-flex col-md-6 d-md-block m-0 p-0 h-100
+                    <div class="title d-flex col-md-4 d-md-block m-0 p-0 h-100
                 align-items-md-center justify-content-start">
                         <a href="/" class="d-flex flex-wrap text-black " style="text-decoration: none">
-                            <span class="m-0 p-0 d-inline">Hi, I'm &nbsp;</span>
-                            <span class="m-0 p-0 d-inline">Ziyi Joshua LIU</span>
+                            <span class="m-0 p-0 d-inline">{{ _("Hi, I'm") }} &nbsp;</span>
+                            <span class="m-0 p-0 d-inline">{{ _("Ziyi Joshua LIU") }}</span>
                         </a>
                     </div>
                     {#Navbar Links Section#}
-                    <div class="d-flex col-md-6  m-0 p-0 h-100">
+                    <div class="d-flex col-md-8 m-0 p-0 h-100">
                         <div class="navbar-collapse collapse" id="headerNavbar">
-                            <div class="container">
-                                <div class="row h-auto w-100 text-center">
-                                    <ul class="navbar-nav d-flex justify-content-md-end px-xl-0 px-5 ps-md-auto text-muted"
+                            <div class="d-flex flex-fill container">
+                                <div class="d-flex flex-fill row h-auto w-100 text-center">
+                                    <ul class="navbar-nav d-flex flex-wrap justify-content-md-around justify-content-center px-xl-0 px-5 ps-md-auto text-muted"
                                         style="padding-left: 4ch;font-size: 20px">
                                         {# Nav Home #}
-                                        <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                        <li class="nav-item flex-inline mx-0 mx-xl-1" style="min-width: 15%">
                                             <a class="nav-link"
                                                {% if page == 'index' %}style="text-decoration: underline"{% endif %}
-                                               href="{{ url_for('main.index_page') }}">Home</a>
+                                               href="{{ url_for('main.index_page') }}">{{ _("Home") }}</a>
                                         </li>
                                         {# Nav Portfolio #}
-                                        <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                        <li class="nav-item flex-inline mx-0 mx-xl-1" style="min-width: 15%">
                                             <a class="nav-link"
                                                {% if page == 'portfolio' %}style="text-decoration: underline"{% endif %}
-                                               href="{{ url_for('main.portfolio_page') }}">Portfolio</a>
+                                               href="{{ url_for('main.portfolio_page') }}">{{ _("Portfolio") }}</a>
                                         </li>
                                         {# Nav About #}
-                                        <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                        <li class="nav-item flex-inline mx-0 mx-xl-1" style="min-width: 15%">
                                             <a class="nav-link"
                                                {% if page == 'cv' %}style="text-decoration: underline"{% endif %}
-                                               href="{{ url_for('main.cv_page') }}">About</a>
+                                               href="{{ url_for('main.cv_page') }}">{{ _("About") }}</a>
                                         </li>
                                         {# Nav Contact #}
-                                        <li class="nav-item mx-0 mx-xl-1" style="min-width: 15%">
+                                        <li class="nav-item flex-inline mx-0 mx-xl-1" style="min-width: 15%">
                                             <a class="nav-link"
                                                {% if page == 'contact' %}style="text-decoration: underline"{% endif %}
-                                               href="{{ url_for('main.contact_page') }}">Contact</a>
+                                               href="{{ url_for('main.contact_page') }}">{{ _("Contact") }}</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                               role="button"
+                                               data-bs-toggle="dropdown" aria-expanded="false">En/简/繁/Fr</a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li class="d-flex justify-content-center">
+                                                    <a class="link" style="text-decoration: none"
+                                                       href="{{ url_for('ip.set_locale', language='zh_Hans') }}">中文</a>
+                                                </li>
+                                                <li class="d-flex justify-content-center">
+                                                    <a class="link" style="text-decoration: none"
+                                                       href="{{ url_for('ip.set_locale', language='yue') }}">廣東話</a>
+                                                </li>
+                                                <li class="d-flex justify-content-center">
+                                                    <a class="link" style="text-decoration: none"
+                                                       href="{{ url_for('ip.set_locale', language='en') }}">English</a>
+                                                </li>
+                                                <li class="d-flex justify-content-center">
+                                                    <a class="link" style="text-decoration: none"
+                                                       href="{{ url_for('ip.set_locale', language='fr') }}">Français</a>
+                                                </li>
+                                            </ul>
+                                            <style>.dropdown-toggle::after {
+                                                display: none;
+                                            }</style>
                                         </li>
                                     </ul>
                                 </div>
@@ -73,7 +99,7 @@
                     </div>
                 </div>
                 {#Navbar Button Section#}
-                <div class="d-flex d-md-none col-3 m-0 p-0 justify-content-center align-items-center h-100">
+                <div class="d-md-none col-2 m-0 p-0 justify-content-center align-items-center h-100">
                     <button class="navbar-toggler collapsed align-self-end" type="button" data-bs-toggle="collapse"
                             data-bs-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="true"
                             aria-label="Toggle navigation" style="border-radius: 50px">
@@ -92,7 +118,7 @@
     </main>
     {#Footer#}
     <footer class="d-flex flex-column justify-content-end m-0 pt-4 pb-4 text-center">
-    <!--Now I am using Singapore server no need to BEIAN!!!!
+        <!--Now I am using Singapore server no need to BEIAN!!!!
         <p class="my-auto" style="align-items:baseline;text-decoration:none;height:auto;">
             {#todo:网安备案信息#}
             <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=320----------"
@@ -121,7 +147,7 @@
         <p class="mt-auto my-2">
             Copyright &copy; 2021-
             <script type="text/javascript">document.write(new Date().getFullYear())</script>
-            JoshuaZiyiLiu.com&nbsp;All Rights Reserved.
+            JoshuaZiyiLiu.com&nbsp;{{ _("All Rights Reserved") }}.
         </p>
     </footer>
     {#2vmin heigt, 100vw fixed container at the top of page#}

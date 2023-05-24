@@ -6,7 +6,7 @@
             <div class="d-flex flex-wrap py-0 align-items-stretch justify-content-start">
                 {#I am#}
                 <span class="pre-description flex-inline mx-0 my-2 d-inline-block"
-                      style="padding: 5px 0px;font-size: xxx-large">I am&nbsp;</span>
+                      style="padding: 5px 0px;font-size: xxx-large">{{ _("I am")}}&nbsp;</span>
                 {#Descriptions#}
                 <span class="flex-inline mx-0 my-2 text-white"
                       style="background-color:black; padding: 5px 10px;font-size: xxx-large;font-weight:bold;">
@@ -17,11 +17,11 @@
     </div>
 
     <script>
-        const descriptionStr = ["striving at engineering.",
-            "Journeying through the tech and design.",
-            "Luminous harnessing tech power for inclusive future.",
-            "Zealous to slightly differ the world.",
-            "Yearning to engineer awe-inspiring wonders."];
+        {{ _('const descriptionStr = ["striving at engineering.",
+                    "Journeying through the tech and design.",
+                    "Luminous harnessing tech power for inclusive future.",
+                    "Zealous to slightly differ the world.",
+                    "Yearning to engineer awe-inspiring wonders."];') }}
         const targetContainer = document.getElementsByClassName('description-container')[0];
         const containerWidth = targetContainer.offsetWidth
         const preDescription = document.getElementsByClassName('pre-description')[0];
@@ -104,7 +104,7 @@
                     letter_js[target_i]++;
                     targets[target_i].innerHTML = currentWord.substring(letter_is[target_i], letter_js[target_i]);
                     targets[target_i].classList.remove('d-none');
-                } else if (letter_js[target_i] === currentWord.length) { // end typing (row_letter<w)
+                } else if (letter_js[target_i] >= currentWord.length) { // end typing (row_letter<w)
                     boolWait = true;
                     setTimeout(function () {
                         isDeleting = true;

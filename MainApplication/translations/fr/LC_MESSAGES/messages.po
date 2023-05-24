@@ -1,0 +1,488 @@
+# French translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-05-24 23:13+0800\n"
+"PO-Revision-Date: 2023-05-24 21:54+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: templates/TEST.html:6
+msgid "Hello World!"
+msgstr ""
+
+#: templates/TEST.html:12
+#, python-format
+msgid "Current language is %(language)s"
+msgstr ""
+
+#: templates/base.html:34
+msgid "Hi, I'm"
+msgstr "Bonjour, je suis"
+
+#: templates/base.html:35 templates/main/cv.html:14
+msgid "Ziyi Joshua LIU"
+msgstr "Ziyi Joshua LIU"
+
+#: templates/base.html:49
+msgid "Home"
+msgstr "Accueil"
+
+#: templates/base.html:55
+msgid "Portfolio"
+msgstr "Portefeuille"
+
+#: templates/base.html:61
+msgid "About"
+msgstr "À propos"
+
+#: templates/base.html:67
+msgid "Contact"
+msgstr "Contact"
+
+#: templates/base.html:150
+msgid "All Rights Reserved"
+msgstr "Tous les droits sont réservés"
+
+#: templates/main/contact.html:11
+msgid "Thank you for your message!"
+msgstr "Merci pour votre message!"
+
+#: templates/main/contact.html:13
+msgid "I will get back to you as soon as possible."
+msgstr "Je vous répondrai dès que possible."
+
+#: templates/main/contact.html:21
+msgid "Why not E-mailing me to say"
+msgstr "Pourquoi ne pas e-mail de"
+
+#: templates/main/contact.html:26
+msgid ""
+"<span>Or you can find me on</span>\n"
+"                                <div class='d-inline' id='social'></div>\n"
+"                                <span>as well!</span>"
+msgstr ""
+"<span>Ou vous pouvez aussi me trouver sur</span>\n"
+"                                <div class='d-inline' id='social'></div>\n"
+"                                <span>!</span>"
+
+#: templates/main/contact.html:57
+msgid "Say Hello"
+msgstr ""
+
+#: templates/main/contact.html:112
+msgid "&nbsp;&quest;"
+msgstr "&nbsp;&quest;"
+
+#: templates/main/cv.html:9
+msgid "Click to Save PDF~"
+msgstr "Cliquez pour enregistrer PDF~"
+
+#: templates/main/cv.html:19
+msgid "CV/Résumé PDF Downloader"
+msgstr "Télécharger de CV/Résumé PDF"
+
+#: templates/main/cv.html:23
+msgid "Please choose the version you want!"
+msgstr "S'il vous plaît choisir la version que vous voulez!"
+
+#: templates/main/cv.html:46
+msgid "Close"
+msgstr "Fermer"
+
+#: templates/main/cv.html:57
+msgid ""
+"East China University of Science and Technology, Meilong Rd., Xuhui "
+"District, Shanghai, China"
+msgstr ""
+
+#: templates/main/cv.html:64
+msgid "Education"
+msgstr ""
+
+#: templates/main/cv.html:67
+msgid "BEng Major in Intelligence and Robotics (Robotics)."
+msgstr ""
+
+#: templates/main/cv.html:68
+msgid "Sept, 2020"
+msgstr ""
+
+#: templates/main/cv.html:68
+msgid "Jul, 2024"
+msgstr ""
+
+#: templates/main/cv.html:71 templates/main/cv.html:97
+msgid "East China University of Science and Technology"
+msgstr ""
+
+#: templates/main/cv.html:72
+msgid "Relevant Courses:"
+msgstr ""
+
+#: templates/main/cv.html:76
+msgid "Mathematical Foundations for Artificial Intelligence"
+msgstr ""
+
+#: templates/main/cv.html:78
+msgid "Principles and Design of Embedded Systems"
+msgstr ""
+
+#: templates/main/cv.html:80
+msgid "Pattern Learning and Machine Learning"
+msgstr ""
+
+#: templates/main/cv.html:81
+msgid "Machine Learning Tools and Platforms"
+msgstr ""
+
+#: templates/main/cv.html:82
+msgid "Robotics Principles and Design"
+msgstr ""
+
+#: templates/main/cv.html:83
+msgid "Computer Graphic"
+msgstr ""
+
+#: templates/main/cv.html:93
+msgid "Mini-major Diploma Major in Computer Science and Technology"
+msgstr ""
+
+#: templates/main/cv.html:94
+msgid "Oct, 2021"
+msgstr ""
+
+#: templates/main/cv.html:94 templates/main/cv.html:110
+#: templates/main/cv.html:166
+msgid "Feb, 2023"
+msgstr ""
+
+#: templates/main/cv.html:98
+msgid "Relevant courses:"
+msgstr ""
+
+#: templates/main/cv.html:98
+msgid ""
+"Data Structures and Algorithms, Principles of Database Systems, Operating"
+" Systems, Software Engineering, Computer Networking."
+msgstr ""
+
+#: templates/main/cv.html:106
+msgid "Internship"
+msgstr ""
+
+#: templates/main/cv.html:109
+msgid "Bank of Communication Financial Technology Co,Ltd."
+msgstr ""
+
+#: templates/main/cv.html:110 templates/main/cv.html:213
+msgid "Dec, 2022"
+msgstr ""
+
+#: templates/main/cv.html:113
+msgid "Back-end Developer"
+msgstr ""
+
+#: templates/main/cv.html:118
+msgid ""
+"Created an updated HRM using a low-code platform and its APIs, designed "
+"its relational database and automated the process from pre-employment to "
+"employee management."
+msgstr ""
+
+#: templates/main/cv.html:122
+msgid ""
+"Developed OCR APIs for HRM (Human Resource Management) using the OpenAPI "
+"standard, improving the efficiency and accuracy of data capture."
+msgstr ""
+
+#: templates/main/cv.html:126
+msgid ""
+"Participated in the DevOps process for the company's supply chain and "
+"debt management platform, contributing to integration testing, "
+"compilation, deployment and test case management."
+msgstr ""
+
+#: templates/main/cv.html:135
+msgid "ISCAS (Institute of Software Chinese Academy of Sciences)"
+msgstr ""
+
+#: templates/main/cv.html:136 templates/main/cv.html:254
+msgid "Apr, 2022"
+msgstr ""
+
+#: templates/main/cv.html:136
+msgid "Sep, 2022"
+msgstr ""
+
+#: templates/main/cv.html:139
+msgid "Development and Testing"
+msgstr ""
+
+#: templates/main/cv.html:144
+msgid ""
+"Tested and packaged software such as Autoconf-2.13 and Pijul on the "
+"openEuler platform, ensuring compatibility and functionality within the "
+"openEuler operating system."
+msgstr ""
+
+#: templates/main/cv.html:149
+msgid ""
+"Developed \"rsensleak\" partially, a document-sensitive information "
+"recognition tool based on Rust, which analyses documents and identifies "
+"sensitive information such as passwords, key tokens, and private "
+"information."
+msgstr ""
+
+#: templates/main/cv.html:161
+msgid "Academic Projects"
+msgstr ""
+
+#: templates/main/cv.html:165
+msgid ""
+"Light pollution assessment and prediction (COMAP Interdisciplinary "
+"Contest in Modelling (ICM))"
+msgstr ""
+
+#: templates/main/cv.html:169 templates/main/cv.html:216
+#: templates/main/cv.html:257
+msgid "Programmer"
+msgstr ""
+
+#: templates/main/cv.html:181
+msgid ""
+"Developing a light pollution level evaluation system, utilising data "
+"related to\n"
+"                                        social development, industrial "
+"levels, and ecological conditions as evaluation\n"
+"                                        variables.&nbsp;"
+msgstr ""
+
+#: templates/main/cv.html:187
+msgid ""
+"Collecting, cleaning and mining historical data in eight different "
+"eastern and\n"
+"                                        western United States regions, "
+"and the data extracted from satellite remote sensing\n"
+"                                        maps and GIS information as "
+"criteria for current light pollution levels. Fitting\n"
+"                                        them to conduct the evaluation "
+"index parameters.&nbsp;"
+msgstr ""
+
+#: templates/main/cv.html:194
+msgid ""
+"Using both subjective and objective evaluation methods, including "
+"individual\n"
+"                                        evaluations using DEMATEL and "
+"network analysis (ANP). And using multiple regression\n"
+"                                        analysis for accurate testing and"
+" assessment."
+msgstr ""
+
+#: templates/main/cv.html:212
+msgid ""
+"Time Series Based Climate Prediction and Attribution Analysis (APMCM "
+"Mathematical Modeling Contest)"
+msgstr ""
+
+#: templates/main/cv.html:228
+msgid ""
+"Built ARIMA and XGboost model to predict global temperature rise, found\n"
+"                                        temperature will reach 20°C in "
+"2048.&nbsp;"
+msgstr ""
+
+#: templates/main/cv.html:233
+msgid ""
+"Conducted hypothesis testing and got a 97.6872&percnt; probability to "
+"reject the assumption of no abnormal rise in March 2022 due to the "
+"potential effect of the global epidemic.&nbsp;"
+msgstr ""
+
+#: templates/main/cv.html:237
+msgid ""
+"Used PC algorithm and DTW to attribute temperature change to human "
+"activities\n"
+"                                        dominating natural factors."
+msgstr ""
+
+#: templates/main/cv.html:253
+msgid ""
+"Signal base station siting problem (MathorCup Mathematical Modeling "
+"Program)"
+msgstr ""
+
+#: templates/main/cv.html:266
+msgid ""
+"Implemented a particle swarm optimization model with additional "
+"coordinates as\n"
+"                                        guide terms for central base "
+"station planning using K-Means clustering and\n"
+"                                        incorporated coordinates based on"
+" greedy thinking for branch base station planning.\n"
+"                                        I enhanced signal base station "
+"optimization by partitioning map outliers.&nbsp;"
+msgstr ""
+
+#: templates/main/cv.html:273
+msgid ""
+"Refined base station coverage boundary into three principal directions,\n"
+"                                        calculating coverage using an "
+"approximation of a circle of equal area. The line\n"
+"                                        connecting the base station "
+"centre and the circle determined the main direction of\n"
+"                                        signal emission.&nbsp;"
+msgstr ""
+
+#: templates/main/cv.html:280
+msgid ""
+"The improved PSO demonstrated faster convergence and higher accuracy, "
+"with final\n"
+"                                        model parameters extracted with "
+"an error of less than 2&percnt;, outperforming the\n"
+"                                        traditional BOKM algorithm."
+msgstr ""
+
+#: templates/main/cv.html:295
+msgid "Speech-Recognition-Based Mechanical System for Lift Control"
+msgstr ""
+
+#: templates/main/cv.html:296
+msgid "Apr, 2021"
+msgstr ""
+
+#: templates/main/cv.html:296
+msgid "Jun, 2021"
+msgstr ""
+
+#: templates/main/cv.html:299
+msgid "Software Developer and Tester"
+msgstr ""
+
+#: templates/main/cv.html:306
+msgid ""
+"Developed a Raspberry Pi-based lift control mechanism, utilizing stepper "
+"motors, magnetic switches, and Huawei's voice recognition API for "
+"contactless operations during pandemics.&nbsp;"
+msgstr ""
+
+#: templates/main/cv.html:310
+msgid ""
+"This Python-controlled innovation secured the second prize at the 10th "
+"Shanghai\n"
+"                                    City University Students Mechanical "
+"Engineering Innovation Contest."
+msgstr ""
+
+#: templates/main/cv.html:325
+msgid "Reward and Certifications"
+msgstr ""
+
+#: templates/main/cv.html:329
+msgid ""
+"Huawei \"Intelligence Base\" Outstanding Student Scholarship (Level B, "
+"selection rate 1&percnt;)."
+msgstr ""
+
+#: templates/main/cv.html:330
+msgid ""
+"The Shanghai College Information Technology Level Examination in Big Data"
+" and Cloud Computing, Level 4 (Highest Level)."
+msgstr ""
+
+#: templates/main/cv.html:331
+msgid ""
+"The Shanghai College Information Technology Level Examination in C "
+"Programming and Application, Level 3 (Highest Level)."
+msgstr ""
+
+#: templates/main/cv.html:332
+msgid ""
+"The Second Prize in 10th University Students Mechanical Engineering "
+"Innovation Contest, Shanghai."
+msgstr ""
+
+#: templates/main/cv.html:333
+msgid ""
+"Successful Participant in COMAP Interdisciplinary Contest in Modelling "
+"(ICM)."
+msgstr ""
+
+#: templates/main/cv.html:334
+msgid ""
+"Successful Participant in Asia and Pacific Mathematical Contest in "
+"Modeling."
+msgstr ""
+
+#: templates/main/index.html:9
+msgid "I am"
+msgstr "Je suis"
+
+#: templates/main/index.html:20
+msgid ""
+"const descriptionStr = [\"striving at engineering.\",\n"
+"                    \"Journeying through the tech and design.\",\n"
+"                    \"Luminous harnessing tech power for inclusive "
+"future.\",\n"
+"                    \"Zealous to slightly differ the world.\",\n"
+"                    \"Yearning to engineer awe-inspiring wonders.\"];"
+msgstr ""
+"const descriptionStr = [\"en train de m\\'efforcer pour devenir "
+"ingénieur.\",\n"
+"                    \"Joyeux face aux possibilités offertes par la "
+"technologie et le design.\",\n"
+"                    \"Lucide en exploitant le pouvoir de la technologie "
+"pour un avenir inclusif.\",\n"
+"                    \"Zélé pour différencier légèrement le monde.\",\n"
+"                    \"Ympatient d\\'ingénierer des merveilles "
+"inspirantes.\"];"
+
+#~ msgid ", Meilong Rd., Xuhui District, Shanghai, China"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Conducted hypothesis testing and got a"
+#~ " 97.6872% probability to reject the\n"
+#~ "                                        assumption of "
+#~ "no abnormal rise in March 2022 due"
+#~ " to the potential effect of the\n"
+#~ ""
+#~ "                                        global epidemic.&nbsp;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Conducted hypothesis testing and got a"
+#~ " 97.6872% probability to reject the "
+#~ "assumption of no abnormal rise in "
+#~ "March 2022 due to the potential "
+#~ "effect of the global epidemic.&nbsp;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The improved PSO demonstrated faster "
+#~ "convergence and higher accuracy, with "
+#~ "final\n"
+#~ "                                        model parameters"
+#~ " extracted with an error of less "
+#~ "than 2%, outperforming the\n"
+#~ "                                        traditional BOKM algorithm."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Huawei \"Intelligence Base\" Outstanding "
+#~ "Student Scholarship (Level B, selection "
+#~ "rate 1%)."
+#~ msgstr ""
+
