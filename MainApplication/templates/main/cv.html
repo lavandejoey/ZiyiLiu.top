@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="container" style="height: 50px">
+    <div class="container-fluid d-flex m-0 p-0" style="height: 50px;">
         <div class="save_tag">
             {# A fixed arrow img #}
             <img src="{{ url_for('static', filename='img/arrow1.png') }}" alt="arrow" class="arrow"
@@ -16,25 +16,31 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content" style="z-index: 5000">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel">CV/Résumé PDF Downloader</h4>
+                        <h2 class="modal-title" id="myModalLabel">CV/Résumé PDF Downloader</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="d-flex flex-fill flex-column modal-body">
-                        <h5>Please choose the version you want!</h5>
-                        <table style="font-size: medium">
-                            <tr>
-                                <td><a href="{{ url_for('static', filename='files/CVen.pdf') }}">English Academic CV</a></td>
-                                <td><a href="{{ url_for('static', filename='files/resume_en.pdf') }}">English Résumé</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="{{ url_for('static', filename='files/CVcn.pdf') }}">中文学术 CV</a></td>
-                                <td><a href="{{ url_for('static', filename='files/resume_cn.pdf') }}">中文简历</a></td>
-                            </tr>
-                        </table>
+                    <div class="modal-body">
+                        <h4>Please choose the version you want!</h4>
+                        <div class="d-flex flex-wrap" style="font-size: large">
+                            <span class="mx-2 my-3 flex-inline">
+                                <a style="text-decoration: none" target="_self" href="{{ url_for('static', filename='files/CVen.pdf') }}">English&nbsp;Academic&nbsp;CV</a>
+                            </span>
+                            <span class="mx-2 my-3 flex-inline">
+                                <a style="text-decoration: none" target="_self" href="{{ url_for('static', filename='files/resume_en.pdf') }}">English&nbsp;Résumé</a>
+                            </span>
+                            <span class="mx-2 my-3 flex-inline">
+                                <a style="text-decoration: none" target="_self" href="{{ url_for('static', filename='files/CVcn.pdf') }}">中文学术&nbsp;CV</a>
+                            </span>
+                            <span class="mx-2 my-3 flex-inline">
+                                <a style="text-decoration: none" target="_self" href="{{ url_for('static', filename='files/resume_cn.pdf') }}">中文简历</a>
+                            </span>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         {# Close modal button #}
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">
+                            Close
+                        </button>
                     </div>
                 </div>
             </div>
@@ -377,7 +383,15 @@
             position: relative;
             top: 0;
             left: 50%;
-            z-index: 1000;
+        }
+
+        {#screen sm#}
+        @media only screen and (max-width: 320px) {
+            .save_tag {
+                position: relative;
+                top: 0;
+                left: 30%;
+            }
         }
 
         .cv {
