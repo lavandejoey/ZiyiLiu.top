@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-25 00:21+0800\n"
+"POT-Creation-Date: 2023-05-25 12:30+0800\n"
 "PO-Revision-Date: 2023-05-24 18:16+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hans\n"
@@ -65,9 +65,9 @@ msgstr "我会尽快回复你的信息。"
 
 #: templates/main/contact.html:21
 msgid ""
-"<span>Why not E-mailing me to say</span><div class='d-inline' "
+"<span>Why not E-mailing me to say&nbsp;</span><div class='d-inline' "
 "id='hello'></div>"
-msgstr "<span>欢迎你的来信！</span>"
+msgstr "<span>欢迎你的来信！&nbsp;</span>"
 
 #: templates/main/contact.html:25
 msgid ""
@@ -77,13 +77,25 @@ msgstr ""
 "<span>你还可以在</span><div class='d-inline' "
 "id='social'></div><span>找到我！</span>"
 
+#: templates/main/contact.html:37
+msgid "Your preferred name&quest;"
+msgstr "如何称呼你？"
+
+#: templates/main/contact.html:42
+msgid "Where can I reach you via email?"
+msgstr "你的邮箱？"
+
+#: templates/main/contact.html:50
+msgid "Plz feel free to send whatever you want to talk with me!"
+msgstr "请写下你的来信内容！"
+
 #: templates/main/contact.html:54
 msgid "Say Hello"
 msgstr "Hello"
 
 #: templates/main/contact.html:109
 msgid "&nbsp;&quest;"
-msgstr ""
+msgstr "&nbsp;&quest;"
 
 #: templates/main/cv.html:9
 msgid "Click to Save PDF~"
@@ -111,21 +123,21 @@ msgstr "上海市徐汇区梅陇路130号华东理工大学"
 msgid "Education"
 msgstr "教育背景"
 
-#: templates/main/cv.html:67
-msgid "BEng Major in Intelligence and Robotics (Robotics)."
-msgstr "智能与机器人工科试验班（机械设计制造及其自动化方向）"
+#: templates/main/cv.html:67 templates/main/cv.html:93
+msgid "East China University of Science and Technology"
+msgstr "华东理工大学"
 
-#: templates/main/cv.html:68
+#: templates/main/cv.html:68 templates/main/cv.html:329
 msgid "Sept, 2020"
-msgstr "2020 年 9 月"
+msgstr "2020年09月"
 
 #: templates/main/cv.html:68
 msgid "Jul, 2024"
-msgstr "2024 年 7 月"
+msgstr "2024年07月"
 
-#: templates/main/cv.html:71 templates/main/cv.html:97
-msgid "East China University of Science and Technology"
-msgstr "华东理工大学"
+#: templates/main/cv.html:71
+msgid "BEng Major in Intelligence and Robotics (Robotics)."
+msgstr "智能与机器人工科试验班（机械设计制造及其自动化方向）"
 
 #: templates/main/cv.html:72
 msgid "Relevant Courses:"
@@ -155,18 +167,18 @@ msgstr "机器人原理与设计"
 msgid "Computer Graphic"
 msgstr "计算机图形学"
 
-#: templates/main/cv.html:93
-msgid "Mini-major Diploma Major in Computer Science and Technology"
-msgstr "计算机科学与技术（微专业）"
-
 #: templates/main/cv.html:94
 msgid "Oct, 2021"
-msgstr "2021 年 10 月"
+msgstr "2021年10月"
 
 #: templates/main/cv.html:94 templates/main/cv.html:110
 #: templates/main/cv.html:166
 msgid "Feb, 2023"
-msgstr "2023 年 2 月"
+msgstr "2023年02月"
+
+#: templates/main/cv.html:97
+msgid "Mini-major Diploma Major in Computer Science and Technology"
+msgstr "计算机科学与技术（微专业）"
 
 #: templates/main/cv.html:98
 msgid "Relevant courses:"
@@ -186,9 +198,9 @@ msgstr "实习经历"
 msgid "Bank of Communication Financial Technology Co,Ltd."
 msgstr "交银金融科技有限公司"
 
-#: templates/main/cv.html:110 templates/main/cv.html:213
+#: templates/main/cv.html:110 templates/main/cv.html:206
 msgid "Dec, 2022"
-msgstr "2022 年 12 月"
+msgstr "2022年12月"
 
 #: templates/main/cv.html:113
 msgid "Back-end Developer"
@@ -218,13 +230,13 @@ msgstr "参与公司供应链和债权管理平台的 DevOps 进程，参与设�
 msgid "ISCAS (Institute of Software Chinese Academy of Sciences)"
 msgstr "中国科学院软件研究所 (ISCAS)"
 
-#: templates/main/cv.html:136 templates/main/cv.html:254
+#: templates/main/cv.html:136 templates/main/cv.html:245
 msgid "Apr, 2022"
-msgstr "2022 年 4 月"
+msgstr "2022年04月"
 
 #: templates/main/cv.html:136
-msgid "Sep, 2022"
-msgstr "2022 年 9 月"
+msgid "Sept, 2022"
+msgstr "2022年09月"
 
 #: templates/main/cv.html:139
 msgid "Development and Testing"
@@ -236,7 +248,7 @@ msgid ""
 "openEuler platform, ensuring compatibility and functionality within the "
 "openEuler operating system."
 msgstr ""
-"试用 RPM 在 openEuler 平台上测试并打包了针对该操作系统的 Autoconf-2.13 和 Pijul 等软件，确保软件包在 "
+"使用 RPM 在 openEuler 平台上测试并打包了针对该操作系统的 Autoconf-2.13 和 Pijul 等软件，确保软件包在 "
 "openEuler 操作系统内的兼容性和功能。"
 
 #: templates/main/cv.html:149
@@ -245,7 +257,7 @@ msgid ""
 "recognition tool based on Rust, which analyses documents and identifies "
 "sensitive information such as passwords, key tokens, and private "
 "information."
-msgstr "参与开发了”rsensleak”，这是一个基于 Rust 的文档敏感信息识别工具，可以分析文档并识别敏感信息，如密码、密钥令牌和私人信息。"
+msgstr "参与开发了“rsensleak”，这是一个基于 Rust 的文档敏感信息识别工具，可以分析文档并识别敏感信息，如密码、密钥令牌和私人信息。"
 
 #: templates/main/cv.html:161
 msgid "Academic Projects"
@@ -257,182 +269,242 @@ msgid ""
 "Contest in Modelling (ICM))"
 msgstr "光污染评估和预测 · 美国大学生数学建模竞赛（COMAP-ICM）"
 
-#: templates/main/cv.html:169 templates/main/cv.html:216
-#: templates/main/cv.html:257
+#: templates/main/cv.html:169 templates/main/cv.html:209
+#: templates/main/cv.html:248
 msgid "Programmer"
 msgstr "程序开发"
 
 #: templates/main/cv.html:181
 msgid ""
 "Developing a light pollution level evaluation system, utilising data "
-"related to\n"
-"                                        social development, industrial "
-"levels, and ecological conditions as evaluation\n"
-"                                        variables.&nbsp;"
+"related to social development, industrial levels, and ecological "
+"conditions as evaluation variables.&nbsp;"
 msgstr ""
 "基于 Python（包括软件包 NumPy，Pandas "
 "等）实现自行设计的光污染水平评价系统，利用社会发展、工业水平、生态条件等领域的相关数据作为评价变量。"
 
-#: templates/main/cv.html:187
+#: templates/main/cv.html:185
 msgid ""
 "Collecting, cleaning and mining historical data in eight different "
-"eastern and\n"
-"                                        western United States regions, "
-"and the data extracted from satellite remote sensing\n"
-"                                        maps and GIS information as "
-"criteria for current light pollution levels. Fitting\n"
-"                                        them to conduct the evaluation "
-"index parameters.&nbsp;"
+"eastern and western United States regions, and the data extracted from "
+"satellite remote sensing maps and GIS information as criteria for current"
+" light pollution levels. Fitting them to conduct the evaluation index "
+"parameters.&nbsp;"
 msgstr ""
 "针对美国东、西部八个不同发展水平与自然环境的地区历史数据进行提炼分析，并以对应地区卫星遥感地图和GIS "
 "信息中的数据作为其光污染水平的标准，使用回归拟合方法来构建光污染评价指标的参数权重。"
 
-#: templates/main/cv.html:194
+#: templates/main/cv.html:189
 msgid ""
 "Using both subjective and objective evaluation methods, including "
-"individual\n"
-"                                        evaluations using DEMATEL and "
-"network analysis (ANP). And using multiple regression\n"
-"                                        analysis for accurate testing and"
-" assessment."
+"individual evaluations using DEMATEL and network analysis (ANP). And "
+"using multiple regression analysis for accurate testing and assessment."
 msgstr "使用主、客观混合评价方法，包括 DEMATEL 和网络分析（ANP）进行个体评价。并使用多元回归分析进行准确的测试和评估。"
 
-#: templates/main/cv.html:212
+#: templates/main/cv.html:205
 msgid ""
 "Time Series Based Climate Prediction and Attribution Analysis (APMCM "
 "Mathematical Modeling Contest)"
 msgstr "基于时间序列的气候预测和归因分析 · APMCM 亚太地区大学生数学建模竞赛"
 
-#: templates/main/cv.html:228
+#: templates/main/cv.html:221
 msgid ""
-"Built ARIMA and XGboost model to predict global temperature rise, found\n"
-"                                        temperature will reach 20°C in "
-"2048.&nbsp;"
+"Built ARIMA and XGboost model to predict global temperature rise, found "
+"temperature will reach 20°C in 2048.&nbsp;"
 msgstr "建立并比较了 ARIMA、SARIMA 和 XGboost 模型来预测全球温度上升；发现温度将在 2048 年达到 20℃。"
 
-#: templates/main/cv.html:233
+#: templates/main/cv.html:225
 msgid ""
 "Conducted hypothesis testing and got a 97.6872&percnt; probability to "
 "reject the assumption of no abnormal rise in March 2022 due to the "
 "potential effect of the global epidemic.&nbsp;"
 msgstr "根据假设检验，得到 97.6872&percnt; 的概率拒绝 2022 年 3 月由于全球流行病的潜在影响而没有异常上升的假设。&nbsp;"
 
-#: templates/main/cv.html:237
+#: templates/main/cv.html:229
 msgid ""
 "Used PC algorithm and DTW to attribute temperature change to human "
-"activities\n"
-"                                        dominating natural factors."
+"activities dominating natural factors."
 msgstr "使用 PC 算法和 DTW 将温度变化归因于人类活动主导了自然因素。"
 
-#: templates/main/cv.html:253
+#: templates/main/cv.html:244
 msgid ""
 "Signal base station siting problem (MathorCup Mathematical Modeling "
 "Program)"
 msgstr "信号基站选址问题 · MathorCup 数学建模"
 
-#: templates/main/cv.html:266
+#: templates/main/cv.html:257
 msgid ""
 "Implemented a particle swarm optimization model with additional "
-"coordinates as\n"
-"                                        guide terms for central base "
-"station planning using K-Means clustering and\n"
-"                                        incorporated coordinates based on"
-" greedy thinking for branch base station planning.\n"
-"                                        I enhanced signal base station "
+"coordinates as guide terms for central base station planning using "
+"K-Means clustering and incorporated coordinates based on greedy thinking "
+"for branch base station planning. I enhanced signal base station "
 "optimization by partitioning map outliers.&nbsp;"
 msgstr "提出了基于 K-means 聚类算法作引导的宏基站选址方法和基于贪心思想作引导的微基站选址方法。"
 
-#: templates/main/cv.html:273
+#: templates/main/cv.html:261
 msgid ""
-"Refined base station coverage boundary into three principal directions,\n"
-"                                        calculating coverage using an "
-"approximation of a circle of equal area. The line\n"
-"                                        connecting the base station "
-"centre and the circle determined the main direction of\n"
-"                                        signal emission.&nbsp;"
-msgstr ""
-"基于 Python 程序实现的改进 PSO 表现出更快的收敛速度和更高的精度，最终提取的模型参数误差小于 2&percnt;，优于传统的 BOKM"
-" 算法。"
+"Refined base station coverage boundary into three principal directions, "
+"calculating coverage using an approximation of a circle of equal area. "
+"The line connecting the base station centre and the circle determined the"
+" main direction of signal emission.&nbsp;"
+msgstr "提出了基于K-means聚类算法作引导的宏基站选址方法和基于贪心思想作引导的微基站选址方法；"
 
-#: templates/main/cv.html:280
+#: templates/main/cv.html:265
 msgid ""
 "The improved PSO demonstrated faster convergence and higher accuracy, "
-"with final\n"
-"                                        model parameters extracted with "
-"an error of less than 2&percnt;, outperforming the\n"
-"                                        traditional BOKM algorithm."
-msgstr ""
+"with final model parameters extracted with an error of less than "
+"2&percnt;, outperforming the traditional BOKM algorithm."
+msgstr "基于Python程序实现的改进PSO表现出更快的收敛速度和更高的精度，最终提取的模型参数误差小于2&percnt;，优于传统的BOKM算法。"
 
-#: templates/main/cv.html:295
+#: templates/main/cv.html:278
 msgid "Speech-Recognition-Based Mechanical System for Lift Control"
 msgstr "基于语音识别的外置电梯运行控制机械系统"
 
-#: templates/main/cv.html:296
+#: templates/main/cv.html:279
 msgid "Apr, 2021"
-msgstr "2021 年 4 月"
+msgstr "2021年04月"
 
-#: templates/main/cv.html:296
+#: templates/main/cv.html:279
 msgid "Jun, 2021"
-msgstr "2021 年 6 月"
+msgstr "2021年06月"
 
-#: templates/main/cv.html:299
+#: templates/main/cv.html:282
 msgid "Software Developer and Tester"
 msgstr "嵌入式软件开发与测试"
 
-#: templates/main/cv.html:306
+#: templates/main/cv.html:289
 msgid ""
 "Developed a Raspberry Pi-based lift control mechanism, utilizing stepper "
 "motors, magnetic switches, and Huawei's voice recognition API for "
 "contactless operations during pandemics.&nbsp;"
 msgstr "开发了一个基于 Raspberry Pi 的电梯控制系统，利用步进电机、磁性开关和华为语音识别 API，实现传染病时期电梯的无接触式操作。"
 
-#: templates/main/cv.html:310
+#: templates/main/cv.html:293
 msgid ""
 "This Python-controlled innovation secured the second prize at the 10th "
-"Shanghai\n"
-"                                    City University Students Mechanical "
-"Engineering Innovation Contest."
+"Shanghai City University Students Mechanical Engineering Innovation "
+"Contest."
 msgstr "项目成果荣获第十届上海城市大学生机械工程创新大赛的二等奖。"
 
-#: templates/main/cv.html:325
+#: templates/main/cv.html:307
 msgid "Reward and Certifications"
 msgstr "奖状与证书"
 
-#: templates/main/cv.html:329
+#: templates/main/cv.html:311
 msgid ""
 "Huawei \"Intelligence Base\" Outstanding Student Scholarship (Level B, "
-"selection rate 1&percnt;)."
-msgstr "华为”智慧基座”优秀学生奖学金（2021 年 11 月，B 级）"
+"selection rate 1&percnt;);"
+msgstr "华为 \"智慧基座\" 优秀学生奖学金（2021年11月，B级）；"
 
-#: templates/main/cv.html:330
+#: templates/main/cv.html:312
 msgid ""
 "The Shanghai College Information Technology Level Examination in Big Data"
-" and Cloud Computing, Level 4 (Highest Level)."
-msgstr "通过上海市高等学校信息技术水平考试大数据与云计算，四级（最高等级）(2023 年 03 月)"
+" and Cloud Computing, Level 4 (Mar, 2023, Highest Level);"
+msgstr "通过上海市高等学校信息技术水平考试大数据与云计算，四级（最高等级，2023年03月）；"
 
-#: templates/main/cv.html:331
+#: templates/main/cv.html:313
 msgid ""
 "The Shanghai College Information Technology Level Examination in C "
-"Programming and Application, Level 3 (Highest Level)."
-msgstr "通过上海市高等学校信息技术水平考试 C 程序设计及应用，三级（最高等级）(2022 年 01 月)"
+"Programming and Application, Level 3 (Jan, 2022, Highest Level);"
+msgstr "通过上海市高等学校信息技术水平考试C程序设计及应用，三级（最高等级，2022年01月）；"
 
-#: templates/main/cv.html:332
-msgid ""
-"The Second Prize in 10th University Students Mechanical Engineering "
-"Innovation Contest, Shanghai."
-msgstr "第十届上海市大学生机械工程创新大赛二等奖（2021 年 06 月）"
-
-#: templates/main/cv.html:333
+#: templates/main/cv.html:314
 msgid ""
 "Successful Participant in COMAP Interdisciplinary Contest in Modelling "
-"(ICM)."
-msgstr "美国大学生数学建模竞赛（COMAP-ICM）S 奖（2023 年 02 月）"
+"(ICM) (Jun, 2021);"
+msgstr "美国大学生数学建模竞赛（COMAP-ICM）S 奖（2023年02月）；"
 
-#: templates/main/cv.html:334
+#: templates/main/cv.html:315
 msgid ""
 "Successful Participant in Asia and Pacific Mathematical Contest in "
-"Modeling."
-msgstr "APMCM 亚太地区大学生数学建模竞赛 S 奖（2022 年 11 月）"
+"Modeling (Feb, 2023);"
+msgstr "APMCM 亚太地区大学生数学建模竞赛 S 奖（2022年11月）；"
+
+#: templates/main/cv.html:316
+msgid ""
+"Third Prize of the 12th National E-Commerce \"Innovation, Creativity and "
+"Entrepreneurship\" Challenge Contest (Jun, 2022);"
+msgstr "第十二届全国大学生电子商务“创新、创意及创业”挑战赛三等奖（2022年06月）；"
+
+#: templates/main/cv.html:317
+msgid ""
+"The Second Prize in 10th University Students Mechanical Engineering "
+"Innovation Contest, Shanghai (Nov, 2022)."
+msgstr "第十届上海市大学生机械工程创新大赛二等奖（2021年06月）。"
+
+#: templates/main/cv.html:324
+msgid "EXTRACURRICULAR ACTIVITIES"
+msgstr "社会服务与课外活动"
+
+#: templates/main/cv.html:328
+msgid ""
+"School Publicity and Media Sector of Youth League Committee, East China "
+"University of Science and Technology"
+msgstr "华东理工大学信息学院团委信息宣传与传媒中心"
+
+#: templates/main/cv.html:329
+msgid "Aug, 2022"
+msgstr "2022年08月"
+
+#: templates/main/cv.html:332
+msgid "Head of Department"
+msgstr "部门负责人"
+
+#: templates/main/cv.html:344
+msgid ""
+"Coordinated the day-to-day work of a 20-member working group. Ran the "
+"operation of the college's WeChat official account, \"Huali Xinyuan\", "
+"which has 7,000+ active users and has been awarded \"4-star member "
+"media\" by the Shanghai University Media Union for two consecutive years "
+"(2020 and 2021);"
+msgstr "组织、协调约20人的部门日常工作,主要为学院微信公众号和“Bilibili”账号设计宣传内容，拍摄活动资料，策划学院活动。学院微信公众号“华理信院”截至卸任账号拥有7000+活跃用户，连续两年（2020、2021）获评“中青校媒（上海）四星会员媒体”；"
+
+#: templates/main/cv.html:348
+msgid ""
+"Organised college-wide freshers' icebreakers with over 300 participants. "
+"Held two \"Geek Festivals\" in which we joined forces with other colleges"
+" and companies, such as Dell and Huawei, and promoted information "
+"technology interestingly and diversely, engaging people in creativity and"
+" hands-on work."
+msgstr "两次组织了全院的新生破冰活动“画布大赛”，参与人数超过300人。带领部门主办了`两届“极客节”，通过与其他学院及戴尔、华为等公司合作，以多元化的游戏、竞技、课堂，引导大家探究技术、参与创新。"
+
+#: templates/main/cv.html:367
+msgid "LANGUAGE AND SKILLS"
+msgstr "语言及其他技能能力"
+
+#: templates/main/cv.html:371
+msgid "Native in Mandarin; fluent in Cantonese;"
+msgstr "中文普通话：母语；广东话：熟练应用；"
+
+#: templates/main/cv.html:372
+msgid "Proficient in English (IELTS 6.5, CET-6 583), Beginner in French;"
+msgstr "英语：CET-6（IELTS 6.5, CET-6 583）；"
+
+#: templates/main/cv.html:373
+msgid ""
+"AHA Heartsaver Basic Life Support and CPR Certificate, American Heart "
+"Association, 2022;"
+msgstr "美国心脏协会基础生命支持(BLS)与心肺复苏(CPR)证书，美国心脏协会，2022年；"
+
+#: templates/main/cv.html:374
+msgid ""
+"Proficient in Microsoft Office, SPSS, Origin, MATLAB, and other office "
+"software;"
+msgstr "熟练使用Microsoft Office、SPSS、Origin、MATLAB等办公软件；"
+
+#: templates/main/cv.html:375
+msgid ""
+"Programming Tool: Linux, C/C++, Python, Rust, SQL, HTML, CSS, SCSS, "
+"JavaScript, \\LaTeX, Markdown;"
+msgstr "编程工具：Linux、C/C++、Python、Rust、SQL、HTML、CSS、SCSS、JavaScript、\\LaTeX、Markdown；"
+
+#: templates/main/cv.html:376
+msgid "Development Tool: Git, Docker, Kubernetes, OpenAPI, Postman, Swagger;"
+msgstr "开发工具：Git、Docker、Kubernetes、OpenAPI、Postman、Swagger；"
+
+#: templates/main/cv.html:377
+msgid "Development Framework: Flask, Django, Bootstrap, jQuery, Node.js."
+msgstr "开发框架：Flask、Django、Bootstrap、jQuery、Node.js。"
 
 #: templates/main/index.html:9
 msgid "I am"

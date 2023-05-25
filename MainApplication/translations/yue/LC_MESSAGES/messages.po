@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-25 00:21+0800\n"
+"POT-Creation-Date: 2023-05-25 12:30+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: yue\n"
@@ -57,31 +57,47 @@ msgstr "版權所有"
 
 #: templates/main/contact.html:11
 msgid "Thank you for your message!"
-msgstr ""
+msgstr "多謝你嘅留言！"
 
 #: templates/main/contact.html:13
 msgid "I will get back to you as soon as possible."
-msgstr ""
+msgstr "我會盡快覆你。"
 
 #: templates/main/contact.html:21
 msgid ""
-"<span>Why not E-mailing me to say</span><div class='d-inline' "
+"<span>Why not E-mailing me to say&nbsp;</span><div class='d-inline' "
 "id='hello'></div>"
 msgstr ""
+"<span>點解唔 E-mail 同我 say&nbsp;</span><div class='d-inline' "
+"id='hello'></div>"
 
 #: templates/main/contact.html:25
 msgid ""
 "<span>Or you can find me on</span><div class='d-inline' "
 "id='social'></div><span>as well!</span>"
 msgstr ""
+"<span>你都可以喺&nbsp;</span><div class='d-inline' "
+"id='social'></div><span>&nbsp;度搵到我！</span>"
+
+#: templates/main/contact.html:37
+msgid "Your preferred name&quest;"
+msgstr "點樣稱呼你？"
+
+#: templates/main/contact.html:42
+msgid "Where can I reach you via email?"
+msgstr "你嘅電郵？"
+
+#: templates/main/contact.html:50
+msgid "Plz feel free to send whatever you want to talk with me!"
+msgstr "請隨意傳送你想同我傾嘅嘢！"
 
 #: templates/main/contact.html:54
 msgid "Say Hello"
-msgstr ""
+msgstr "Say Hello"
 
 #: templates/main/contact.html:109
 msgid "&nbsp;&quest;"
-msgstr ""
+msgstr "&nbsp;？"
 
 #: templates/main/cv.html:9
 msgid "Click to Save PDF~"
@@ -103,130 +119,130 @@ msgstr "關閉"
 msgid ""
 "East China University of Science and Technology, Meilong Rd., Xuhui "
 "District, Shanghai, China"
-msgstr ""
+msgstr "中國上海市徐匯區梅隴路華東理工大學"
 
 #: templates/main/cv.html:64
 msgid "Education"
-msgstr ""
+msgstr "教育經歷"
 
-#: templates/main/cv.html:67
-msgid "BEng Major in Intelligence and Robotics (Robotics)."
-msgstr ""
+#: templates/main/cv.html:67 templates/main/cv.html:93
+msgid "East China University of Science and Technology"
+msgstr "華東理工大學"
 
-#: templates/main/cv.html:68
+#: templates/main/cv.html:68 templates/main/cv.html:329
 msgid "Sept, 2020"
-msgstr ""
+msgstr "2020年9月"
 
 #: templates/main/cv.html:68
 msgid "Jul, 2024"
-msgstr ""
+msgstr "2024年7月"
 
-#: templates/main/cv.html:71 templates/main/cv.html:97
-msgid "East China University of Science and Technology"
-msgstr ""
+#: templates/main/cv.html:71
+msgid "BEng Major in Intelligence and Robotics (Robotics)."
+msgstr "工程學士，智能與機器人（機器人方向）。"
 
 #: templates/main/cv.html:72
 msgid "Relevant Courses:"
-msgstr ""
+msgstr "相關課程："
 
 #: templates/main/cv.html:76
 msgid "Mathematical Foundations for Artificial Intelligence"
-msgstr ""
+msgstr "人工智能數學基礎"
 
 #: templates/main/cv.html:78
 msgid "Principles and Design of Embedded Systems"
-msgstr ""
+msgstr "嵌入式系統原理與設計"
 
 #: templates/main/cv.html:80
 msgid "Pattern Learning and Machine Learning"
-msgstr ""
+msgstr "模式識別與機器學習"
 
 #: templates/main/cv.html:81
 msgid "Machine Learning Tools and Platforms"
-msgstr ""
+msgstr "機器學習工具與平台"
 
 #: templates/main/cv.html:82
 msgid "Robotics Principles and Design"
-msgstr ""
+msgstr "機器人原理與設計"
 
 #: templates/main/cv.html:83
 msgid "Computer Graphic"
-msgstr ""
-
-#: templates/main/cv.html:93
-msgid "Mini-major Diploma Major in Computer Science and Technology"
-msgstr ""
+msgstr "計算機圖形學"
 
 #: templates/main/cv.html:94
 msgid "Oct, 2021"
-msgstr ""
+msgstr "2021年10月"
 
 #: templates/main/cv.html:94 templates/main/cv.html:110
 #: templates/main/cv.html:166
 msgid "Feb, 2023"
-msgstr ""
+msgstr "2023年2月"
+
+#: templates/main/cv.html:97
+msgid "Mini-major Diploma Major in Computer Science and Technology"
+msgstr "微專業，計算機科學與技術"
 
 #: templates/main/cv.html:98
 msgid "Relevant courses:"
-msgstr ""
+msgstr "相關課程："
 
 #: templates/main/cv.html:98
 msgid ""
 "Data Structures and Algorithms, Principles of Database Systems, Operating"
 " Systems, Software Engineering, Computer Networking."
-msgstr ""
+msgstr "數據結構與算法，數據庫系統原理，操作系統，軟件工程，計算機網絡。"
 
 #: templates/main/cv.html:106
 msgid "Internship"
-msgstr ""
+msgstr "實習經驗"
 
 #: templates/main/cv.html:109
 msgid "Bank of Communication Financial Technology Co,Ltd."
-msgstr ""
+msgstr "交銀金融科技有限公司"
 
-#: templates/main/cv.html:110 templates/main/cv.html:213
+#: templates/main/cv.html:110 templates/main/cv.html:206
 msgid "Dec, 2022"
-msgstr ""
+msgstr "2022年12月"
 
 #: templates/main/cv.html:113
 msgid "Back-end Developer"
-msgstr ""
+msgstr "後端開發"
 
 #: templates/main/cv.html:118
 msgid ""
 "Created an updated HRM using a low-code platform and its APIs, designed "
 "its relational database and automated the process from pre-employment to "
 "employee management."
-msgstr ""
+msgstr "使用低代碼平颱及平颱 API 搭建新的人力資源信息管理繫統，設計了繫統的數據庫關繫，實現了從求職者預錄用到員工入職及解約的數據信息管理的自動化。"
 
 #: templates/main/cv.html:122
 msgid ""
 "Developed OCR APIs for HRM (Human Resource Management) using the OpenAPI "
 "standard, improving the efficiency and accuracy of data capture."
-msgstr ""
+msgstr "基於 OpenAPI 標準爲 HRM（人力資源管理）開發 OCR API，提高了繫統的數據採集效率和準確性。"
 
 #: templates/main/cv.html:126
 msgid ""
 "Participated in the DevOps process for the company's supply chain and "
 "debt management platform, contributing to integration testing, "
 "compilation, deployment and test case management."
-msgstr ""
+msgstr "參與公司供應鏈和債權管理平颱的 DevOps 進程，參與設計平颱 30 多個 API 與 10 餘個頁麵 UI 測試用例。"
 
 #: templates/main/cv.html:135
 msgid "ISCAS (Institute of Software Chinese Academy of Sciences)"
-msgstr ""
+msgstr "中國科學院軟件研究所 (ISCAS)"
 
-#: templates/main/cv.html:136 templates/main/cv.html:254
+#: templates/main/cv.html:136 templates/main/cv.html:245
 msgid "Apr, 2022"
-msgstr ""
+msgstr "2022年4月"
 
 #: templates/main/cv.html:136
-msgid "Sep, 2022"
-msgstr ""
+msgid "Sept, 2022"
+msgstr "2022年9月"
 
 #: templates/main/cv.html:139
 msgid "Development and Testing"
-msgstr ""
+msgstr "軟件研發與測試"
 
 #: templates/main/cv.html:144
 msgid ""
@@ -234,6 +250,8 @@ msgid ""
 "openEuler platform, ensuring compatibility and functionality within the "
 "openEuler operating system."
 msgstr ""
+"使用 RPM 在 openEuler 平颱上測試並打包了針對該操作繫統的 Autoconf-2.13 和 Pijul 等軟件，確保軟件包在 "
+"openEuler 操作繫統內的兼容性和功能。"
 
 #: templates/main/cv.html:149
 msgid ""
@@ -241,188 +259,254 @@ msgid ""
 "recognition tool based on Rust, which analyses documents and identifies "
 "sensitive information such as passwords, key tokens, and private "
 "information."
-msgstr ""
+msgstr "參與開發了“rsensleak”，這是一個基於 Rust 的文檔敏感信息識別工具，可以分析文檔並識別敏感信息，如密碼、密鑰令牌和私人信息。"
 
 #: templates/main/cv.html:161
 msgid "Academic Projects"
-msgstr ""
+msgstr "學術項目"
 
 #: templates/main/cv.html:165
 msgid ""
 "Light pollution assessment and prediction (COMAP Interdisciplinary "
 "Contest in Modelling (ICM))"
-msgstr ""
+msgstr "光污染評估和預測 · 美國大學生數學建模競賽（COMAP-ICM）"
 
-#: templates/main/cv.html:169 templates/main/cv.html:216
-#: templates/main/cv.html:257
+#: templates/main/cv.html:169 templates/main/cv.html:209
+#: templates/main/cv.html:248
 msgid "Programmer"
-msgstr ""
+msgstr "程序開發"
 
 #: templates/main/cv.html:181
 msgid ""
 "Developing a light pollution level evaluation system, utilising data "
-"related to\n"
-"                                        social development, industrial "
-"levels, and ecological conditions as evaluation\n"
-"                                        variables.&nbsp;"
+"related to social development, industrial levels, and ecological "
+"conditions as evaluation variables.&nbsp;"
 msgstr ""
+"基於 Python（包括軟件包 NumPy，Pandas "
+"等）實現自行設計的光污染水平評價繫統，利用社會發展、工業水平、生態條件等領域的相關數據作爲評價變量。"
 
-#: templates/main/cv.html:187
+#: templates/main/cv.html:185
 msgid ""
 "Collecting, cleaning and mining historical data in eight different "
-"eastern and\n"
-"                                        western United States regions, "
-"and the data extracted from satellite remote sensing\n"
-"                                        maps and GIS information as "
-"criteria for current light pollution levels. Fitting\n"
-"                                        them to conduct the evaluation "
-"index parameters.&nbsp;"
+"eastern and western United States regions, and the data extracted from "
+"satellite remote sensing maps and GIS information as criteria for current"
+" light pollution levels. Fitting them to conduct the evaluation index "
+"parameters.&nbsp;"
 msgstr ""
+"針對美國東、西部八個不同發展水平與自然環境的地區曆史數據進行提煉分析，並以對應地區衛星遙感地圖和GIS "
+"信息中的數據作爲其光污染水平的標準，使用回歸擬合方法來構建光污染評價指標的參數權重。"
 
-#: templates/main/cv.html:194
+#: templates/main/cv.html:189
 msgid ""
 "Using both subjective and objective evaluation methods, including "
-"individual\n"
-"                                        evaluations using DEMATEL and "
-"network analysis (ANP). And using multiple regression\n"
-"                                        analysis for accurate testing and"
-" assessment."
-msgstr ""
+"individual evaluations using DEMATEL and network analysis (ANP). And "
+"using multiple regression analysis for accurate testing and assessment."
+msgstr "使用主、客觀混合評價方法，包括 DEMATEL 和網絡分析（ANP）進行個體評價。並使用多元回歸分析進行準確的測試和評估。"
 
-#: templates/main/cv.html:212
+#: templates/main/cv.html:205
 msgid ""
 "Time Series Based Climate Prediction and Attribution Analysis (APMCM "
 "Mathematical Modeling Contest)"
-msgstr ""
+msgstr "基於時間序列的氣候預測和歸因分析 · APMCM 亞太地區大學生數學建模競賽"
 
-#: templates/main/cv.html:228
+#: templates/main/cv.html:221
 msgid ""
-"Built ARIMA and XGboost model to predict global temperature rise, found\n"
-"                                        temperature will reach 20°C in "
-"2048.&nbsp;"
-msgstr ""
+"Built ARIMA and XGboost model to predict global temperature rise, found "
+"temperature will reach 20°C in 2048.&nbsp;"
+msgstr "建立並比較了 ARIMA、SARIMA 和 XGboost 模型來預測全球溫度上昇；發現溫度將在 2048 年達到 20℃。"
 
-#: templates/main/cv.html:233
+#: templates/main/cv.html:225
 msgid ""
 "Conducted hypothesis testing and got a 97.6872&percnt; probability to "
 "reject the assumption of no abnormal rise in March 2022 due to the "
 "potential effect of the global epidemic.&nbsp;"
-msgstr ""
+msgstr "根據假設檢驗，得到 97.6872&percnt; 的概率拒絶 2022 年 3 月由於全球流行病的潛在影響而沒有異常上昇的假設。&nbsp;"
 
-#: templates/main/cv.html:237
+#: templates/main/cv.html:229
 msgid ""
 "Used PC algorithm and DTW to attribute temperature change to human "
-"activities\n"
-"                                        dominating natural factors."
-msgstr ""
+"activities dominating natural factors."
+msgstr "使用 PC 算法和 DTW 將溫度變化歸因於人類活動主導了自然因素。"
 
-#: templates/main/cv.html:253
+#: templates/main/cv.html:244
 msgid ""
 "Signal base station siting problem (MathorCup Mathematical Modeling "
 "Program)"
-msgstr ""
+msgstr "信號基站選址問題 · MathorCup 數學建模"
 
-#: templates/main/cv.html:266
+#: templates/main/cv.html:257
 msgid ""
 "Implemented a particle swarm optimization model with additional "
-"coordinates as\n"
-"                                        guide terms for central base "
-"station planning using K-Means clustering and\n"
-"                                        incorporated coordinates based on"
-" greedy thinking for branch base station planning.\n"
-"                                        I enhanced signal base station "
+"coordinates as guide terms for central base station planning using "
+"K-Means clustering and incorporated coordinates based on greedy thinking "
+"for branch base station planning. I enhanced signal base station "
 "optimization by partitioning map outliers.&nbsp;"
-msgstr ""
+msgstr "提出了基於 K-means 聚類算法作引導的宏基站選址方法和基於貪心思想作引導的微基站選址方法。"
 
-#: templates/main/cv.html:273
+#: templates/main/cv.html:261
 msgid ""
-"Refined base station coverage boundary into three principal directions,\n"
-"                                        calculating coverage using an "
-"approximation of a circle of equal area. The line\n"
-"                                        connecting the base station "
-"centre and the circle determined the main direction of\n"
-"                                        signal emission.&nbsp;"
-msgstr ""
+"Refined base station coverage boundary into three principal directions, "
+"calculating coverage using an approximation of a circle of equal area. "
+"The line connecting the base station centre and the circle determined the"
+" main direction of signal emission.&nbsp;"
+msgstr "提出了基於K-means聚類算法作引導的宏基站選址方法和基於貪心思想作引導的微基站選址方法；"
 
-#: templates/main/cv.html:280
+#: templates/main/cv.html:265
 msgid ""
 "The improved PSO demonstrated faster convergence and higher accuracy, "
-"with final\n"
-"                                        model parameters extracted with "
-"an error of less than 2&percnt;, outperforming the\n"
-"                                        traditional BOKM algorithm."
-msgstr ""
+"with final model parameters extracted with an error of less than "
+"2&percnt;, outperforming the traditional BOKM algorithm."
+msgstr "基於Python程序實現的改進PSO表現出更快的收斂速度和更高的精度，最終提取的模型參數誤差小於2&percnt;，優於傳統的BOKM算法。"
 
-#: templates/main/cv.html:295
+#: templates/main/cv.html:278
 msgid "Speech-Recognition-Based Mechanical System for Lift Control"
-msgstr ""
+msgstr "基於語音識別的外置電梯運行控製機械繫統"
 
-#: templates/main/cv.html:296
+#: templates/main/cv.html:279
 msgid "Apr, 2021"
-msgstr ""
+msgstr "2021年4月"
 
-#: templates/main/cv.html:296
+#: templates/main/cv.html:279
 msgid "Jun, 2021"
-msgstr ""
+msgstr "2021年6月"
 
-#: templates/main/cv.html:299
+#: templates/main/cv.html:282
 msgid "Software Developer and Tester"
-msgstr ""
+msgstr "嵌入式軟件開發與測試"
 
-#: templates/main/cv.html:306
+#: templates/main/cv.html:289
 msgid ""
 "Developed a Raspberry Pi-based lift control mechanism, utilizing stepper "
 "motors, magnetic switches, and Huawei's voice recognition API for "
 "contactless operations during pandemics.&nbsp;"
-msgstr ""
+msgstr "開發了一個基於 Raspberry Pi 的電梯控製繫統，利用步進電機、磁性開關和華爲語音識別 API，實現傳染病時期電梯的無接觸式操作。"
 
-#: templates/main/cv.html:310
+#: templates/main/cv.html:293
 msgid ""
 "This Python-controlled innovation secured the second prize at the 10th "
-"Shanghai\n"
-"                                    City University Students Mechanical "
-"Engineering Innovation Contest."
-msgstr ""
+"Shanghai City University Students Mechanical Engineering Innovation "
+"Contest."
+msgstr "項目成果榮獲第十屆上海城市大學生機械工程創新大賽的二等獎。"
 
-#: templates/main/cv.html:325
+#: templates/main/cv.html:307
 msgid "Reward and Certifications"
-msgstr ""
+msgstr "獎狀與証書"
 
-#: templates/main/cv.html:329
+#: templates/main/cv.html:311
 msgid ""
 "Huawei \"Intelligence Base\" Outstanding Student Scholarship (Level B, "
-"selection rate 1&percnt;)."
-msgstr ""
+"selection rate 1&percnt;);"
+msgstr "華爲 \"智慧基座\" 優秀學生獎學金（2021年11月，B級）；"
 
-#: templates/main/cv.html:330
+#: templates/main/cv.html:312
 msgid ""
 "The Shanghai College Information Technology Level Examination in Big Data"
-" and Cloud Computing, Level 4 (Highest Level)."
-msgstr ""
+" and Cloud Computing, Level 4 (Mar, 2023, Highest Level);"
+msgstr "通過上海市高等學校信息技術水平考試大數據與雲計算，四級（最高等級，2023年03月）；"
 
-#: templates/main/cv.html:331
+#: templates/main/cv.html:313
 msgid ""
 "The Shanghai College Information Technology Level Examination in C "
-"Programming and Application, Level 3 (Highest Level)."
-msgstr ""
+"Programming and Application, Level 3 (Jan, 2022, Highest Level);"
+msgstr "通過上海市高等學校信息技術水平考試C程序設計及應用，三級（最高等級，2022年01月）；"
 
-#: templates/main/cv.html:332
-msgid ""
-"The Second Prize in 10th University Students Mechanical Engineering "
-"Innovation Contest, Shanghai."
-msgstr ""
-
-#: templates/main/cv.html:333
+#: templates/main/cv.html:314
 msgid ""
 "Successful Participant in COMAP Interdisciplinary Contest in Modelling "
-"(ICM)."
-msgstr ""
+"(ICM) (Jun, 2021);"
+msgstr "美國大學生數學建模競賽（COMAP-ICM）S 獎（2023年02月）；"
 
-#: templates/main/cv.html:334
+#: templates/main/cv.html:315
 msgid ""
 "Successful Participant in Asia and Pacific Mathematical Contest in "
-"Modeling."
-msgstr ""
+"Modeling (Feb, 2023);"
+msgstr "APMCM 亞太地區大學生數學建模競賽 S 獎（2022年11月）；"
+
+#: templates/main/cv.html:316
+msgid ""
+"Third Prize of the 12th National E-Commerce \"Innovation, Creativity and "
+"Entrepreneurship\" Challenge Contest (Jun, 2022);"
+msgstr "第十二屆全國大學生電子商務“創新、創意及創業”挑戰賽三等獎（2022年06月）；"
+
+#: templates/main/cv.html:317
+msgid ""
+"The Second Prize in 10th University Students Mechanical Engineering "
+"Innovation Contest, Shanghai (Nov, 2022)."
+msgstr "第十屆上海市大學生機械工程創新大賽二等獎（2021年06月）。"
+
+#: templates/main/cv.html:324
+msgid "EXTRACURRICULAR ACTIVITIES"
+msgstr "社會服務與課外活動"
+
+#: templates/main/cv.html:328
+msgid ""
+"School Publicity and Media Sector of Youth League Committee, East China "
+"University of Science and Technology"
+msgstr "華東理工大學信息學院團委信息宣傳與傳媒中心"
+
+#: templates/main/cv.html:329
+msgid "Aug, 2022"
+msgstr "2022年8月"
+
+#: templates/main/cv.html:332
+msgid "Head of Department"
+msgstr "部門負責人"
+
+#: templates/main/cv.html:344
+msgid ""
+"Coordinated the day-to-day work of a 20-member working group. Ran the "
+"operation of the college's WeChat official account, \"Huali Xinyuan\", "
+"which has 7,000+ active users and has been awarded \"4-star member "
+"media\" by the Shanghai University Media Union for two consecutive years "
+"(2020 and 2021);"
+msgstr "組織、協調約20人的部門日常工作,主要爲學院微信公衆號和“Bilibili”賬號設計宣傳內容，拍攝活動資料，策劃學院活動。學院微信公衆號“華理信院”截至卸任賬號擁有7000+活躍用戶，連續兩年（2020、2021）獲評“中青校媒（上海）四星會員媒體”；"
+
+#: templates/main/cv.html:348
+msgid ""
+"Organised college-wide freshers' icebreakers with over 300 participants. "
+"Held two \"Geek Festivals\" in which we joined forces with other colleges"
+" and companies, such as Dell and Huawei, and promoted information "
+"technology interestingly and diversely, engaging people in creativity and"
+" hands-on work."
+msgstr "兩次組織了全院的新生破冰活動“畫佈大賽”，參與人數超過300人。帶領部門主辦了兩屆“極客節”，通過與其他學院及戴爾、華爲等公司合作，以多元化的遊戲、競技、課堂，引導大家探究技術、參與創新。"
+
+#: templates/main/cv.html:367
+msgid "LANGUAGE AND SKILLS"
+msgstr "語言及其他技能能力"
+
+#: templates/main/cv.html:371
+msgid "Native in Mandarin; fluent in Cantonese;"
+msgstr "中文普通話：母語；廣東話：熟練應用；"
+
+#: templates/main/cv.html:372
+msgid "Proficient in English (IELTS 6.5, CET-6 583), Beginner in French;"
+msgstr "英文：CET-6（IELTS 6.5, CET-6 583）；"
+
+#: templates/main/cv.html:373
+msgid ""
+"AHA Heartsaver Basic Life Support and CPR Certificate, American Heart "
+"Association, 2022;"
+msgstr "美國心臟協會基礎生命支持(BLS)與心肺復甦(CPR)証書，美國心臟協會，2022年；"
+
+#: templates/main/cv.html:374
+msgid ""
+"Proficient in Microsoft Office, SPSS, Origin, MATLAB, and other office "
+"software;"
+msgstr "熟練使用Microsoft Office、SPSS、Origin、MATLAB等辦公軟件；"
+
+#: templates/main/cv.html:375
+msgid ""
+"Programming Tool: Linux, C/C++, Python, Rust, SQL, HTML, CSS, SCSS, "
+"JavaScript, \\LaTeX, Markdown;"
+msgstr "編程工具：Linux、C/C++、Python、Rust、SQL、HTML、CSS、SCSS、JavaScript、\\LaTeX、Markdown；"
+
+#: templates/main/cv.html:376
+msgid "Development Tool: Git, Docker, Kubernetes, OpenAPI, Postman, Swagger;"
+msgstr "開發工具：Git、Docker、Kubernetes、OpenAPI、Postman、Swagger；"
+
+#: templates/main/cv.html:377
+msgid "Development Framework: Flask, Django, Bootstrap, jQuery, Node.js."
+msgstr "開發框架：Flask、Django、Bootstrap、jQuery、Node.js。"
 
 #: templates/main/index.html:9
 msgid "I am"
@@ -443,75 +527,4 @@ msgstr ""
 "future.\",\n"
 "                    \"Zealous to slightly differ the world.\",\n"
 "                    \"Yearning to engineer awe-inspiring wonders.\"];"
-
-#~ msgid "Say Hello"
-#~ msgstr ""
-
-#~ msgid ", Meilong Rd., Xuhui District, Shanghai, China"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Conducted hypothesis testing and got a"
-#~ " 97.6872% probability to reject the\n"
-#~ "                                        assumption of "
-#~ "no abnormal rise in March 2022 due"
-#~ " to the potential effect of the\n"
-#~ ""
-#~ "                                        global epidemic.&nbsp;"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Conducted hypothesis testing and got a"
-#~ " 97.6872% probability to reject the "
-#~ "assumption of no abnormal rise in "
-#~ "March 2022 due to the potential "
-#~ "effect of the global epidemic.&nbsp;"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The improved PSO demonstrated faster "
-#~ "convergence and higher accuracy, with "
-#~ "final\n"
-#~ "                                        model parameters"
-#~ " extracted with an error of less "
-#~ "than 2%, outperforming the\n"
-#~ "                                        traditional BOKM algorithm."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Huawei \"Intelligence Base\" Outstanding "
-#~ "Student Scholarship (Level B, selection "
-#~ "rate 1%)."
-#~ msgstr ""
-
-#~ msgid "Why not E-mailing me to say"
-#~ msgstr "點解唔電郵我講"
-
-#~ msgid "Thank you for your message!"
-#~ msgstr "多謝你嘅留言！"
-
-#~ msgid "I will get back to you as soon as possible."
-#~ msgstr "我會好快覆你。"
-
-#~ msgid ""
-#~ "<span>Why not E-mailing me to "
-#~ "say</span><div class='d-inline' id='hello'></div>"
-#~ msgstr ""
-#~ "<span>或者你都可以喺</span>\n"
-#~ "                                <div class='d-inline' "
-#~ "id='social'></div>\n"
-#~ "                                <span>度搵到我！</span>"
-
-#~ msgid ""
-#~ "<span>Or you can find me on</span><div"
-#~ " class='d-inline' id='social'></div><span>as "
-#~ "well!</span>"
-#~ msgstr ""
-#~ "<span>或者你都可以喺</span>\n"
-#~ "                                <div class='d-inline' "
-#~ "id='social'></div>\n"
-#~ "                                <span>度搵到我！</span>"
-
-#~ msgid "&nbsp;&quest;"
-#~ msgstr "&nbsp;&quest;"
 

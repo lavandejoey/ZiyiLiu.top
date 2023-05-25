@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-25 00:21+0800\n"
+"POT-Creation-Date: 2023-05-25 12:30+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -57,31 +57,47 @@ msgstr "Tous les droits sont réservés"
 
 #: templates/main/contact.html:11
 msgid "Thank you for your message!"
-msgstr ""
+msgstr "Merci pour votre message!"
 
 #: templates/main/contact.html:13
 msgid "I will get back to you as soon as possible."
-msgstr ""
+msgstr "Je vous répondrai dès que possible."
 
 #: templates/main/contact.html:21
 msgid ""
-"<span>Why not E-mailing me to say</span><div class='d-inline' "
+"<span>Why not E-mailing me to say&nbsp;</span><div class='d-inline' "
 "id='hello'></div>"
 msgstr ""
+"<span>Pourquoi ne pas e-mail à&nbsp;</span><div class='d-inline' "
+"id='hello'></div>"
 
 #: templates/main/contact.html:25
 msgid ""
 "<span>Or you can find me on</span><div class='d-inline' "
 "id='social'></div><span>as well!</span>"
 msgstr ""
+"<span>Ou vous pouvez me trouver sur</span><div class='d-inline' "
+"id='social'></div><span>aussi!</span>"
+
+#: templates/main/contact.html:37
+msgid "Your preferred name&quest;"
+msgstr "Votre nom préféré&quest;"
+
+#: templates/main/contact.html:42
+msgid "Where can I reach you via email?"
+msgstr "Où puis-je vous joindre par e-mail?"
+
+#: templates/main/contact.html:50
+msgid "Plz feel free to send whatever you want to talk with me!"
+msgstr "N'hésitez pas à envoyer tout ce dont vous voulez parler avec moi&nbsp;!"
 
 #: templates/main/contact.html:54
 msgid "Say Hello"
-msgstr ""
+msgstr "Dire Bonjour"
 
 #: templates/main/contact.html:109
 msgid "&nbsp;&quest;"
-msgstr ""
+msgstr "&nbsp;&quest;"
 
 #: templates/main/cv.html:9
 msgid "Click to Save PDF~"
@@ -104,25 +120,27 @@ msgid ""
 "East China University of Science and Technology, Meilong Rd., Xuhui "
 "District, Shanghai, China"
 msgstr ""
+"Université des sciences et technologies de l'Est de la Chine, Meilong "
+"Rd., district de Xuhui, Shanghai, Chine"
 
 #: templates/main/cv.html:64
 msgid "Education"
-msgstr ""
+msgstr "Éducation"
 
-#: templates/main/cv.html:67
-msgid "BEng Major in Intelligence and Robotics (Robotics)."
-msgstr ""
+#: templates/main/cv.html:67 templates/main/cv.html:93
+msgid "East China University of Science and Technology"
+msgstr "Université des sciences et technologies de l'est de la Chine"
 
-#: templates/main/cv.html:68
+#: templates/main/cv.html:68 templates/main/cv.html:329
 msgid "Sept, 2020"
-msgstr ""
+msgstr "sept, 2020"
 
 #: templates/main/cv.html:68
 msgid "Jul, 2024"
-msgstr ""
+msgstr "juil, 2024"
 
-#: templates/main/cv.html:71 templates/main/cv.html:97
-msgid "East China University of Science and Technology"
+#: templates/main/cv.html:71
+msgid "BEng Major in Intelligence and Robotics (Robotics)."
 msgstr ""
 
 #: templates/main/cv.html:72
@@ -153,17 +171,17 @@ msgstr ""
 msgid "Computer Graphic"
 msgstr ""
 
-#: templates/main/cv.html:93
-msgid "Mini-major Diploma Major in Computer Science and Technology"
-msgstr ""
-
 #: templates/main/cv.html:94
 msgid "Oct, 2021"
-msgstr ""
+msgstr "oct, 2021"
 
 #: templates/main/cv.html:94 templates/main/cv.html:110
 #: templates/main/cv.html:166
 msgid "Feb, 2023"
+msgstr "fév, 2023"
+
+#: templates/main/cv.html:97
+msgid "Mini-major Diploma Major in Computer Science and Technology"
 msgstr ""
 
 #: templates/main/cv.html:98
@@ -178,15 +196,15 @@ msgstr ""
 
 #: templates/main/cv.html:106
 msgid "Internship"
-msgstr ""
+msgstr "Stage"
 
 #: templates/main/cv.html:109
 msgid "Bank of Communication Financial Technology Co,Ltd."
 msgstr ""
 
-#: templates/main/cv.html:110 templates/main/cv.html:213
+#: templates/main/cv.html:110 templates/main/cv.html:206
 msgid "Dec, 2022"
-msgstr ""
+msgstr "déc, 2022"
 
 #: templates/main/cv.html:113
 msgid "Back-end Developer"
@@ -215,14 +233,16 @@ msgstr ""
 #: templates/main/cv.html:135
 msgid "ISCAS (Institute of Software Chinese Academy of Sciences)"
 msgstr ""
+"ISCAS (Institut de logiciels de les académies scientifiques et "
+"technologiques de Chine)"
 
-#: templates/main/cv.html:136 templates/main/cv.html:254
+#: templates/main/cv.html:136 templates/main/cv.html:245
 msgid "Apr, 2022"
-msgstr ""
+msgstr "avr, 2022"
 
 #: templates/main/cv.html:136
-msgid "Sep, 2022"
-msgstr ""
+msgid "Sept, 2022"
+msgstr "sept, 2022"
 
 #: templates/main/cv.html:139
 msgid "Development and Testing"
@@ -253,175 +273,237 @@ msgid ""
 "Contest in Modelling (ICM))"
 msgstr ""
 
-#: templates/main/cv.html:169 templates/main/cv.html:216
-#: templates/main/cv.html:257
+#: templates/main/cv.html:169 templates/main/cv.html:209
+#: templates/main/cv.html:248
 msgid "Programmer"
 msgstr ""
 
 #: templates/main/cv.html:181
 msgid ""
 "Developing a light pollution level evaluation system, utilising data "
-"related to\n"
-"                                        social development, industrial "
-"levels, and ecological conditions as evaluation\n"
-"                                        variables.&nbsp;"
+"related to social development, industrial levels, and ecological "
+"conditions as evaluation variables.&nbsp;"
 msgstr ""
 
-#: templates/main/cv.html:187
+#: templates/main/cv.html:185
 msgid ""
 "Collecting, cleaning and mining historical data in eight different "
-"eastern and\n"
-"                                        western United States regions, "
-"and the data extracted from satellite remote sensing\n"
-"                                        maps and GIS information as "
-"criteria for current light pollution levels. Fitting\n"
-"                                        them to conduct the evaluation "
-"index parameters.&nbsp;"
+"eastern and western United States regions, and the data extracted from "
+"satellite remote sensing maps and GIS information as criteria for current"
+" light pollution levels. Fitting them to conduct the evaluation index "
+"parameters.&nbsp;"
 msgstr ""
 
-#: templates/main/cv.html:194
+#: templates/main/cv.html:189
 msgid ""
 "Using both subjective and objective evaluation methods, including "
-"individual\n"
-"                                        evaluations using DEMATEL and "
-"network analysis (ANP). And using multiple regression\n"
-"                                        analysis for accurate testing and"
-" assessment."
+"individual evaluations using DEMATEL and network analysis (ANP). And "
+"using multiple regression analysis for accurate testing and assessment."
 msgstr ""
 
-#: templates/main/cv.html:212
+#: templates/main/cv.html:205
 msgid ""
 "Time Series Based Climate Prediction and Attribution Analysis (APMCM "
 "Mathematical Modeling Contest)"
 msgstr ""
 
-#: templates/main/cv.html:228
+#: templates/main/cv.html:221
 msgid ""
-"Built ARIMA and XGboost model to predict global temperature rise, found\n"
-"                                        temperature will reach 20°C in "
-"2048.&nbsp;"
+"Built ARIMA and XGboost model to predict global temperature rise, found "
+"temperature will reach 20°C in 2048.&nbsp;"
 msgstr ""
 
-#: templates/main/cv.html:233
+#: templates/main/cv.html:225
 msgid ""
 "Conducted hypothesis testing and got a 97.6872&percnt; probability to "
 "reject the assumption of no abnormal rise in March 2022 due to the "
 "potential effect of the global epidemic.&nbsp;"
 msgstr ""
 
-#: templates/main/cv.html:237
+#: templates/main/cv.html:229
 msgid ""
 "Used PC algorithm and DTW to attribute temperature change to human "
-"activities\n"
-"                                        dominating natural factors."
+"activities dominating natural factors."
 msgstr ""
 
-#: templates/main/cv.html:253
+#: templates/main/cv.html:244
 msgid ""
 "Signal base station siting problem (MathorCup Mathematical Modeling "
 "Program)"
 msgstr ""
 
-#: templates/main/cv.html:266
+#: templates/main/cv.html:257
 msgid ""
 "Implemented a particle swarm optimization model with additional "
-"coordinates as\n"
-"                                        guide terms for central base "
-"station planning using K-Means clustering and\n"
-"                                        incorporated coordinates based on"
-" greedy thinking for branch base station planning.\n"
-"                                        I enhanced signal base station "
+"coordinates as guide terms for central base station planning using "
+"K-Means clustering and incorporated coordinates based on greedy thinking "
+"for branch base station planning. I enhanced signal base station "
 "optimization by partitioning map outliers.&nbsp;"
 msgstr ""
 
-#: templates/main/cv.html:273
+#: templates/main/cv.html:261
 msgid ""
-"Refined base station coverage boundary into three principal directions,\n"
-"                                        calculating coverage using an "
-"approximation of a circle of equal area. The line\n"
-"                                        connecting the base station "
-"centre and the circle determined the main direction of\n"
-"                                        signal emission.&nbsp;"
+"Refined base station coverage boundary into three principal directions, "
+"calculating coverage using an approximation of a circle of equal area. "
+"The line connecting the base station centre and the circle determined the"
+" main direction of signal emission.&nbsp;"
 msgstr ""
 
-#: templates/main/cv.html:280
+#: templates/main/cv.html:265
 msgid ""
 "The improved PSO demonstrated faster convergence and higher accuracy, "
-"with final\n"
-"                                        model parameters extracted with "
-"an error of less than 2&percnt;, outperforming the\n"
-"                                        traditional BOKM algorithm."
+"with final model parameters extracted with an error of less than "
+"2&percnt;, outperforming the traditional BOKM algorithm."
 msgstr ""
 
-#: templates/main/cv.html:295
+#: templates/main/cv.html:278
 msgid "Speech-Recognition-Based Mechanical System for Lift Control"
 msgstr ""
 
-#: templates/main/cv.html:296
+#: templates/main/cv.html:279
 msgid "Apr, 2021"
 msgstr ""
 
-#: templates/main/cv.html:296
+#: templates/main/cv.html:279
 msgid "Jun, 2021"
 msgstr ""
 
-#: templates/main/cv.html:299
+#: templates/main/cv.html:282
 msgid "Software Developer and Tester"
 msgstr ""
 
-#: templates/main/cv.html:306
+#: templates/main/cv.html:289
 msgid ""
 "Developed a Raspberry Pi-based lift control mechanism, utilizing stepper "
 "motors, magnetic switches, and Huawei's voice recognition API for "
 "contactless operations during pandemics.&nbsp;"
 msgstr ""
 
-#: templates/main/cv.html:310
+#: templates/main/cv.html:293
 msgid ""
 "This Python-controlled innovation secured the second prize at the 10th "
-"Shanghai\n"
-"                                    City University Students Mechanical "
-"Engineering Innovation Contest."
+"Shanghai City University Students Mechanical Engineering Innovation "
+"Contest."
 msgstr ""
 
-#: templates/main/cv.html:325
+#: templates/main/cv.html:307
 msgid "Reward and Certifications"
 msgstr ""
 
-#: templates/main/cv.html:329
+#: templates/main/cv.html:311
 msgid ""
 "Huawei \"Intelligence Base\" Outstanding Student Scholarship (Level B, "
-"selection rate 1&percnt;)."
+"selection rate 1&percnt;);"
 msgstr ""
 
-#: templates/main/cv.html:330
+#: templates/main/cv.html:312
 msgid ""
 "The Shanghai College Information Technology Level Examination in Big Data"
-" and Cloud Computing, Level 4 (Highest Level)."
+" and Cloud Computing, Level 4 (Mar, 2023, Highest Level);"
 msgstr ""
 
-#: templates/main/cv.html:331
+#: templates/main/cv.html:313
 msgid ""
 "The Shanghai College Information Technology Level Examination in C "
-"Programming and Application, Level 3 (Highest Level)."
+"Programming and Application, Level 3 (Jan, 2022, Highest Level);"
+msgstr ""
+
+#: templates/main/cv.html:314
+msgid ""
+"Successful Participant in COMAP Interdisciplinary Contest in Modelling "
+"(ICM) (Jun, 2021);"
+msgstr ""
+
+#: templates/main/cv.html:315
+msgid ""
+"Successful Participant in Asia and Pacific Mathematical Contest in "
+"Modeling (Feb, 2023);"
+msgstr ""
+
+#: templates/main/cv.html:316
+msgid ""
+"Third Prize of the 12th National E-Commerce \"Innovation, Creativity and "
+"Entrepreneurship\" Challenge Contest (Jun, 2022);"
+msgstr ""
+
+#: templates/main/cv.html:317
+msgid ""
+"The Second Prize in 10th University Students Mechanical Engineering "
+"Innovation Contest, Shanghai (Nov, 2022)."
+msgstr ""
+
+#: templates/main/cv.html:324
+msgid "EXTRACURRICULAR ACTIVITIES"
+msgstr ""
+
+#: templates/main/cv.html:328
+msgid ""
+"School Publicity and Media Sector of Youth League Committee, East China "
+"University of Science and Technology"
+msgstr ""
+
+#: templates/main/cv.html:329
+msgid "Aug, 2022"
 msgstr ""
 
 #: templates/main/cv.html:332
-msgid ""
-"The Second Prize in 10th University Students Mechanical Engineering "
-"Innovation Contest, Shanghai."
+msgid "Head of Department"
 msgstr ""
 
-#: templates/main/cv.html:333
+#: templates/main/cv.html:344
 msgid ""
-"Successful Participant in COMAP Interdisciplinary Contest in Modelling "
-"(ICM)."
+"Coordinated the day-to-day work of a 20-member working group. Ran the "
+"operation of the college's WeChat official account, \"Huali Xinyuan\", "
+"which has 7,000+ active users and has been awarded \"4-star member "
+"media\" by the Shanghai University Media Union for two consecutive years "
+"(2020 and 2021);"
 msgstr ""
 
-#: templates/main/cv.html:334
+#: templates/main/cv.html:348
 msgid ""
-"Successful Participant in Asia and Pacific Mathematical Contest in "
-"Modeling."
+"Organised college-wide freshers' icebreakers with over 300 participants. "
+"Held two \"Geek Festivals\" in which we joined forces with other colleges"
+" and companies, such as Dell and Huawei, and promoted information "
+"technology interestingly and diversely, engaging people in creativity and"
+" hands-on work."
+msgstr ""
+
+#: templates/main/cv.html:367
+msgid "LANGUAGE AND SKILLS"
+msgstr ""
+
+#: templates/main/cv.html:371
+msgid "Native in Mandarin; fluent in Cantonese;"
+msgstr ""
+
+#: templates/main/cv.html:372
+msgid "Proficient in English (IELTS 6.5, CET-6 583), Beginner in French;"
+msgstr ""
+
+#: templates/main/cv.html:373
+msgid ""
+"AHA Heartsaver Basic Life Support and CPR Certificate, American Heart "
+"Association, 2022;"
+msgstr ""
+
+#: templates/main/cv.html:374
+msgid ""
+"Proficient in Microsoft Office, SPSS, Origin, MATLAB, and other office "
+"software;"
+msgstr ""
+
+#: templates/main/cv.html:375
+msgid ""
+"Programming Tool: Linux, C/C++, Python, Rust, SQL, HTML, CSS, SCSS, "
+"JavaScript, \\LaTeX, Markdown;"
+msgstr ""
+
+#: templates/main/cv.html:376
+msgid "Development Tool: Git, Docker, Kubernetes, OpenAPI, Postman, Swagger;"
+msgstr ""
+
+#: templates/main/cv.html:377
+msgid "Development Framework: Flask, Django, Bootstrap, jQuery, Node.js."
 msgstr ""
 
 #: templates/main/index.html:9
@@ -446,75 +528,4 @@ msgstr ""
 "                    \"Zélé pour différencier légèrement le monde.\",\n"
 "                    \"Ympatient d\\'ingénierer des merveilles "
 "inspirantes.\"];"
-
-#~ msgid ", Meilong Rd., Xuhui District, Shanghai, China"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Conducted hypothesis testing and got a"
-#~ " 97.6872% probability to reject the\n"
-#~ "                                        assumption of "
-#~ "no abnormal rise in March 2022 due"
-#~ " to the potential effect of the\n"
-#~ ""
-#~ "                                        global epidemic.&nbsp;"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Conducted hypothesis testing and got a"
-#~ " 97.6872% probability to reject the "
-#~ "assumption of no abnormal rise in "
-#~ "March 2022 due to the potential "
-#~ "effect of the global epidemic.&nbsp;"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The improved PSO demonstrated faster "
-#~ "convergence and higher accuracy, with "
-#~ "final\n"
-#~ "                                        model parameters"
-#~ " extracted with an error of less "
-#~ "than 2%, outperforming the\n"
-#~ "                                        traditional BOKM algorithm."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Huawei \"Intelligence Base\" Outstanding "
-#~ "Student Scholarship (Level B, selection "
-#~ "rate 1%)."
-#~ msgstr ""
-
-#~ msgid "Why not E-mailing me to say"
-#~ msgstr "Pourquoi ne pas e-mail de"
-
-#~ msgid "Thank you for your message!"
-#~ msgstr "Merci pour votre message!"
-
-#~ msgid "I will get back to you as soon as possible."
-#~ msgstr "Je vous répondrai dès que possible."
-
-#~ msgid ""
-#~ "<span>Why not E-mailing me to "
-#~ "say</span><div class='d-inline' id='hello'></div>"
-#~ msgstr ""
-#~ "<span>Ou vous pouvez aussi me trouver sur</span>\n"
-#~ "                                <div class='d-inline' "
-#~ "id='social'></div>\n"
-#~ "                                <span>!</span>"
-
-#~ msgid ""
-#~ "<span>Or you can find me on</span><div"
-#~ " class='d-inline' id='social'></div><span>as "
-#~ "well!</span>"
-#~ msgstr ""
-#~ "<span>Ou vous pouvez aussi me trouver sur</span>\n"
-#~ "                                <div class='d-inline' "
-#~ "id='social'></div>\n"
-#~ "                                <span>!</span>"
-
-#~ msgid "Say Hello"
-#~ msgstr ""
-
-#~ msgid "&nbsp;&quest;"
-#~ msgstr "&nbsp;&quest;"
 

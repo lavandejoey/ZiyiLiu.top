@@ -18,7 +18,7 @@
                     <div class="d-flex flex-fill flex-row flex-column mt-4 p-4" style="min-width: 50%">
                         {# Various language for "Say Hello!" #}
                         <div class="container">
-                            {{ _("<span>Why not E-mailing me to say</span><div class=\'d-inline\' id=\'hello\'></div>") }}
+                            {{ _("<span>Why not E-mailing me to say&nbsp;</span><div class=\'d-inline\' id=\'hello\'></div>") }}
                         </div>
                         {# Additional information #}
                         <div class="container">
@@ -34,12 +34,12 @@
                                 {{ form.csrf_token }}
                                 <div class="row">
                                     <div class="col form-group my-4">
-                                        {{ form.name(type="text", class="form-control", id="name", placeholder="Your preferred name&quest;", required=True) }}
+                                        {{ form.name(type="text", class="form-control", id="name", placeholder=_("Your preferred name&quest;"), required=True) }}
                                     </div>
                                     <div class="col form-group my-4">
                                         {#<input type="email" class="form-control" id="email" name="email"#}
                                         {#placeholder="Where can I reach you via email?" required>#}
-                                        {{ form.email(type="email", class="form-control", id="email",placeholder="Where can I reach you via email?", required=True) }}
+                                        {{ form.email(type="email", class="form-control", id="email",placeholder=_("Where can I reach you via email?"), required=True) }}
                                     </div>
                                 </div>
                                 <div class="row">
@@ -47,7 +47,7 @@
                                         {#<textarea class="form-control" id="message" name="message" rows="5" required#}
                                         {#placeholder="Plz feel free to send whatever you want to talk with me!"></textarea>#}
                                         {{ form.message(class="form-control", id="message", rows="5", required=True,
-                                        placeholder="Plz feel free to send whatever you want to talk with me!") }}
+                                        placeholder=_("Plz feel free to send whatever you want to talk with me!")) }}
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
