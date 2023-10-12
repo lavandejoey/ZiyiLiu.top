@@ -7,6 +7,8 @@ __version__ = "0.0.1"
 __maintainer__ = ""
 __email__ = "lavandejoey@outlook.com"
 
+import logging
+
 # standard library
 # 3rd party packages
 from flask import blueprints, request, current_app, make_response, jsonify, redirect
@@ -30,10 +32,10 @@ def get_timezone():
 
 
 def get_locale():
-    cookie = request.cookies.get('locale')
-    print(cookie)
-    if cookie in current_app.config.get('LANGUAGES'):
-        return cookie
+    locale = request.cookies.get('locale')
+    logging.info("The current locale is: %s" % locale)
+    if locale in current_app.config.get('LANGUAGES'):
+        return locale
     return request.accept_languages.best_match(current_app.config.get('BABEL_DEFAULT_LOCALE'))
     # 没有cookie时，默认为 en
 

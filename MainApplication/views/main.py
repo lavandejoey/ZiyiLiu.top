@@ -11,6 +11,7 @@ __email__ = "lavandejoey@outlook.com"
 # 3rd party packages
 from flask import Blueprint, render_template, flash, request, current_app
 from flask_mail import Message
+import logging
 
 # local source
 from MainApplication.forms import ContactForm

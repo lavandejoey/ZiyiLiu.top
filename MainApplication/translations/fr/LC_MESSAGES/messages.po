@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-25 12:36+0800\n"
+"POT-Creation-Date: 2023-10-12 18:31+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -63,7 +63,7 @@ msgstr "Merci pour votre message!"
 msgid "I will get back to you as soon as possible."
 msgstr "Je vous répondrai dès que possible."
 
-#: templates/main/contact.html:21
+#: templates/main/contact.html:37
 msgid ""
 "<span>Why not E-mailing me to say&nbsp;</span><div class='d-inline' "
 "id='hello'></div>"
@@ -71,7 +71,7 @@ msgstr ""
 "<span>Pourquoi ne pas e-mail à&nbsp;</span><div class='d-inline' "
 "id='hello'></div>"
 
-#: templates/main/contact.html:25
+#: templates/main/contact.html:41
 msgid ""
 "<span>Or you can find me on</span><div class='d-inline' "
 "id='social'></div><span>as well!</span>"
@@ -79,23 +79,23 @@ msgstr ""
 "<span>Ou vous pouvez me trouver sur</span><div class='d-inline' "
 "id='social'></div><span>aussi!</span>"
 
-#: templates/main/contact.html:37
+#: templates/main/contact.html:53
 msgid "Your preferred name&quest;"
 msgstr "Votre nom préféré&quest;"
 
-#: templates/main/contact.html:42
+#: templates/main/contact.html:58
 msgid "Where can I reach you via email?"
 msgstr "Où puis-je vous joindre par e-mail?"
 
-#: templates/main/contact.html:50
+#: templates/main/contact.html:66
 msgid "Plz feel free to send whatever you want to talk with me!"
 msgstr "N'hésitez pas à envoyer tout ce dont vous voulez parler avec moi&nbsp;!"
 
-#: templates/main/contact.html:54
+#: templates/main/contact.html:71
 msgid "Say Hello"
 msgstr "Dire Bonjour"
 
-#: templates/main/contact.html:109
+#: templates/main/contact.html:123
 msgid "&nbsp;&quest;"
 msgstr "&nbsp;&quest;"
 

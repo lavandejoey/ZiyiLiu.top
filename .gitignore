@@ -139,3 +139,5 @@ db/
 config.py
 Designs/
 MainApplication/static/files/
+
+*tmp*

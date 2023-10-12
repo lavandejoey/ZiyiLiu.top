@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-25 12:36+0800\n"
+"POT-Creation-Date: 2023-10-12 18:31+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hant\n"
@@ -63,13 +63,13 @@ msgstr "感謝你的來信！"
 msgid "I will get back to you as soon as possible."
 msgstr "我會盡快回復你的郵件。"
 
-#: templates/main/contact.html:21
+#: templates/main/contact.html:37
 msgid ""
 "<span>Why not E-mailing me to say&nbsp;</span><div class='d-inline' "
 "id='hello'></div>"
 msgstr "<span>歡迎你的來信！&nbsp;</span>"
 
-#: templates/main/contact.html:25
+#: templates/main/contact.html:41
 msgid ""
 "<span>Or you can find me on</span><div class='d-inline' "
 "id='social'></div><span>as well!</span>"
@@ -77,23 +77,23 @@ msgstr ""
 "<span>你也可以在</span><div class='d-inline' "
 "id='social'></div><span>找到我！</span>"
 
-#: templates/main/contact.html:37
+#: templates/main/contact.html:53
 msgid "Your preferred name&quest;"
 msgstr "請留下稱呼！"
 
-#: templates/main/contact.html:42
+#: templates/main/contact.html:58
 msgid "Where can I reach you via email?"
 msgstr "請留下郵箱地址！"
 
-#: templates/main/contact.html:50
+#: templates/main/contact.html:66
 msgid "Plz feel free to send whatever you want to talk with me!"
 msgstr "請隨意寫下你想要交流的內容！"
 
-#: templates/main/contact.html:54
+#: templates/main/contact.html:71
 msgid "Say Hello"
 msgstr "妳好！"
 
-#: templates/main/contact.html:109
+#: templates/main/contact.html:123
 msgid "&nbsp;&quest;"
 msgstr "&nbsp;&quest;"
 
