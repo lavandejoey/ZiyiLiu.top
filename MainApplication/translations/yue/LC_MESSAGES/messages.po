@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-12 18:31+0800\n"
+"POT-Creation-Date: 2023-10-12 23:30+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: yue\n"
@@ -51,7 +51,7 @@ msgstr "關於我"
 msgid "Contact"
 msgstr "同我傾"
 
-#: templates/base.html:150
+#: templates/base.html:151
 msgid "All Rights Reserved"
 msgstr "版權所有"
 
@@ -62,6 +62,10 @@ msgstr "多謝你嘅留言！"
 #: templates/main/contact.html:13
 msgid "I will get back to you as soon as possible."
 msgstr "我會盡快覆你。"
+
+#: templates/main/contact.html:15
+msgid "Redirecting in <span id='timer'>5</span> seconds..."
+msgstr "<span id='timer'>5</span> 秒後自動跳轉..."
 
 #: templates/main/contact.html:37
 msgid ""
@@ -507,6 +511,14 @@ msgstr "開發工具：Git、Docker、Kubernetes、OpenAPI、Postman、Swagger�
 #: templates/main/cv.html:377
 msgid "Development Framework: Flask, Django, Bootstrap, jQuery, Node.js."
 msgstr "開發框架：Flask、Django、Bootstrap、jQuery、Node.js。"
+
+#: templates/main/files.html:3
+msgid "Directory"
+msgstr "目錄"
+
+#: templates/main/files.html:16
+msgid "items"
+msgstr "項目"
 
 #: templates/main/index.html:9
 msgid "I am"

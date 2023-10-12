@@ -35,8 +35,6 @@ def create_main_app():
     app.register_blueprint(blueprint=error_blueprint)
     app.register_blueprint(blueprint=ip_blueprint)
     app.register_blueprint(blueprint=main_blueprint)
-    app.register_blueprint(blueprint=file_blueprint)
-    app.register_blueprint(blueprint=game_blueprint)
 
     if app.config["DEBUG"]:
         @app.route("/test")
