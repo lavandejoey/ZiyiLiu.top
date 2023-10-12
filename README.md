@@ -1,7 +1,5 @@
 # [JoshuaZiyiLiu.com Site](https://github.com/lavandejoey/JoshuaZiyiLiu.com)
 
----
-
 [//]: # (Badges)
 [![stars](https://img.shields.io/github/stars/lavandejoey/JoshuaZiyiLiu.com.svg)]()
 [![license](https://img.shields.io/github/license/lavandejoey/JoshuaZiyiLiu.com.svg)]()
@@ -14,7 +12,6 @@ and includes a CV (Curriculum Vitae).
 
 ## Directory Structure
 
----
 The repository's directory structure is as follows:
 
 ```
@@ -60,8 +57,6 @@ MainApplication: Contains the main application files.
 
 ## Update History
 
----
-
 - [2023-10-12] Internationalization (i18n) support (EN-UK, ZH-CN, YUE-HK, FR-FR)
 - [2023-02-12] Signin/up pages
 - [2023-02-10] Dependencies update
@@ -69,5 +64,4 @@ MainApplication: Contains the main application files.
 
 ## License
 
----
 This project is licenced under the Apache Licence 2.0 - see the [LICENCE](LICENCE) file for details.
