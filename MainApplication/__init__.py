@@ -32,10 +32,9 @@ def create_main_app():
     babel = Babel(app=app, locale_selector=get_locale, timezone_selector=get_timezone)
 
     # register blueprints
-    # app.register_blueprint(blueprint=error_blueprint)
+    app.register_blueprint(blueprint=error_blueprint)
     app.register_blueprint(blueprint=ip_blueprint)
     app.register_blueprint(blueprint=main_blueprint)
-    # app.register_blueprint(blueprint=files_blueprint)
 
     if app.config["DEBUG"]:
         @app.route("/test")
