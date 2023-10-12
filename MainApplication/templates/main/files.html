@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2 class="mx-md-5">{{ _("Directory") }}: {{ "~"~'/'~cur_dir_name }}</h2>
+    <div class="px-0 px-sm-2 px-md-5 mx-lg-2">
+        <ul>
+            {# cur_dir_name, par_dir_name, at_root, dir_dict, file_dict #}
+            {# name items in dir_dict #}
+            {# name size unit in file_dict #}
+            {# Return to the parent directory if not in the root directory #}
+            {% if not at_root %}
+                <li><a href="{{ url_for('main.directory_page', filename=par_dir_name) }}">../</a></li>
+            {% endif %}
+            {# List the directories with hyperlinks and item counts #}
+            {% for dir in dir_dict %}
+                <li>
+                    <a href="{{ url_for('main.directory_page', filename=cur_dir_name ~ '/' ~ dir['name']) }}">
+                        <span class="name">{{ dir['name'] }}/</span>&nbsp;<span
+                            class="param"> {{ dir['items'] }} {{ _("items") }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+            {# List the files with hyperlinks and file sizes #}
+            {% for file in file_dict %}
+                <li>
+                    <a href="{{ url_for('static', filename='files' ~ '/' ~ cur_dir_name ~ '/' ~ file['name']) }}">
+                        <span class="name">{{ file['name'] }}</span>&nbsp;<span
+                            class="param"> {{ file['size'] }} {{ file['unit'] }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <style>
+        {# no underline for a in li #}
+        a {
+            text-decoration: none;
+        }
+
+        .param {
+            float: right;
+            width: 100px;
+        }
+        .name {
+            width: 250px;
+        }
+
+        a:hover > span {
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+{% endblock %}

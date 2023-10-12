@@ -14,7 +14,7 @@ from flask import Blueprint
 # local source
 
 error_blueprint = Blueprint(name="error", import_name=__name__, static_folder="static", static_url_path="/static",
-                            template_folder="templates", url_prefix="/error", subdomain=None, url_defaults=None,
+                            template_folder="templates", subdomain=None, url_defaults=None,
                             cli_group=None)
 
 

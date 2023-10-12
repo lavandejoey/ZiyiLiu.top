@@ -12,5 +12,3 @@ __email__ = "lavandejoey@outlook.com"
 # local source
 from .main import *
 from .error import *
-from .file import *
-from .game import *
