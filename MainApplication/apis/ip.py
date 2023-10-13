@@ -7,9 +7,9 @@ __version__ = "0.0.1"
 __maintainer__ = ""
 __email__ = "lavandejoey@outlook.com"
 
-import logging
 
 # standard library
+import logging
 # 3rd party packages
 from flask import blueprints, request, current_app, make_response, jsonify, redirect
 from flask_babel import refresh

@@ -64,5 +64,10 @@ def sitemap_generator():
     yield 'main.portfolio_page', {}
     yield 'main.cv_page', {}
     yield 'main.contact_page', {}
-    # yield 'file.file_page', {}
+    yield 'main.directory_page', {}
+    yield 'auth.login_page', {}
+    yield 'auth.signup_page', {}
+    yield 'auth.logout_page', {}
+    yield 'auth.user_page', {}
+    # yield 'auth.user_edit_page', {}
     # yield 'game.game_page', {}
