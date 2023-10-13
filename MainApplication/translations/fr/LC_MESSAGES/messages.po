@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-13 21:55+0800\n"
+"POT-Creation-Date: 2023-10-14 01:13+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -67,11 +67,17 @@ msgstr "Connexion"
 msgid "All Rights Reserved"
 msgstr "Tous les droits sont réservés"
 
+#: templates/auth/login.html:6
+msgid "Login"
+msgstr "Connexion"
+
 #: templates/auth/login.html:9
-msgid "User not found. <a href=\"{{ url_for('auth.signup') }}\">Sign up here</a>"
-msgstr ""
-"L'utilisateur n'a pas été trouvé. <a href=\"{{ url_for('auth.signup') "
-"}}\">Inscrivez-vous ici</a>"
+msgid "User not found. "
+msgstr "L'utilisateur n'a pas été trouvé. "
+
+#: templates/auth/login.html:9
+msgid "Sign up here"
+msgstr "S'inscrire ici"
 
 #: templates/auth/login.html:13
 msgid "Login failed. Please check your credentials."
@@ -79,37 +85,53 @@ msgstr ""
 "Échec de la connexion. Veuillez vérifier vos informations "
 "d'identification."
 
+#: templates/auth/login.html:30
+msgid "Username/Email/Phone: "
+msgstr "Utilisateur/E-mail/Téléphone: "
+
+#: templates/auth/login.html:34 templates/auth/signup.html:31
+msgid "Password: "
+msgstr "Mot de passe: "
+
 #: templates/auth/login.html:39
-msgid ""
-"Don't have an account? <a href=\"{{ url_for('auth.signup') }}\">Sign up "
-"here</a>"
-msgstr ""
-"Vous n'avez pas de compte? <a href=\"{{ url_for('auth.signup') "
-"}}\">Inscrivez-vous ici</a>"
+msgid "Don't have an account? "
+msgstr "Vous n'avez pas de compte? "
+
+#: templates/auth/login.html:40
+msgid "Sign up here!"
+msgstr "Inscrivez-vous ici!"
+
+#: templates/auth/signup.html:6
+msgid "Sign Up"
+msgstr "S'inscrire"
 
 #: templates/auth/signup.html:9
-msgid ""
-"User already exists. Try a different one or <a href=\"{{ "
-"url_for('auth.login') }}\">log in</a>."
-msgstr ""
-"Cet utilisateur existe déjà. Essayez-en un autre ou <a href=\"{{ "
-"url_for('auth.login') }}\">connectez-vous</a>."
+msgid "User already exists. Try a different one or "
+msgstr "Cet utilisateur existe déjà. Essayez-en un autre ou "
 
-#: templates/auth/signup.html:44
-msgid ""
-"Already have an account? <a href=\"{{ url_for('auth.login') }}\">Log in "
-"here</a>"
-msgstr ""
-"Vous avez déjà un compte? <a href=\"{{ url_for('auth.login') "
-"}}\">Connectez-vous ici</a>"
+#: templates/auth/signup.html:9
+msgid "login"
+msgstr "connectez-vous."
 
-#: templates/auth/user.html:12
+#: templates/auth/signup.html:27 templates/auth/user.html:12
 msgid "Username: "
 msgstr "Utilisateur: "
 
-#: templates/auth/user.html:13
+#: templates/auth/signup.html:35
+msgid "Confirm Password: "
+msgstr "Confirmez le mot de passe: "
+
+#: templates/auth/signup.html:39 templates/auth/user.html:13
 msgid "Email: "
 msgstr "E-mail: "
+
+#: templates/auth/signup.html:44
+msgid "Already have an account? "
+msgstr "Vous avez déjà un compte? "
+
+#: templates/auth/signup.html:44
+msgid "Log in here"
+msgstr "Connectez-vous ici"
 
 #: templates/auth/user.html:14
 msgid "Phone: "
@@ -618,4 +640,28 @@ msgstr ""
 "                    \"Zélé pour différencier légèrement le monde.\",\n"
 "                    \"Ympatient d\\'ingénierer des merveilles "
 "inspirantes.\"];"
+
+#~ msgid ""
+#~ "User not found. <a href=\"{{ "
+#~ "url_for('auth.signup') }}\">Sign up here</a>"
+#~ msgstr ""
+#~ "L'utilisateur n'a pas été trouvé. <a "
+#~ "href=\"{{ url_for('auth.signup') }}\">Inscrivez-vous"
+#~ " ici</a>"
+
+#~ msgid ""
+#~ "Don't have an account? <a href='{{ "
+#~ "url_for('auth.signup') }}'>Sign up here</a>"
+#~ msgstr ""
+#~ "Vous n'avez pas de compte? <a "
+#~ "href='{{ url_for('auth.signup') }}'>Inscrivez-vous"
+#~ " ici</a>"
+
+#~ msgid ""
+#~ "Already have an account? <a href=\"{{"
+#~ " url_for('auth.login') }}\">Log in here</a>"
+#~ msgstr ""
+#~ "Vous avez déjà un compte? <a "
+#~ "href=\"{{ url_for('auth.login') }}\">Connectez-vous"
+#~ " ici</a>"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-13 21:55+0800\n"
+"POT-Creation-Date: 2023-10-14 01:13+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: yue\n"
@@ -67,39 +67,69 @@ msgstr "登入"
 msgid "All Rights Reserved"
 msgstr "版權所有"
 
+#: templates/auth/login.html:6
+msgid "Login"
+msgstr "登入"
+
 #: templates/auth/login.html:9
-msgid "User not found. <a href=\"{{ url_for('auth.signup') }}\">Sign up here</a>"
-msgstr "冇搵到呢個用戶。 <a href=\"{{ url_for('auth.signup') }}\">註冊</a>"
+msgid "User not found. "
+msgstr "用戶未找到。"
+
+#: templates/auth/login.html:9
+msgid "Sign up here"
+msgstr "喺度註冊"
 
 #: templates/auth/login.html:13
 msgid "Login failed. Please check your credentials."
 msgstr "登入失敗。請檢查你嘅用戶名同密碼。"
 
+#: templates/auth/login.html:30
+msgid "Username/Email/Phone: "
+msgstr "用戶名/電郵/電話："
+
+#: templates/auth/login.html:34 templates/auth/signup.html:31
+msgid "Password: "
+msgstr "密碼："
+
 #: templates/auth/login.html:39
-msgid ""
-"Don't have an account? <a href=\"{{ url_for('auth.signup') }}\">Sign up "
-"here</a>"
-msgstr "仲冇帳戶？ <a href=\"{{ url_for('auth.signup') }}\">註冊</a>"
+msgid "Don't have an account? "
+msgstr "仲冇帳戶？"
+
+#: templates/auth/login.html:40
+msgid "Sign up here!"
+msgstr "喺度註冊！"
+
+#: templates/auth/signup.html:6
+msgid "Sign Up"
+msgstr "註冊"
 
 #: templates/auth/signup.html:9
-msgid ""
-"User already exists. Try a different one or <a href=\"{{ "
-"url_for('auth.login') }}\">log in</a>."
-msgstr "用戶名已經存在。試下揀一個新嘅或者 <a href=\"{{ url_for('auth.login') }}\">登入</a>。"
+msgid "User already exists. Try a different one or "
+msgstr "用戶名已經存在。試下揀一個新嘅或者"
 
-#: templates/auth/signup.html:44
-msgid ""
-"Already have an account? <a href=\"{{ url_for('auth.login') }}\">Log in "
-"here</a>"
-msgstr "已經有帳戶？ <a href=\"{{ url_for('auth.login') }}\">登入</a>"
+#: templates/auth/signup.html:9
+msgid "login"
+msgstr "登入"
 
-#: templates/auth/user.html:12
+#: templates/auth/signup.html:27 templates/auth/user.html:12
 msgid "Username: "
 msgstr "用戶名："
 
-#: templates/auth/user.html:13
+#: templates/auth/signup.html:35
+msgid "Confirm Password: "
+msgstr "確認密碼："
+
+#: templates/auth/signup.html:39 templates/auth/user.html:13
 msgid "Email: "
 msgstr "電郵："
+
+#: templates/auth/signup.html:44
+msgid "Already have an account? "
+msgstr "已經有帳戶？"
+
+#: templates/auth/signup.html:44
+msgid "Log in here"
+msgstr "由呢度登入"
 
 #: templates/auth/user.html:14
 msgid "Phone: "
@@ -605,4 +635,19 @@ msgstr ""
 "future.\",\n"
 "                    \"Zealous to slightly differ the world.\",\n"
 "                    \"Yearning to engineer awe-inspiring wonders.\"];"
+
+#~ msgid ""
+#~ "User not found. <a href=\"{{ "
+#~ "url_for('auth.signup') }}\">Sign up here</a>"
+#~ msgstr "冇搵到呢個用戶。 <a href=\"{{ url_for('auth.signup') }}\">註冊</a>"
+
+#~ msgid ""
+#~ "Don't have an account? <a href='{{ "
+#~ "url_for('auth.signup') }}'>Sign up here</a>"
+#~ msgstr "仲冇帳戶？ <a href={{ url_for('auth.signup') }}>註冊</a>"
+
+#~ msgid ""
+#~ "Already have an account? <a href=\"{{"
+#~ " url_for('auth.login') }}\">Log in here</a>"
+#~ msgstr "已經有帳戶？ <a href=\"{{ url_for('auth.login') }}\">登入</a>"
 
