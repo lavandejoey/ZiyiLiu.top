@@ -12,7 +12,7 @@
                                 </div>
                                 <div class="container">{{ _("I will get back to you as soon as possible.") }}</div>
                             </div>
-                            <p id="countdown">{{ _("Redirecting in <span id='timer'>5</span> seconds...")}}</p>
+                            <p id="countdown">{{ _("Redirecting in <span id='timer'>5</span> seconds...") }}</p>
                         </div>
                     </div>
                     <script>
@@ -50,7 +50,11 @@
                                 {{ form.csrf_token }}
                                 <div class="row">
                                     <div class="col form-group my-4">
-                                        {{ form.name(type="text", class="form-control", id="name", placeholder=_("Your preferred name&quest;"), required=True) }}
+                                        <div class="input-group">
+                                            {#<input type="text" class="form-control" id="name" name="name"#}
+                                            {#placeholder="Your preferred name?" required>#}
+                                            {{ form.name(type="text", class="form-control", id="name", placeholder=_("Your preferred name&quest;"), required=True) }}
+                                        </div>
                                     </div>
                                     <div class="col form-group my-4">
                                         {#<input type="email" class="form-control" id="email" name="email"#}
@@ -98,14 +102,21 @@
         textarea.form-control {
             height: 100px;
             line-height: 20px;
-            background: repeating-linear-gradient(
-                    #bdd0ca 1px,
-                    #bdd0ca 20px,
-            );
             color: #333;
         }
     </style>
     <script>
+        // insert icons to <div class="d-inline" id="social"></div>
+        const socialElement = document.getElementById('social');
+        const socialList = [
+            '<a class="mx-1 align-self-end" href="https://instagram.com/lavandecn?igshid=MzMyNGUyNmU2YQ=="><i class="fa-brands fa-instagram fa-sm"></i></a>',
+            '<a class="mx-1 align-self-end" href="https://x.com/lanvande_0528?t=GGTYEhGtLHDQe-uaFc26xg&s=09"><i class="fa-brands fa-x-twitter fa-sm"></i></a>',
+            '<a class="mx-1 align-self-end" href="https://www.facebook.com/profile.php?id=100011578249275&mibextid=ZbWKwL"><i class="fa-brands fa-facebook fa-sm"></i></a>',
+            '<a class="mx-1 align-self-end" href="https://www.linkedin.com/in/%E5%AD%90%E8%89%BA-%E5%88%98-88b872179/"><i class="fa-brands fa-linkedin fa-sm"></i></a>',
+            '<a class="mx-1 align-self-end" href="https://github.com/lavandejoey/"><i class="fa-brands fa-github fa-sm"></i></a>'
+        ]
+        socialElement.innerHTML = socialList.join('');
+
         // use typewriter animation loop to change text letter by letter
         let word_i = 0;
         let letter_i = 0;

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# errors.py
+# views/error.py
 __author__ = "lavandejoey, Ziyi LIU"
 __copyright__ = "Copyright 2023"
 __license__ = ""
@@ -9,7 +9,7 @@ __email__ = "lavandejoey@outlook.com"
 
 # standard library
 # 3rd party packages
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 # local source
 
@@ -18,24 +18,12 @@ error_blueprint = Blueprint(name="error", import_name=__name__, static_folder="s
                             cli_group=None)
 
 
-@error_blueprint.app_errorhandler(404)
-def not_found(error):
-    return "404"
-
-
-@error_blueprint.app_errorhandler(400)
-def bad_request(error):
-    return "400"
-
-
-@error_blueprint.app_errorhandler(403)
-def forbidden(error):
-    return "403"
-
-
-@error_blueprint.app_errorhandler(405)
-def method_not_allowed(error):
-    return "405"
+@error_blueprint.app_errorhandler(400)  # 400 Bad Request
+@error_blueprint.app_errorhandler(403)  # 403 Forbidden
+@error_blueprint.app_errorhandler(404)  # 404 Not Found
+@error_blueprint.app_errorhandler(405)  # 405 Method Not Allowed
+def handle_error(error):
+    return render_template('error/error.html'), error.code
 
 
 @error_blueprint.app_errorhandler(500)

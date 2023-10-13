@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# main.py
+# views/main.py
 __author__ = "lavandejoey, Ziyi LIU"
 __copyright__ = "Copyright 2023"
 __license__ = ""
@@ -11,7 +11,8 @@ import os
 
 # standard library
 # 3rd party packages
-from flask import Blueprint, render_template, flash, request, current_app
+from flask import Blueprint, render_template, flash, request, current_app, redirect, url_for
+from flask_login import login_required, current_user
 from flask_mail import Message
 import logging
 
@@ -70,7 +71,15 @@ def contact_page():
 
 @main_blueprint.route('/files/<path:filename>')
 @main_blueprint.route('/files/')
+@login_required
 def directory_page(filename=""):
+    # Check if the user is logged in and belongs to the file manager group (1)
+    if not current_user.is_authenticated:
+        flash("You must be logged in to access this page.", "danger") if locale == "en" else flash("请先登录。", "danger")
+        return redirect(request.referrer or url_for('main.index_page'))
+    elif not current_user.belong_to_group(1):
+        flash("You are not authorized to access this page.", "danger")
+        return redirect(request.referrer or url_for('main.index_page'))
     root_path = os.path.join(current_app.root_path, "static", "files")
     # Ensure filename is a valid path within the root directory
     cur_dir = os.path.normpath(os.path.join(root_path, filename))

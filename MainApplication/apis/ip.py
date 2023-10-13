@@ -46,20 +46,3 @@ def set_locale(language):
     if language:
         resp.set_cookie('locale', language, max_age=30 * 24 * 60 * 60)
     return resp
-
-#
-# @ip_blueprint.route("/lang", methods=['POST'])
-# def set_locale():
-#     lang = request.args.get("language")
-#     response = make_response(jsonify(message=lang))
-#     if lang == 'English':
-#         refresh()
-#         response.set_cookie('locale', 'en')
-#         return response
-#
-#     if lang == '汉语':
-#         refresh()
-#         response.set_cookie('locale', 'zh_CN')
-#         return response
-#
-#     return jsonify({"data": "success"})

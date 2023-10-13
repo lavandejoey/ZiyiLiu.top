@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-12 23:30+0800\n"
+"POT-Creation-Date: 2023-10-13 21:55+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -20,40 +20,118 @@ msgstr ""
 
 #: templates/TEST.html:6
 msgid "Hello World!"
-msgstr ""
+msgstr "Bonjour tout le monde!"
 
 #: templates/TEST.html:12
 #, python-format
 msgid "Current language is %(language)s"
-msgstr ""
+msgstr "La langue actuelle est %(language)s"
 
-#: templates/base.html:34
+#: templates/base.html:33
 msgid "Hi, I'm"
 msgstr "Bonjour, je suis"
 
-#: templates/base.html:35 templates/main/cv.html:14
+#: templates/base.html:34 templates/main/cv.html:14
 msgid "Ziyi Joshua LIU"
 msgstr "Ziyi Joshua LIU"
 
-#: templates/base.html:49
+#: templates/base.html:48
 msgid "Home"
 msgstr "Accueil"
 
-#: templates/base.html:55
+#: templates/base.html:54
 msgid "Portfolio"
 msgstr "Portefeuille"
 
-#: templates/base.html:61
+#: templates/base.html:60
 msgid "About"
 msgstr "À propos"
 
-#: templates/base.html:67
+#: templates/base.html:66
 msgid "Contact"
 msgstr "Contact"
 
-#: templates/base.html:151
+#: templates/auth/user.html:8 templates/base.html:72
+msgid "User Profile"
+msgstr "Profil d'utilisateur"
+
+#: templates/base.html:78
+msgid "Log Out"
+msgstr "Déconnexion"
+
+#: templates/base.html:84
+msgid "Log In"
+msgstr "Connexion"
+
+#: templates/base.html:177
 msgid "All Rights Reserved"
 msgstr "Tous les droits sont réservés"
+
+#: templates/auth/login.html:9
+msgid "User not found. <a href=\"{{ url_for('auth.signup') }}\">Sign up here</a>"
+msgstr ""
+"L'utilisateur n'a pas été trouvé. <a href=\"{{ url_for('auth.signup') "
+"}}\">Inscrivez-vous ici</a>"
+
+#: templates/auth/login.html:13
+msgid "Login failed. Please check your credentials."
+msgstr ""
+"Échec de la connexion. Veuillez vérifier vos informations "
+"d'identification."
+
+#: templates/auth/login.html:39
+msgid ""
+"Don't have an account? <a href=\"{{ url_for('auth.signup') }}\">Sign up "
+"here</a>"
+msgstr ""
+"Vous n'avez pas de compte? <a href=\"{{ url_for('auth.signup') "
+"}}\">Inscrivez-vous ici</a>"
+
+#: templates/auth/signup.html:9
+msgid ""
+"User already exists. Try a different one or <a href=\"{{ "
+"url_for('auth.login') }}\">log in</a>."
+msgstr ""
+"Cet utilisateur existe déjà. Essayez-en un autre ou <a href=\"{{ "
+"url_for('auth.login') }}\">connectez-vous</a>."
+
+#: templates/auth/signup.html:44
+msgid ""
+"Already have an account? <a href=\"{{ url_for('auth.login') }}\">Log in "
+"here</a>"
+msgstr ""
+"Vous avez déjà un compte? <a href=\"{{ url_for('auth.login') "
+"}}\">Connectez-vous ici</a>"
+
+#: templates/auth/user.html:12
+msgid "Username: "
+msgstr "Utilisateur: "
+
+#: templates/auth/user.html:13
+msgid "Email: "
+msgstr "E-mail: "
+
+#: templates/auth/user.html:14
+msgid "Phone: "
+msgstr "Téléphone: "
+
+#: templates/auth/user.html:15
+msgid "Created At: "
+msgstr "Créé à: "
+
+#: templates/auth/user.html:16
+msgid "Updated At: "
+msgstr "Mis à jour à: "
+
+#: templates/error/error.html:8
+msgid "Error"
+msgstr "Erreur"
+
+#: templates/error/error.html:11
+msgid "Sorry, something went wrong. Please check the URL or try again later."
+msgstr ""
+"Désolé, quelque chose s'est mal passé. Veuillez vérifier l'URL ou "
+"réessayer plus tard."
 
 #: templates/main/contact.html:11
 msgid "Thank you for your message!"
@@ -83,23 +161,23 @@ msgstr ""
 "<span>Ou vous pouvez me trouver sur</span><div class='d-inline' "
 "id='social'></div><span>aussi!</span>"
 
-#: templates/main/contact.html:53
+#: templates/main/contact.html:56
 msgid "Your preferred name&quest;"
 msgstr "Votre nom préféré&quest;"
 
-#: templates/main/contact.html:58
+#: templates/main/contact.html:62
 msgid "Where can I reach you via email?"
 msgstr "Où puis-je vous joindre par e-mail?"
 
-#: templates/main/contact.html:66
+#: templates/main/contact.html:70
 msgid "Plz feel free to send whatever you want to talk with me!"
 msgstr "N'hésitez pas à envoyer tout ce dont vous voulez parler avec moi&nbsp;!"
 
-#: templates/main/contact.html:71
+#: templates/main/contact.html:75
 msgid "Say Hello"
-msgstr "Dire Bonjour"
+msgstr "Salut~"
 
-#: templates/main/contact.html:123
+#: templates/main/contact.html:134
 msgid "&nbsp;&quest;"
 msgstr "&nbsp;&quest;"
 
@@ -145,35 +223,35 @@ msgstr "juil, 2024"
 
 #: templates/main/cv.html:71
 msgid "BEng Major in Intelligence and Robotics (Robotics)."
-msgstr ""
+msgstr "BEng Majeure en intelligence et robotique (robotique)."
 
 #: templates/main/cv.html:72
 msgid "Relevant Courses:"
-msgstr ""
+msgstr "Cours pertinents:"
 
 #: templates/main/cv.html:76
 msgid "Mathematical Foundations for Artificial Intelligence"
-msgstr ""
+msgstr "Mathématiques fondamentales pour l'intelligence artificielle"
 
 #: templates/main/cv.html:78
 msgid "Principles and Design of Embedded Systems"
-msgstr ""
+msgstr "Principes et conception des systèmes embarqués"
 
 #: templates/main/cv.html:80
 msgid "Pattern Learning and Machine Learning"
-msgstr ""
+msgstr "Apprentissage de modèles et apprentissage automatique"
 
 #: templates/main/cv.html:81
 msgid "Machine Learning Tools and Platforms"
-msgstr ""
+msgstr "Outils et plates-formes d'apprentissage automatique"
 
 #: templates/main/cv.html:82
 msgid "Robotics Principles and Design"
-msgstr ""
+msgstr "Principes et conception de la robotique"
 
 #: templates/main/cv.html:83
 msgid "Computer Graphic"
-msgstr ""
+msgstr "Graphique par ordinateur"
 
 #: templates/main/cv.html:94
 msgid "Oct, 2021"
@@ -514,15 +592,15 @@ msgstr ""
 msgid "Directory"
 msgstr "Répertoire"
 
-#: templates/main/files.html:16
+#: templates/main/files.html:18
 msgid "items"
 msgstr "éléments"
 
-#: templates/main/index.html:9
+#: templates/main/index.html:21
 msgid "I am"
 msgstr "Je suis"
 
-#: templates/main/index.html:20
+#: templates/main/index.html:32
 msgid ""
 "const descriptionStr = [\"striving at engineering.\",\n"
 "                    \"Journeying through the tech and design.\",\n"
