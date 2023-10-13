@@ -12,15 +12,13 @@ import os
 import logging
 # 3rd party packages
 # local source
-from MainApplication import create_main_app
+from MainApplication import main_app
 
 # Init console debug log "JoshuaZiyiLiu"
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logging.debug("Debug mode is on.")
 
 # Create the main application
-main_app = create_main_app()
-
 debug = os.environ.get("APP_DEBUG", True)
 host = os.environ.get("APP_HOST", "localhost")
 port = os.environ.get("APP_PORT", 1211)
