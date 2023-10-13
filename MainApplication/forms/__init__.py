@@ -8,3 +8,4 @@ __maintainer__ = ""
 __email__ = "lavandejoey@outlook.com"
 
 from .email import ContactForm
+from .auth import LoginForm, SignupForm

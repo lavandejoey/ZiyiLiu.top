@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-12 23:30+0800\n"
+"POT-Creation-Date: 2023-10-13 21:55+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hant\n"
@@ -25,35 +25,101 @@ msgstr ""
 #: templates/TEST.html:12
 #, python-format
 msgid "Current language is %(language)s"
-msgstr ""
+msgstr "現在的語言是 %(language)s"
 
-#: templates/base.html:34
+#: templates/base.html:33
 msgid "Hi, I'm"
 msgstr "妳好，我是"
 
-#: templates/base.html:35 templates/main/cv.html:14
+#: templates/base.html:34 templates/main/cv.html:14
 msgid "Ziyi Joshua LIU"
 msgstr "劉子藝"
 
-#: templates/base.html:49
+#: templates/base.html:48
 msgid "Home"
 msgstr "首頁"
 
-#: templates/base.html:55
+#: templates/base.html:54
 msgid "Portfolio"
 msgstr "作品集"
 
-#: templates/base.html:61
+#: templates/base.html:60
 msgid "About"
 msgstr "關於我"
 
-#: templates/base.html:67
+#: templates/base.html:66
 msgid "Contact"
 msgstr "與我聯繫"
 
-#: templates/base.html:151
+#: templates/auth/user.html:8 templates/base.html:72
+msgid "User Profile"
+msgstr "個人資料"
+
+#: templates/base.html:78
+msgid "Log Out"
+msgstr "登出"
+
+#: templates/base.html:84
+msgid "Log In"
+msgstr "登入"
+
+#: templates/base.html:177
 msgid "All Rights Reserved"
 msgstr "版權所有"
+
+#: templates/auth/login.html:9
+msgid "User not found. <a href=\"{{ url_for('auth.signup') }}\">Sign up here</a>"
+msgstr "沒有找到該用戶。 <a href=\"{{ url_for('auth.signup') }}\">點擊這裏註冊</a>"
+
+#: templates/auth/login.html:13
+msgid "Login failed. Please check your credentials."
+msgstr "登入失敗。請檢查你的用戶名和密碼。"
+
+#: templates/auth/login.html:39
+msgid ""
+"Don't have an account? <a href=\"{{ url_for('auth.signup') }}\">Sign up "
+"here</a>"
+msgstr "你還沒有帳號嗎？ <a href=\"{{ url_for('auth.signup') }}\">點擊這裏註冊</a>"
+
+#: templates/auth/signup.html:9
+msgid ""
+"User already exists. Try a different one or <a href=\"{{ "
+"url_for('auth.login') }}\">log in</a>."
+msgstr "該用戶已存在。請嘗試使用其他用戶名或<a href=\"{{ url_for('auth.login') }}\">登入</a>。"
+
+#: templates/auth/signup.html:44
+msgid ""
+"Already have an account? <a href=\"{{ url_for('auth.login') }}\">Log in "
+"here</a>"
+msgstr "你已經有帳號了嗎？ <a href=\"{{ url_for('auth.login') }}\">點擊這裏登入</a>"
+
+#: templates/auth/user.html:12
+msgid "Username: "
+msgstr "用戶名："
+
+#: templates/auth/user.html:13
+msgid "Email: "
+msgstr "郵箱："
+
+#: templates/auth/user.html:14
+msgid "Phone: "
+msgstr "電話："
+
+#: templates/auth/user.html:15
+msgid "Created At: "
+msgstr "創建於："
+
+#: templates/auth/user.html:16
+msgid "Updated At: "
+msgstr "更新於："
+
+#: templates/error/error.html:8
+msgid "Error"
+msgstr "錯誤"
+
+#: templates/error/error.html:11
+msgid "Sorry, something went wrong. Please check the URL or try again later."
+msgstr "很抱歉，出現了一些問題。請檢查網址或稍後再試。"
 
 #: templates/main/contact.html:11
 msgid "Thank you for your message!"
@@ -81,23 +147,23 @@ msgstr ""
 "<span>你也可以在</span><div class='d-inline' "
 "id='social'></div><span>找到我！</span>"
 
-#: templates/main/contact.html:53
+#: templates/main/contact.html:56
 msgid "Your preferred name&quest;"
 msgstr "請留下稱呼！"
 
-#: templates/main/contact.html:58
+#: templates/main/contact.html:62
 msgid "Where can I reach you via email?"
 msgstr "請留下郵箱地址！"
 
-#: templates/main/contact.html:66
+#: templates/main/contact.html:70
 msgid "Plz feel free to send whatever you want to talk with me!"
 msgstr "請隨意寫下你想要交流的內容！"
 
-#: templates/main/contact.html:71
+#: templates/main/contact.html:75
 msgid "Say Hello"
 msgstr "妳好！"
 
-#: templates/main/contact.html:123
+#: templates/main/contact.html:134
 msgid "&nbsp;&quest;"
 msgstr "&nbsp;&quest;"
 
@@ -514,15 +580,15 @@ msgstr "開發框架：Flask、Django、Bootstrap、jQuery、Node.js。"
 msgid "Directory"
 msgstr "目錄"
 
-#: templates/main/files.html:16
+#: templates/main/files.html:18
 msgid "items"
 msgstr "項目"
 
-#: templates/main/index.html:9
+#: templates/main/index.html:21
 msgid "I am"
 msgstr "I am"
 
-#: templates/main/index.html:20
+#: templates/main/index.html:32
 msgid ""
 "const descriptionStr = [\"striving at engineering.\",\n"
 "                    \"Journeying through the tech and design.\",\n"

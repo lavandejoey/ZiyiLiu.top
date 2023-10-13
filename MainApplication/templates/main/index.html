@@ -1,12 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="container" style="height:15vh"></div>
+    <div class="container" style="height:15vh">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div id="flash-message" class="messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
     <div class="container">
         <div class="d-flex mx-4 align-items-start description-container">
             <div class="d-flex flex-wrap py-0 align-items-stretch justify-content-start">
                 {#I am#}
                 <span class="pre-description flex-inline mx-0 my-2 d-inline-block"
-                      style="padding: 5px 0px;font-size: xxx-large">{{ _("I am")}}&nbsp;</span>
+                      style="padding: 5px 0px;font-size: xxx-large">{{ _("I am") }}&nbsp;</span>
                 {#Descriptions#}
                 <span class="flex-inline mx-0 my-2 text-white"
                       style="background-color:black; padding: 5px 10px;font-size: xxx-large;font-weight:bold;">
