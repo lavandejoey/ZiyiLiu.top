@@ -1,34 +1,82 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "HarmonyOS";
+  font-family: "HarmonyOS", SanSerif;
   src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HarmonyOS", SanSerif;
   src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Bold.ttf");
-  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Light.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HarmonyOS", SanSerif;
   src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HarmonyOS", SanSerif;
   src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Regular.ttf");
-  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Black.ttf");
-  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Bold.ttf");
-  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Light.ttf");
-  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Medium.ttf");
-  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Regular.ttf");
-  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HarmonyOS", SansSerif;
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HarmonyOS", SansSerif;
   src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Thin.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HarmonyOS-Italic";
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Black_Italic.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Bold_Italic.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Italic.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Medium_Italic.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Light_Italic.ttf");
+  src: url("../fonts/HarmonyOS/HarmonyOS_Sans_Thin_Italic.ttf");
+  font-style: italic;
 }
 @font-face {
   font-family: "HandPurisa";
   src: url("../fonts/tlwg/Purisa.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HandPurisa";
   src: url("../fonts/tlwg/Purisa-Bold.ttf");
-  src: url("../fonts/tlwg/Purisa-BoldOblique.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HandPurisa";
   src: url("../fonts/tlwg/Purisa-Oblique.ttf");
+  font-weight: normal;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "HandPurisa";
+  src: url("../fonts/tlwg/Purisa-BoldOblique.ttf");
+  font-weight: bold;
+  font-style: oblique;
 }
 html {
   background: #e3d1c6;
-  font-family: "HarmonyOS", SansSerif, serif, sans-serif;
-  z-index: 0;
+  font-family: "HarmonyOS", SansSerif, sans-serif;
+  z-index: -100;
 }
 
 body {
-  z-index: 5;
+  z-index: -10;
   background-color: #f2f2f2;
 }
 
@@ -38,7 +86,7 @@ body {
   width: 100vw;
   height: 2vmin;
   background-color: #e3d1c6;
-  z-index: 10;
+  z-index: 0;
   display: none;
 }
 @media (min-width: 768px) {
@@ -56,17 +104,13 @@ header.at-top {
   background: #f2f2f2;
 }
 
-header.title {
-  font-size: x-large;
+.title {
+  font-weight: bold;
+  font-size: 25pt;
 }
 
 footer {
-  font-size: 0.4em;
-}
-@media (min-width: 768px) {
-  footer {
-    font-size: 0.8em;
-  }
+  font-size: 10pt;
 }
 
 .nav-link {
@@ -75,6 +119,26 @@ footer {
 
 .pre-description {
   background-color: #f2f2f2;
+}
+
+.highlight-half {
+  position: relative;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.highlight-half::before {
+  /* Highlight color */
+  background-color: #a55d51;
+  opacity: 0.6;
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 60%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-3deg);
 }
 
 /*!

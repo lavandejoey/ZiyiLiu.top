@@ -7,37 +7,40 @@ __version__ = "0.0.1"
 __maintainer__ = "lavandejoey"
 __email__ = "lavandejoey@outlook.com"
 
+import json
+
 # standard library
 
 # 3rd party packages
 from flask import Flask
-from flask_babel import Babel
-from flask_mail import Mail
-from flask_sitemap import Sitemap
-from flask_wtf.csrf import CSRFProtect
-from flask_login import LoginManager, login_required
 
 # local source
 from .apis import *
 from .views import *
 from .models import *
+from .extentions import *
 
 # def create_main_app():
 main_app = Flask(__name__, instance_relative_config=True, )
 main_app.config.from_pyfile("config.py")
 
 # initialize extensions
-email = Mail(app=main_app, )
-sitemap = Sitemap(app=main_app)
-csrf = CSRFProtect(app=main_app, )
-babel = Babel(app=main_app, locale_selector=get_locale, timezone_selector=get_timezone)
+email.init_app(app=main_app, )
+sitemap.init_app(app=main_app)
+csrf.init_app(app=main_app, )
+babel.init_app(app=main_app, locale_selector=get_locale, timezone_selector=get_timezone)
 db.init_app(app=main_app)
 with main_app.app_context():
     db.create_all()
-
 # Initialize the login manager
-login_manager = LoginManager(app=main_app)
+login_manager.init_app(app=main_app)
 login_manager.login_view = "auth.login"
+cache.init_app(app=main_app,
+               config={"CACHE_TYPE": main_app.config["CACHE_TYPE"],
+                       "CACHE_DIR": main_app.config["CACHE_DIR"],
+                       "CACHE_DEFAULT_TIMEOUT": main_app.config["CACHE_DEFAULT_TIMEOUT"],
+                       "CACHE_THRESHOLD": main_app.config["CACHE_THRESHOLD"],
+                       "CACHE_NO_NULL_WARNING": main_app.config["CACHE_NO_NULL_WARNING"]})
 
 
 @login_manager.user_loader
@@ -51,11 +54,13 @@ main_app.register_blueprint(blueprint=error_blueprint)
 main_app.register_blueprint(blueprint=ip_blueprint)
 main_app.register_blueprint(blueprint=main_blueprint)
 main_app.register_blueprint(blueprint=auth_blueprint)
+main_app.register_blueprint(blueprint=apis_blueprint)
 
 
-# @app.route("/test")
-# def test_page():
-#     return render_template("TEST.html", current_language=get_locale(), current_locale=get_timezone())
+@main_app.route("/test")
+def test_page():
+    return render_template("TEST.html", title="TEST", page="test")
+
 
 # sitemap generator
 @sitemap.register_generator

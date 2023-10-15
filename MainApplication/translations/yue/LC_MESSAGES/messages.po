@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-14 01:13+0800\n"
+"POT-Creation-Date: 2023-10-15 19:01+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: yue\n"
@@ -18,54 +18,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: templates/TEST.html:6
-msgid "Hello World!"
-msgstr "你好，世界！"
+#: templates/TEST.html:13 templates/main/portfolio.html:12
+msgid "Powered by: "
+msgstr "Powered by: "
 
-#: templates/TEST.html:12
-#, python-format
-msgid "Current language is %(language)s"
-msgstr "當前語言係 %(language)s"
-
-#: templates/base.html:33
+#: templates/base.html:30 templates/base_old.html:33
 msgid "Hi, I'm"
 msgstr "你好，我係"
 
-#: templates/base.html:34 templates/main/cv.html:14
-msgid "Ziyi Joshua LIU"
+#: templates/base.html:31
+msgid "Joshua LIU"
 msgstr "劉子藝&nbsp;(Joshua)"
 
-#: templates/base.html:48
+#: templates/base.html:45 templates/base_old.html:48
 msgid "Home"
 msgstr "主頁"
 
-#: templates/base.html:54
+#: templates/base.html:51 templates/base_old.html:54
 msgid "Portfolio"
 msgstr "作品集"
 
-#: templates/base.html:60
+#: templates/base.html:57 templates/base_old.html:60
 msgid "About"
 msgstr "關於我"
 
-#: templates/base.html:66
+#: templates/base.html:63 templates/base_old.html:66
 msgid "Contact"
 msgstr "同我傾"
 
-#: templates/auth/user.html:8 templates/base.html:72
+#: templates/auth/user.html:8 templates/base.html:69 templates/base_old.html:72
 msgid "User Profile"
 msgstr "用戶資料"
 
-#: templates/base.html:78
+#: templates/base.html:75 templates/base_old.html:78
 msgid "Log Out"
 msgstr "登出"
 
-#: templates/base.html:84
+#: templates/base.html:81 templates/base_old.html:84
 msgid "Log In"
 msgstr "登入"
 
-#: templates/base.html:177
+#: templates/base.html:166 templates/base_old.html:196
 msgid "All Rights Reserved"
 msgstr "版權所有"
+
+#: templates/base_old.html:34 templates/main/cv.html:14
+msgid "Ziyi Joshua LIU"
+msgstr "劉子藝&nbsp;(Joshua)"
 
 #: templates/auth/login.html:6
 msgid "Login"
@@ -636,6 +635,10 @@ msgstr ""
 "                    \"Zealous to slightly differ the world.\",\n"
 "                    \"Yearning to engineer awe-inspiring wonders.\"];"
 
+#: templates/main/portfolio.html:10
+msgid "ABOUT: "
+msgstr "關於："
+
 #~ msgid ""
 #~ "User not found. <a href=\"{{ "
 #~ "url_for('auth.signup') }}\">Sign up here</a>"
@@ -650,4 +653,10 @@ msgstr ""
 #~ "Already have an account? <a href=\"{{"
 #~ " url_for('auth.login') }}\">Log in here</a>"
 #~ msgstr "已經有帳戶？ <a href=\"{{ url_for('auth.login') }}\">登入</a>"
+
+#~ msgid "Hello World!"
+#~ msgstr "你好，世界！"
+
+#~ msgid "Current language is %(language)s"
+#~ msgstr "當前語言係 %(language)s"
 
