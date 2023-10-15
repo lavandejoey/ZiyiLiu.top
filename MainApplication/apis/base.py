@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# apis/__init__.py
+# apis/base.py
 __author__ = "lavandejoey, Ziyi LIU"
 __copyright__ = "Copyright 2023"
 __license__ = ""
@@ -9,7 +9,8 @@ __email__ = "lavandejoey@outlook.com"
 
 # standard library
 # 3rd party packages
+from flask import Blueprint
+
 # local source
-from .ip import ip_blueprint, get_ip, get_locale, get_timezone, set_locale
-from .repos import apis_blueprint
-from .sitemap_register import register_generator
+
+apis_blueprint = Blueprint(name="apis", import_name=__name__, url_prefix="/api")

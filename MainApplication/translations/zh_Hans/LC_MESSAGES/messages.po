@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-14 01:13+0800\n"
+"POT-Creation-Date: 2023-10-15 14:37+0800\n"
 "PO-Revision-Date: 2023-05-24 18:16+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hans\n"
@@ -18,14 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: templates/TEST.html:6
-msgid "Hello World!"
-msgstr "你好，世界！"
-
-#: templates/TEST.html:12
-#, python-format
-msgid "Current language is %(language)s"
-msgstr "当前语言是 %(language)s"
+#: templates/TEST.html:13 templates/main/portfolio.html:12
+msgid "Powered by: "
+msgstr "Powered by: "
 
 #: templates/base.html:33
 msgid "Hi, I'm"
@@ -117,7 +112,7 @@ msgstr "用户名："
 
 #: templates/auth/signup.html:35
 msgid "Confirm Password: "
-msgstr ""
+msgstr "确认密码："
 
 #: templates/auth/signup.html:39 templates/auth/user.html:13
 msgid "Email: "
@@ -634,6 +629,10 @@ msgstr ""
 "                    \"Zealous to slightly differ the world.\",\n"
 "                    \"Yearning to engineer awe-inspiring wonders.\"];"
 
+#: templates/main/portfolio.html:10
+msgid "ABOUT: "
+msgstr "关于："
+
 #~ msgid ""
 #~ "User not found. <a href=\"{{ "
 #~ "url_for('auth.signup') }}\">Sign up here</a>"
@@ -648,4 +647,10 @@ msgstr ""
 #~ "Already have an account? <a href=\"{{"
 #~ " url_for('auth.login') }}\">Log in here</a>"
 #~ msgstr "已有账号？<a href=\"{{ url_for('auth.login') }}\">登录</a>"
+
+#~ msgid "Hello World!"
+#~ msgstr "你好，世界！"
+
+#~ msgid "Current language is %(language)s"
+#~ msgstr "当前语言是 %(language)s"
 

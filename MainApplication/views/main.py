@@ -7,17 +7,19 @@ __version__ = "0.0.1"
 __maintainer__ = ""
 __email__ = "lavandejoey@outlook.com"
 
+# standard library
+import json
 import os
 
-# standard library
 # 3rd party packages
+import requests
 from flask import Blueprint, render_template, flash, request, current_app, redirect, url_for
-from flask_babel import get_locale
 from flask_login import login_required, current_user
 from flask_mail import Message
-import logging
 
 # local source
+from MainApplication.apis import get_locale
+from MainApplication.extentions import cache
 from MainApplication.forms import ContactForm
 
 main_blueprint = Blueprint(name="main", import_name=__name__, static_folder="static",
@@ -35,7 +37,38 @@ def index_page():
 
 @main_blueprint.route('/portfolio')
 def portfolio_page():
-    return render_template("main/portfolio.html", title="Portfolio", page="portfolio")
+    # cache get_github_data for different repo names
+    @cache.memoize(timeout=60 * 60 * 24)  # 24 hours
+    def get_github_data(_repo_name):
+        usr = current_app.config["GITHUB_USERNAME"]
+        with open("MainApplication/static/git-lang-colours.json", "r") as f:
+            color_scheme = json.load(f)
+        api_url = f'https://api.github.com/repos/{usr}/{_repo_name}'
+        api_lang_url = f"https://api.github.com/repos/{usr}/{_repo_name}/languages"
+        headers = {
+            'Authorization': f'token {current_app.config["GITHUB_API_TOKEN"]}'
+        }
+        response_repo = requests.get(api_url, headers=headers)
+        response_lang = requests.get(api_lang_url, headers=headers)
+        if response_repo.status_code == 200 and response_lang.status_code == 200:
+            repo = response_repo.json()
+            languages = response_lang.json()
+            total_lines = sum(languages.values())
+            language_data = {
+                key: {"percentage": round(val / total_lines * 100, 2), "color": color_scheme[key]["color"]}
+                for key, val in languages.items()
+            }
+            repo["language"] = language_data
+            return repo
+
+    repos_json = []
+    for repo_name in current_app.config["GITHUB_REPO_NAMES"]:
+        repos_json.append(get_github_data(repo_name))
+    return render_template("main/portfolio.html", title="Portfolio", page="portfolio", repos=repos_json)
+
+
+# def portfolio_page():
+#     return render_template("main/portfolio.html", title="Portfolio", page="portfolio")
 
 
 # Curriculum Vitae

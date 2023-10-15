@@ -26,6 +26,7 @@ MarkupSafe>=2.1.2
 pycparser>=2.21
 pymysql
 pyOpenSSL>=23.1.1
+requests>=2.31.0
 sqlalchemy>=2.0.20
 toml>=0.10.2
 typing_extensions>=4.5.0

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-14 01:13+0800\n"
+"POT-Creation-Date: 2023-10-15 14:37+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -18,14 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: templates/TEST.html:6
-msgid "Hello World!"
-msgstr "Bonjour tout le monde!"
-
-#: templates/TEST.html:12
-#, python-format
-msgid "Current language is %(language)s"
-msgstr "La langue actuelle est %(language)s"
+#: templates/TEST.html:13 templates/main/portfolio.html:12
+msgid "Powered by: "
+msgstr "Propulsé par: "
 
 #: templates/base.html:33
 msgid "Hi, I'm"
@@ -286,17 +281,20 @@ msgstr "fév, 2023"
 
 #: templates/main/cv.html:97
 msgid "Mini-major Diploma Major in Computer Science and Technology"
-msgstr ""
+msgstr "Diplôme de mini-majeure en informatique et technologie"
 
 #: templates/main/cv.html:98
 msgid "Relevant courses:"
-msgstr ""
+msgstr "Cours pertinents:"
 
 #: templates/main/cv.html:98
 msgid ""
 "Data Structures and Algorithms, Principles of Database Systems, Operating"
 " Systems, Software Engineering, Computer Networking."
 msgstr ""
+"Structures de données et algorithmes, principes des systèmes de base de "
+"données, systèmes d'exploitation, génie logiciel, réseautage "
+"informatique."
 
 #: templates/main/cv.html:106
 msgid "Internship"
@@ -304,7 +302,7 @@ msgstr "Stage"
 
 #: templates/main/cv.html:109
 msgid "Bank of Communication Financial Technology Co,Ltd."
-msgstr ""
+msgstr "Banque de communication Financial Technology Co,Ltd."
 
 #: templates/main/cv.html:110 templates/main/cv.html:206
 msgid "Dec, 2022"
@@ -312,7 +310,7 @@ msgstr "déc, 2022"
 
 #: templates/main/cv.html:113
 msgid "Back-end Developer"
-msgstr ""
+msgstr "Développeur back-end"
 
 #: templates/main/cv.html:118
 msgid ""
@@ -320,12 +318,18 @@ msgid ""
 "its relational database and automated the process from pre-employment to "
 "employee management."
 msgstr ""
+"Créé un HRM mis à jour à l'aide d'une plate-forme à faible code et de ses"
+" API, conçu sa base de données relationnelle et automatisé le processus "
+"de la pré-embauche à la gestion des employés."
 
 #: templates/main/cv.html:122
 msgid ""
 "Developed OCR APIs for HRM (Human Resource Management) using the OpenAPI "
 "standard, improving the efficiency and accuracy of data capture."
 msgstr ""
+"Développé des API OCR pour HRM (gestion des ressources humaines) en "
+"utilisant la norme OpenAPI, améliorant l'efficacité et la précision de la"
+" capture de données."
 
 #: templates/main/cv.html:126
 msgid ""
@@ -333,6 +337,10 @@ msgid ""
 "debt management platform, contributing to integration testing, "
 "compilation, deployment and test case management."
 msgstr ""
+"Participé au processus DevOps pour la chaîne d'approvisionnement et la "
+"plate-forme de gestion de la dette de l'entreprise, contribuant aux tests"
+" d'intégration, à la compilation, au déploiement et à la gestion des cas "
+"de test."
 
 #: templates/main/cv.html:135
 msgid "ISCAS (Institute of Software Chinese Academy of Sciences)"
@@ -350,7 +358,7 @@ msgstr "sept, 2022"
 
 #: templates/main/cv.html:139
 msgid "Development and Testing"
-msgstr ""
+msgstr "Développement et test"
 
 #: templates/main/cv.html:144
 msgid ""
@@ -358,6 +366,9 @@ msgid ""
 "openEuler platform, ensuring compatibility and functionality within the "
 "openEuler operating system."
 msgstr ""
+"Testé et empaqueté des logiciels tels que Autoconf-2.13 et Pijul sur la "
+"plate-forme openEuler, assurant la compatibilité et la fonctionnalité "
+"dans le système d'exploitation openEuler."
 
 #: templates/main/cv.html:149
 msgid ""
@@ -366,21 +377,27 @@ msgid ""
 "sensitive information such as passwords, key tokens, and private "
 "information."
 msgstr ""
+"Développé \"rsensleak\" partiellement, un outil de reconnaissance "
+"d'informations sensibles aux documents basé sur Rust, qui analyse les "
+"documents et identifie les informations sensibles telles que les mots de "
+"passe, les jetons clés et les informations privées."
 
 #: templates/main/cv.html:161
 msgid "Academic Projects"
-msgstr ""
+msgstr "Projets académiques"
 
 #: templates/main/cv.html:165
 msgid ""
 "Light pollution assessment and prediction (COMAP Interdisciplinary "
 "Contest in Modelling (ICM))"
 msgstr ""
+"Évaluation et prédiction de la pollution lumineuse (Concours "
+"interdisciplinaire de modélisation COMAP (ICM))"
 
 #: templates/main/cv.html:169 templates/main/cv.html:209
 #: templates/main/cv.html:248
 msgid "Programmer"
-msgstr ""
+msgstr "Programmeur"
 
 #: templates/main/cv.html:181
 msgid ""
@@ -388,6 +405,10 @@ msgid ""
 "related to social development, industrial levels, and ecological "
 "conditions as evaluation variables.&nbsp;"
 msgstr ""
+"Développement d'un système d'évaluation du niveau de pollution lumineuse,"
+" utilisant des données liées au développement social, aux niveaux "
+"industriels et aux conditions écologiques comme variables "
+"d'évaluation.&nbsp;"
 
 #: templates/main/cv.html:185
 msgid ""
@@ -397,6 +418,12 @@ msgid ""
 " light pollution levels. Fitting them to conduct the evaluation index "
 "parameters.&nbsp;"
 msgstr ""
+"Collecte, nettoyage et extraction de données historiques dans huit "
+"régions différentes des États-Unis orientaux et occidentaux, et les "
+"données extraites de cartes de télédétection par satellite et "
+"d'informations SIG comme critères pour les niveaux actuels de pollution "
+"lumineuse. Les ajuster pour mener les paramètres d'indice "
+"d'évaluation.&nbsp;"
 
 #: templates/main/cv.html:189
 msgid ""
@@ -404,18 +431,27 @@ msgid ""
 "individual evaluations using DEMATEL and network analysis (ANP). And "
 "using multiple regression analysis for accurate testing and assessment."
 msgstr ""
+"Utilisation de méthodes d'évaluation subjectives et objectives, y compris"
+" des évaluations individuelles à l'aide de DEMATEL et d'analyses de "
+"réseau (ANP). Et en utilisant l'analyse de régression multiple pour des "
+"tests et une évaluation précis."
 
 #: templates/main/cv.html:205
 msgid ""
 "Time Series Based Climate Prediction and Attribution Analysis (APMCM "
 "Mathematical Modeling Contest)"
 msgstr ""
+"Prédiction du climat et analyse d'attribution basées sur les séries "
+"chronologiques (Concours de modélisation mathématique APMCM)"
 
 #: templates/main/cv.html:221
 msgid ""
 "Built ARIMA and XGboost model to predict global temperature rise, found "
 "temperature will reach 20°C in 2048.&nbsp;"
 msgstr ""
+"Construit un modèle ARIMA et XGboost pour prédire l'augmentation de la "
+"température mondiale, a constaté que la température atteindra 20°C en "
+"2048.&nbsp;"
 
 #: templates/main/cv.html:225
 msgid ""
@@ -423,18 +459,25 @@ msgid ""
 "reject the assumption of no abnormal rise in March 2022 due to the "
 "potential effect of the global epidemic.&nbsp;"
 msgstr ""
+"A mené des tests d'hypothèses et a obtenu une probabilité de "
+"97,6872&percnt; de rejeter l'hypothèse d'une augmentation anormale en "
+"mars 2022 en raison de l'effet potentiel de l'épidémie mondiale.&nbsp;"
 
 #: templates/main/cv.html:229
 msgid ""
 "Used PC algorithm and DTW to attribute temperature change to human "
 "activities dominating natural factors."
 msgstr ""
+"Utilisé l'algorithme PC et DTW pour attribuer le changement de "
+"température aux activités humaines dominant les facteurs naturels."
 
 #: templates/main/cv.html:244
 msgid ""
 "Signal base station siting problem (MathorCup Mathematical Modeling "
 "Program)"
 msgstr ""
+"Problème d'emplacement de la station de base de signal (programme de "
+"modélisation mathématique MathorCup)"
 
 #: templates/main/cv.html:257
 msgid ""
@@ -444,6 +487,13 @@ msgid ""
 "for branch base station planning. I enhanced signal base station "
 "optimization by partitioning map outliers.&nbsp;"
 msgstr ""
+"Implémenté un modèle d'optimisation par essaim de particules avec des "
+"coordonnées supplémentaires comme termes de guidage pour la planification"
+" de la station de base centrale en utilisant le regroupement K-Means et "
+"incorporé des coordonnées basées sur la pensée gourmande pour la "
+"planification de la station de base de branche. J'ai amélioré "
+"l'optimisation de la station de base de signal en partitionnant les "
+"valeurs aberrantes de la carte.&nbsp;"
 
 #: templates/main/cv.html:261
 msgid ""
@@ -452,6 +502,11 @@ msgid ""
 "The line connecting the base station centre and the circle determined the"
 " main direction of signal emission.&nbsp;"
 msgstr ""
+"Raffiné la limite de couverture de la station de base en trois directions"
+" principales, calculant la couverture à l'aide d'une approximation d'un "
+"cercle de surface égale. La ligne reliant le centre de la station de base"
+" et le cercle a déterminé la direction principale d'émission du "
+"signal.&nbsp;"
 
 #: templates/main/cv.html:265
 msgid ""
@@ -459,22 +514,25 @@ msgid ""
 "with final model parameters extracted with an error of less than "
 "2&percnt;, outperforming the traditional BOKM algorithm."
 msgstr ""
+"Le PSO amélioré a démontré une convergence plus rapide et une plus grande"
+" précision, les paramètres du modèle final étant extraits avec une erreur"
+" de moins de 2&percnt;, surpassant l'algorithme BOKM traditionnel."
 
 #: templates/main/cv.html:278
 msgid "Speech-Recognition-Based Mechanical System for Lift Control"
-msgstr ""
+msgstr "Système mécanique de contrôle de levage basé sur la reconnaissance vocale"
 
 #: templates/main/cv.html:279
 msgid "Apr, 2021"
-msgstr ""
+msgstr "avr, 2021"
 
 #: templates/main/cv.html:279
 msgid "Jun, 2021"
-msgstr ""
+msgstr "juin, 2021"
 
 #: templates/main/cv.html:282
 msgid "Software Developer and Tester"
-msgstr ""
+msgstr "Développeur et testeur de logiciels"
 
 #: templates/main/cv.html:289
 msgid ""
@@ -482,6 +540,10 @@ msgid ""
 "motors, magnetic switches, and Huawei's voice recognition API for "
 "contactless operations during pandemics.&nbsp;"
 msgstr ""
+"Développé un mécanisme de contrôle de levage basé sur Raspberry Pi, "
+"utilisant des moteurs pas à pas, des commutateurs magnétiques et l'API de"
+" reconnaissance vocale de Huawei pour des opérations sans contact pendant"
+" les pandémies.&nbsp;"
 
 #: templates/main/cv.html:293
 msgid ""
@@ -489,70 +551,91 @@ msgid ""
 "Shanghai City University Students Mechanical Engineering Innovation "
 "Contest."
 msgstr ""
+"Cette innovation contrôlée par Python a remporté le deuxième prix du 10e "
+"concours d'innovation en génie mécanique des étudiants universitaires de "
+"la ville de Shanghai."
 
 #: templates/main/cv.html:307
 msgid "Reward and Certifications"
-msgstr ""
+msgstr "Récompenses et certifications"
 
 #: templates/main/cv.html:311
 msgid ""
 "Huawei \"Intelligence Base\" Outstanding Student Scholarship (Level B, "
 "selection rate 1&percnt;);"
 msgstr ""
+"La bourse d'études exceptionnelle \"Intelligence Base\" de Huawei (niveau"
+" B, taux de sélection 1&percnt;);"
 
 #: templates/main/cv.html:312
 msgid ""
 "The Shanghai College Information Technology Level Examination in Big Data"
 " and Cloud Computing, Level 4 (Mar, 2023, Highest Level);"
 msgstr ""
+"L'examen de niveau d'information sur la technologie des collèges de "
+"Shanghai en matière de mégadonnées et de cloud computing, niveau 4 (mars "
+"2023, niveau le plus élevé);"
 
 #: templates/main/cv.html:313
 msgid ""
 "The Shanghai College Information Technology Level Examination in C "
 "Programming and Application, Level 3 (Jan, 2022, Highest Level);"
 msgstr ""
+"L'examen de niveau d'information sur la technologie des collèges de "
+"Shanghai en programmation C et en application, niveau 3 (janvier 2022, "
+"niveau le plus élevé);"
 
 #: templates/main/cv.html:314
 msgid ""
 "Successful Participant in COMAP Interdisciplinary Contest in Modelling "
 "(ICM) (Jun, 2021);"
 msgstr ""
+"Participant réussi au concours de modélisation interdisciplinaire COMAP "
+"(ICM) (juin 2021);"
 
 #: templates/main/cv.html:315
 msgid ""
 "Successful Participant in Asia and Pacific Mathematical Contest in "
 "Modeling (Feb, 2023);"
 msgstr ""
+"Participant réussi au concours de modélisation mathématique d'Asie et du "
+"Pacifique (fév, 2023);"
 
 #: templates/main/cv.html:316
 msgid ""
 "Third Prize of the 12th National E-Commerce \"Innovation, Creativity and "
 "Entrepreneurship\" Challenge Contest (Jun, 2022);"
 msgstr ""
+"Troisième prix du 12e concours national de défi \"Innovation, créativité "
+"et entrepreneuriat\" du commerce électronique (juin 2022);"
 
 #: templates/main/cv.html:317
 msgid ""
 "The Second Prize in 10th University Students Mechanical Engineering "
 "Innovation Contest, Shanghai (Nov, 2022)."
 msgstr ""
+"Le deuxième prix du 10e concours d'innovation en génie mécanique des "
+"étudiants universitaires, Shanghai (nov, 2022)."
 
 #: templates/main/cv.html:324
 msgid "EXTRACURRICULAR ACTIVITIES"
-msgstr ""
+msgstr "ACTIVITÉS EXTRASCOLAIRES"
 
 #: templates/main/cv.html:328
 msgid ""
 "School Publicity and Media Sector of Youth League Committee, East China "
 "University of Science and Technology"
 msgstr ""
+"Secteur de la publicité et des médias scolaires du comité de la ligue de "
+"la jeunesse, Université des sciences et technologies de l'est de la Chine"
 
 #: templates/main/cv.html:329
 msgid "Aug, 2022"
-msgstr ""
+msgstr "août, 2022"
 
 #: templates/main/cv.html:332
 msgid "Head of Department"
-msgstr ""
+msgstr "Chef de département"
 
 #: templates/main/cv.html:344
 msgid ""
@@ -562,6 +645,11 @@ msgid ""
 "media\" by the Shanghai University Media Union for two consecutive years "
 "(2020 and 2021);"
 msgstr ""
+"Coordonné le travail quotidien d'un groupe de travail de 20 membres. A "
+"dirigé le fonctionnement du compte officiel WeChat du collège, \"Huali "
+"Xinyuan\", qui compte plus de 7 000 utilisateurs actifs et a été nommé "
+"\"média membre 4 étoiles\" par l'Union des médias universitaires de "
+"Shanghai pendant deux années consécutives (2020 et 2021);"
 
 #: templates/main/cv.html:348
 msgid ""
@@ -571,44 +659,58 @@ msgid ""
 "technology interestingly and diversely, engaging people in creativity and"
 " hands-on work."
 msgstr ""
+"Organisé des brise-glaces pour les nouveaux arrivants dans tout le "
+"collège avec plus de 300 participants. A organisé deux \"festivals des "
+"geeks\" dans lesquels nous avons uni nos forces avec d'autres collèges et"
+" entreprises, telles que Dell et Huawei, et promu la technologie de "
+"l'information de manière intéressante et diversifiée, engageant les gens "
+"dans la créativité et le travail pratique."
 
 #: templates/main/cv.html:367
 msgid "LANGUAGE AND SKILLS"
-msgstr ""
+msgstr "LANGUE ET COMPÉTENCES"
 
 #: templates/main/cv.html:371
 msgid "Native in Mandarin; fluent in Cantonese;"
-msgstr ""
+msgstr "Langue maternelle en mandarin; couramment en cantonais;"
 
 #: templates/main/cv.html:372
 msgid "Proficient in English (IELTS 6.5, CET-6 583), Beginner in French;"
-msgstr ""
+msgstr "Maîtrise de l'anglais (IELTS 6,5, CET-6 583), débutant en français;"
 
 #: templates/main/cv.html:373
 msgid ""
 "AHA Heartsaver Basic Life Support and CPR Certificate, American Heart "
 "Association, 2022;"
 msgstr ""
+"Certificat de base de soutien de base à la vie et de RCP Heartsaver AHA, "
+"American Heart Association, 2022;"
 
 #: templates/main/cv.html:374
 msgid ""
 "Proficient in Microsoft Office, SPSS, Origin, MATLAB, and other office "
 "software;"
 msgstr ""
+"Maîtrise de Microsoft Office, SPSS, Origin, MATLAB et autres logiciels de"
+" bureau;"
 
 #: templates/main/cv.html:375
 msgid ""
 "Programming Tool: Linux, C/C++, Python, Rust, SQL, HTML, CSS, SCSS, "
 "JavaScript, \\LaTeX, Markdown;"
 msgstr ""
+"Outil de programmation: Linux, C/C++, Python, Rust, SQL, HTML, CSS, SCSS,"
+" JavaScript, \\LaTeX, Markdown;"
 
 #: templates/main/cv.html:376
 msgid "Development Tool: Git, Docker, Kubernetes, OpenAPI, Postman, Swagger;"
 msgstr ""
+"Outil de développement: Git, Docker, Kubernetes, OpenAPI, Postman, "
+"Swagger;"
 
 #: templates/main/cv.html:377
 msgid "Development Framework: Flask, Django, Bootstrap, jQuery, Node.js."
-msgstr ""
+msgstr "Cadre de développement: Flask, Django, Bootstrap, jQuery, Node.js."
 
 #: templates/main/files.html:3
 msgid "Directory"
@@ -641,6 +743,10 @@ msgstr ""
 "                    \"Ympatient d\\'ingénierer des merveilles "
 "inspirantes.\"];"
 
+#: templates/main/portfolio.html:10
+msgid "ABOUT: "
+msgstr "À PROPOS: "
+
 #~ msgid ""
 #~ "User not found. <a href=\"{{ "
 #~ "url_for('auth.signup') }}\">Sign up here</a>"
@@ -664,4 +770,10 @@ msgstr ""
 #~ "Vous avez déjà un compte? <a "
 #~ "href=\"{{ url_for('auth.login') }}\">Connectez-vous"
 #~ " ici</a>"
+
+#~ msgid "Hello World!"
+#~ msgstr "Bonjour tout le monde!"
+
+#~ msgid "Current language is %(language)s"
+#~ msgstr "La langue actuelle est %(language)s"
 

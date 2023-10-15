@@ -7,12 +7,11 @@ __version__ = "0.0.1"
 __maintainer__ = ""
 __email__ = "lavandejoey@outlook.com"
 
-
 # standard library
 import logging
+
 # 3rd party packages
-from flask import blueprints, request, current_app, make_response, jsonify, redirect
-from flask_babel import refresh
+from flask import blueprints, request, current_app, redirect
 
 ip_blueprint = blueprints.Blueprint(name="ip", import_name=__name__, static_folder="static", static_url_path="/static",
                                     template_folder="templates", url_prefix="/", subdomain=None, url_defaults=None,
@@ -36,13 +35,13 @@ def get_locale():
     logging.info("The current locale is: %s" % locale)
     if locale in current_app.config.get('LANGUAGES'):
         return locale
-    return request.accept_languages.best_match(current_app.config.get('BABEL_DEFAULT_LOCALE'))
-    # 没有cookie时，默认为 en
+    return request.accept_languages.best_match(current_app.config.get('BABEL_DEFAULT_LOCALE'))  # 没有cookie时，默认为 en
 
 
 @ip_blueprint.route('/set-locale/<language>')
 def set_locale(language):
     resp = redirect(request.referrer)
     if language:
+        # The language is stored in a cookie that is valid for 30 days
         resp.set_cookie('locale', language, max_age=30 * 24 * 60 * 60)
     return resp

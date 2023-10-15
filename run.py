@@ -10,6 +10,7 @@ __email__ = "lavandejoey@outlook.com"
 # standard library
 import os
 import logging
+
 # 3rd party packages
 # local source
 from MainApplication import main_app

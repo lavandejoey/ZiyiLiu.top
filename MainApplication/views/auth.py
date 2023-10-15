@@ -7,19 +7,16 @@ __version__ = "0.0.1"
 __maintainer__ = ""
 __email__ = "lavandejoey@outlook.com"
 
-import os
-
 # standard library
 # 3rd party packages
-from flask import Blueprint, render_template, flash, request, redirect, url_for, g
+from flask import Blueprint, render_template, flash, redirect, url_for
 from flask_login import login_user, login_required, logout_user, current_user
 from sqlalchemy import or_
-import logging
 
+from MainApplication.apis import get_locale
 # local source
 from MainApplication.forms import LoginForm, SignupForm
-from MainApplication.models import User, Group, AccountGroupRelationship
-from MainApplication.apis import get_locale
+from MainApplication.models import User, AccountGroupRelationship
 
 auth_blueprint = Blueprint(name="auth", import_name=__name__, static_folder="static", url_prefix="/auth",
                            template_folder="templates")
@@ -96,7 +93,8 @@ def signup():
 
             flash('Account created. You can now log in.', 'success') if get_locale() == 'en' else None
             flash('账户已创建。您现在可以登录。', 'success') if get_locale() == 'zh_Hans' else None
-            flash('賬戶已創建。您現在可以登錄。', 'success') if get_locale() == 'zh_Hant' or get_locale() == 'yue' else None
+            flash('賬戶已創建。您現在可以登錄。',
+                  'success') if get_locale() == 'zh_Hant' or get_locale() == 'yue' else None
             flash('Compte créé. Vous pouvez maintenant vous connecter.', 'success') if get_locale() == 'fr' else None
     elif form.errors.get('confirm_password'):
         flash('Passwords must match', 'danger') if get_locale() == 'en' else None
