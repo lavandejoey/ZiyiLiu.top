@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-15 14:37+0800\n"
+"POT-Creation-Date: 2023-10-15 19:01+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -22,45 +22,49 @@ msgstr ""
 msgid "Powered by: "
 msgstr "Propulsé par: "
 
-#: templates/base.html:33
+#: templates/base.html:30 templates/base_old.html:33
 msgid "Hi, I'm"
 msgstr "Bonjour, je suis"
 
-#: templates/base.html:34 templates/main/cv.html:14
-msgid "Ziyi Joshua LIU"
-msgstr "Ziyi Joshua LIU"
+#: templates/base.html:31
+msgid "Joshua LIU"
+msgstr "Joshua LIU"
 
-#: templates/base.html:48
+#: templates/base.html:45 templates/base_old.html:48
 msgid "Home"
 msgstr "Accueil"
 
-#: templates/base.html:54
+#: templates/base.html:51 templates/base_old.html:54
 msgid "Portfolio"
 msgstr "Portefeuille"
 
-#: templates/base.html:60
+#: templates/base.html:57 templates/base_old.html:60
 msgid "About"
 msgstr "À propos"
 
-#: templates/base.html:66
+#: templates/base.html:63 templates/base_old.html:66
 msgid "Contact"
 msgstr "Contact"
 
-#: templates/auth/user.html:8 templates/base.html:72
+#: templates/auth/user.html:8 templates/base.html:69 templates/base_old.html:72
 msgid "User Profile"
 msgstr "Profil d'utilisateur"
 
-#: templates/base.html:78
+#: templates/base.html:75 templates/base_old.html:78
 msgid "Log Out"
 msgstr "Déconnexion"
 
-#: templates/base.html:84
+#: templates/base.html:81 templates/base_old.html:84
 msgid "Log In"
 msgstr "Connexion"
 
-#: templates/base.html:177
+#: templates/base.html:166 templates/base_old.html:196
 msgid "All Rights Reserved"
 msgstr "Tous les droits sont réservés"
+
+#: templates/base_old.html:34 templates/main/cv.html:14
+msgid "Ziyi Joshua LIU"
+msgstr "Ziyi Joshua LIU"
 
 #: templates/auth/login.html:6
 msgid "Login"

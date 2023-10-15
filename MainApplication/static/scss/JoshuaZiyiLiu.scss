@@ -109,7 +109,7 @@ $colors: (
 // scss-docs-start theme-color-variables
 $primary: #1f3b54 !default;
 $secondary: #a55d51 !default;
-$secondary: #bdd0ca !default;
+$tertiary: #bdd0ca !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -133,11 +133,11 @@ $body-bg: #e3d1c6 !default;
 html {
   background: $body-bg;
   font-family: "HarmonyOS", SansSerif, sans-serif;
-  z-index: 0;
+    z-index: -100;
 }
 
 body {
-  z-index: 5;
+  z-index: -10;
   background-color: $light;
 }
 
@@ -147,7 +147,7 @@ body {
   width: 100vw;
   height: 2vmin;
   background-color: $body-bg;
-  z-index: 10;
+  z-index: 0;
   display: none;
   @media (min-width: 768px) {
     display: block;
@@ -165,8 +165,9 @@ header.at-top {
   background: $light;
 }
 
-header.title {
-  font-size: x-large;
+.title {
+  font-weight: bold;
+  font-size: 25pt;
 }
 
 footer {
@@ -186,6 +187,27 @@ footer {
 .pre-description {
   background-color: $light;
 }
+
+.highlight-half {
+  position: relative;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.highlight-half::before {
+  /* Highlight color */
+  background-color: $secondary;
+  opacity: 0.6;
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 60%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-3deg);
+}
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
