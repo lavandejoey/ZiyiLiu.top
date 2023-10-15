@@ -14,6 +14,7 @@ import os
 # 3rd party packages
 import requests
 from flask import Blueprint, render_template, flash, request, current_app, redirect, url_for
+from flask_babel import get_locale
 from flask_login import login_required, current_user
 from flask_mail import Message
 
