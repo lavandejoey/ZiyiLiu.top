@@ -6,7 +6,7 @@
                 <h2 class="mt-3">{{ _("Login") }}</h2>
                 {% if user_not_found %}
                     <div id="flash-message" class="alert alert-danger">
-                        {{ _("User not found. ") }}<a href="{{ url_for('auth.signup') }}">{{ _("Sign up here") }}</a>
+                        {{ _("User not found. ") }}<a href="{{ url_for('auth.signup_page') }}">{{ _("Sign up here") }}</a>
                     </div>
                 {% elif password_error %}
                     <div id="flash-message"
@@ -37,7 +37,7 @@
                     {{ form.submit(class="btn btn-primary mt-3") }}
                 </form>
                 <p class="mt-3">{{ _("Don't have an account? ") }}<a
-                        href="{{ url_for('auth.signup') }}">{{ _("Sign up here!") }}</a></p>
+                        href="{{ url_for('auth.signup_page') }}">{{ _("Sign up here!") }}</a></p>
             </div>
         </div>
     </div>

@@ -7,8 +7,6 @@ __version__ = "0.0.1"
 __maintainer__ = "lavandejoey"
 __email__ = "lavandejoey@outlook.com"
 
-import json
-
 # standard library
 
 # 3rd party packages
@@ -16,9 +14,9 @@ from flask import Flask
 
 # local source
 from .apis import *
-from .views import *
-from .models import *
 from .extentions import *
+from .models import *
+from .views import *
 
 # def create_main_app():
 main_app = Flask(__name__, instance_relative_config=True, )
@@ -34,7 +32,7 @@ with main_app.app_context():
     db.create_all()
 # Initialize the login manager
 login_manager.init_app(app=main_app)
-login_manager.login_view = "auth.login"
+login_manager.login_view = "auth.login_page"
 cache.init_app(app=main_app,
                config={"CACHE_TYPE": main_app.config["CACHE_TYPE"],
                        "CACHE_DIR": main_app.config["CACHE_DIR"],
@@ -73,6 +71,8 @@ def sitemap_generator():
     yield 'auth.login_page', {}
     yield 'auth.signup_page', {}
     yield 'auth.logout_page', {}
-    yield 'auth.user_page', {}
-    # yield 'auth.user_edit_page', {}
-    # yield 'game.game_page', {}
+    yield 'ip.set_locale', {"language": "en"}
+    yield 'ip.set_locale', {"language": "zh_Hans"}
+    yield 'ip.set_locale', {"language": "zh_Hant"}
+    yield 'ip.set_locale', {"language": "yue"}
+    yield 'ip.set_locale', {"language": "fr"}

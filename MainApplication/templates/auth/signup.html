@@ -6,7 +6,7 @@
                 <h2 class="mt-3">{{ _("Sign Up")}}</h2>
                 {% if user_exists %}
                     <div id="flash-message" class="alert alert-danger">
-                        {{ _("User already exists. Try a different one or ")}}<a href="{{ url_for('auth.login') }}">{{ _("login") }}</a>.
+                        {{ _("User already exists. Try a different one or ")}}<a href="{{ url_for('auth.login_page') }}">{{ _("login") }}</a>.
                     </div>
                 {% else %}
                     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -41,7 +41,7 @@
                     </div>
                     {{ form.submit(class="btn btn-primary mt-3") }}
                 </form>
-                <p class="mt-3">{{ _("Already have an account? ")}}<a href="{{ url_for('auth.login') }}">{{ _("Log in here") }}</a></p>
+                <p class="mt-3">{{ _("Already have an account? ")}}<a href="{{ url_for('auth.login_page') }}">{{ _("Log in here") }}</a></p>
             </div>
         </div>
     </div>
