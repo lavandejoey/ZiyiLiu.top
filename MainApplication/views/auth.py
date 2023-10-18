@@ -23,7 +23,7 @@ auth_blueprint = Blueprint(name="auth", import_name=__name__, static_folder="sta
 
 
 @auth_blueprint.route('/login', methods=['GET', 'POST'])
-def login():
+def login_page():
     if current_user.is_authenticated:
         return redirect(url_for('auth.user_page', uid=current_user.uid))
 
@@ -68,7 +68,7 @@ def login():
 
 
 @auth_blueprint.route('/signup', methods=['GET', 'POST'])
-def signup():
+def signup_page():
     if current_user.is_authenticated:
         return redirect(url_for('auth.user_page', uid=current_user.uid))
 
@@ -108,7 +108,7 @@ def signup():
 
 @auth_blueprint.route('/logout')
 @login_required
-def logout():
+def logout_page():
     logout_user()
     flash('You have been logged out.', 'success') if get_locale() == 'en' else None
     flash('您已注销。', 'success') if get_locale() == 'zh_Hans' else None
