@@ -1,48 +1,106 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block content %}
-    <p>{{ test_msg }}</p>
-    <div class="row p-0">
-        {% for repo in repos %}
-            <div class="repo-card col-12 col-md-6 col-lg-4">
-                <div class="m-2 p-2 border border-1">
-                    <div class="repo-name">
-                        <a href="{{ repo.html_url }}" target="_blank">lavandejoey/{{ repo.name }}</a>
-                    </div>
-                    <div class="repo-description mt-2" align="justify">ABOUT: {{ repo.description }}</div>
-                    {% if repo["language"] %}
-                        <div class="repo-language mt-2 mx-2">{{ _("Powered by: ")}}
-                            <div class="progress mb-3" style="height: 8px;">
-                                {% for lang in repo["language"] %}
-                                    <div class="progress-bar text-dark"
-                                         style="width: {{ repo["language"][lang]['percentage'] }}%; background-color: {{ repo["language"][lang]['color'] }};"
-                                         role="progressbar" aria-valuenow="{{ repo["language"][lang]['percentage'] }}"
-                                         aria-valuemin="0" aria-valuemax="100"></div>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        <ul class="m-auto px-2">
-                            {% for lang in repo["language"] %}
-                                <li class="d-inline">
-                                    <i class="fa-solid fa-circle"
-                                       style="color: {{ repo["language"][lang]['color'] }};"></i>
-                                    <span class="text-bold mr-1">{{ lang }}
-                                    <span>{{ repo["language"][lang]['percentage'] }}</span></span>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-    <style>
-        .repo-name {
-            font-weight: bold;
-            font-size: 18px;
-        }
 
-        .repo-language {
-            color: #586069;
-        }
-    </style>
+<nav class="navbar">
+    <ul class="menu">
+        <li class="menu-item">
+            <a href="#">Home</a>
+        </li>
+        <li class="menu-item dropdown">
+            <a href="#" class="dropdown-toggle">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="#">Portfolio</a>
+        </li>
+        <li class="menu-item">
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+</nav>
+<style>
+    /* Basic styles */
+    .navbar {
+        padding: 10px;
+    }
+
+    .menu {
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+
+    .menu-item {
+        margin: 0 10px;
+    }
+
+    .menu-item a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+    }
+
+    /* Dropdown styles */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-toggle::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5px solid transparent;
+        background-color: rgba(154, 171, 192, 0.5);
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(154, 171, 192, 0.5);
+        padding: 10px;
+    }
+
+    /* Direction-aware hover effects */
+    .menu-item:hover .dropdown-toggle::before {
+        display: block;
+    }
+
+    .menu-item:hover .dropdown-menu {
+        display: block;
+    }
+
+    .menu-item:hover .dropdown-menu.right {
+        right: 0;
+        left: auto;
+    }
+
+    .menu-item:hover .dropdown-toggle::before {
+        border-top-color: rgba(154, 171, 192, 0.5);
+        border-bottom-color: transparent;
+    }
+
+    .menu-item:hover .dropdown-menu.right::before {
+        left: auto;
+        right: 50%;
+        transform: translateX(50%);
+        border-top-color: rgba(154, 171, 192, 0.5);
+        border-bottom-color: transparent;
+    }
+
+    /* Hover effect for dropdown items */
+    .dropdown-menu a:hover {
+        background-color: rgba(154, 171, 192, 0.5);
+        transition: background-color 0.3s;
+    }
+</style>
+
 {% endblock %}

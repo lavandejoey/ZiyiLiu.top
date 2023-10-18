@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-15 19:01+0800\n"
+"POT-Creation-Date: 2023-10-19 00:59+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hant\n"
@@ -17,10 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-
-#: templates/TEST.html:13 templates/main/portfolio.html:12
-msgid "Powered by: "
-msgstr "Powered by: "
 
 #: templates/base.html:30 templates/base_old.html:33
 msgid "Hi, I'm"
@@ -46,19 +42,33 @@ msgstr "關於我"
 msgid "Contact"
 msgstr "與我聯繫"
 
-#: templates/auth/user.html:8 templates/base.html:69 templates/base_old.html:72
+#: templates/auth/user.html:8 templates/base.html:81 templates/base.html:84
+#: templates/base_old.html:72
 msgid "User Profile"
 msgstr "個人資料"
 
-#: templates/base.html:75 templates/base_old.html:78
+#: templates/base.html:89 templates/base.html:91
+msgid "Dashboard"
+msgstr "控製台"
+
+#: templates/base.html:96 templates/base.html:97 templates/base_old.html:78
 msgid "Log Out"
 msgstr "登出"
 
-#: templates/base.html:81 templates/base_old.html:84
+#: templates/base.html:103 templates/base.html:104 templates/base_old.html:84
 msgid "Log In"
 msgstr "登入"
 
-#: templates/base.html:166 templates/base_old.html:196
+#: templates/auth/signup.html:6 templates/auth/signup.html:51
+#: templates/base.html:108 templates/base.html:109
+msgid "Sign Up"
+msgstr "註冊"
+
+#: templates/base.html:116 templates/base.html:117
+msgid "NAS"
+msgstr "NAS"
+
+#: templates/base.html:180 templates/base_old.html:196
 msgid "All Rights Reserved"
 msgstr "版權所有"
 
@@ -66,7 +76,7 @@ msgstr "版權所有"
 msgid "Ziyi Joshua LIU"
 msgstr "劉子藝"
 
-#: templates/auth/login.html:6
+#: templates/auth/login.html:6 templates/auth/login.html:42
 msgid "Login"
 msgstr "登入"
 
@@ -74,59 +84,58 @@ msgstr "登入"
 msgid "User not found. "
 msgstr "用戶不存在。"
 
-#: templates/auth/login.html:9
+#: templates/auth/login.html:10
 msgid "Sign up here"
 msgstr "點擊這裏註冊"
 
-#: templates/auth/login.html:13
+#: templates/auth/login.html:14
 msgid "Login failed. Please check your credentials."
 msgstr "登入失敗。請檢查你的用戶名和密碼。"
 
-#: templates/auth/login.html:30
-msgid "Username/Email/Phone: "
+#: templates/auth/login.html:32 templates/auth/login.html:33
+msgid "Username / Email / Phone: "
 msgstr "用戶名/郵箱/電話："
 
-#: templates/auth/login.html:34 templates/auth/signup.html:31
+#: templates/auth/login.html:38 templates/auth/login.html:39
+#: templates/auth/signup.html:35 templates/auth/signup.html:36
 msgid "Password: "
 msgstr "密碼："
 
-#: templates/auth/login.html:39
+#: templates/auth/login.html:44
 msgid "Don't have an account? "
 msgstr "還沒有帳號？"
 
-#: templates/auth/login.html:40
+#: templates/auth/login.html:45
 msgid "Sign up here!"
 msgstr "點擊這裏註冊！"
-
-#: templates/auth/signup.html:6
-msgid "Sign Up"
-msgstr "註冊"
 
 #: templates/auth/signup.html:9
 msgid "User already exists. Try a different one or "
 msgstr "該用戶已存在。請嘗試使用其他用戶名或"
 
-#: templates/auth/signup.html:9
+#: templates/auth/signup.html:10
 msgid "login"
 msgstr "登入。"
 
-#: templates/auth/signup.html:27 templates/auth/user.html:12
+#: templates/auth/signup.html:29 templates/auth/signup.html:30
+#: templates/auth/user.html:12
 msgid "Username: "
 msgstr "用戶名："
 
-#: templates/auth/signup.html:35
+#: templates/auth/signup.html:41 templates/auth/signup.html:42
 msgid "Confirm Password: "
 msgstr "確認密碼："
 
-#: templates/auth/signup.html:39 templates/auth/user.html:13
+#: templates/auth/signup.html:47 templates/auth/signup.html:48
+#: templates/auth/user.html:13
 msgid "Email: "
 msgstr "郵箱："
 
-#: templates/auth/signup.html:44
+#: templates/auth/signup.html:53
 msgid "Already have an account? "
 msgstr "已經有帳號了？"
 
-#: templates/auth/signup.html:44
+#: templates/auth/signup.html:54
 msgid "Log in here"
 msgstr "點擊這裏登入"
 
@@ -134,11 +143,15 @@ msgstr "點擊這裏登入"
 msgid "Phone: "
 msgstr "電話："
 
-#: templates/auth/user.html:15
+#: templates/auth/user.html:16
+msgid "Groups: "
+msgstr "羣組："
+
+#: templates/auth/user.html:21
 msgid "Created At: "
 msgstr "創建於："
 
-#: templates/auth/user.html:16
+#: templates/auth/user.html:22
 msgid "Updated At: "
 msgstr "更新於："
 
@@ -170,29 +183,29 @@ msgstr "<span>歡迎你的來信！&nbsp;</span>"
 
 #: templates/main/contact.html:41
 msgid ""
-"<span>Or you can find me on</span><div class='d-inline' "
-"id='social'></div><span>as well!</span>"
+"<span>Or you can find me on</span><div class='d-inline' id='social' "
+"style='position: relative;bottom: -3px;'></div><span>as well!</span>"
 msgstr ""
-"<span>你也可以在</span><div class='d-inline' "
-"id='social'></div><span>找到我！</span>"
+"<span>你也可以在</span><div class='d-inline' id='social' style='position: "
+"relative;bottom: -3px;'></div><span>找到我！</span>"
 
-#: templates/main/contact.html:56
+#: templates/main/contact.html:56 templates/main/contact.html:58
 msgid "Your preferred name&quest;"
 msgstr "請留下稱呼！"
 
-#: templates/main/contact.html:62
+#: templates/main/contact.html:65 templates/main/contact.html:67
 msgid "Where can I reach you via email?"
 msgstr "請留下郵箱地址！"
 
-#: templates/main/contact.html:70
+#: templates/main/contact.html:77 templates/main/contact.html:79
 msgid "Plz feel free to send whatever you want to talk with me!"
 msgstr "請隨意寫下你想要交流的內容！"
 
-#: templates/main/contact.html:75
+#: templates/main/contact.html:85
 msgid "Say Hello"
 msgstr "妳好！"
 
-#: templates/main/contact.html:134
+#: templates/main/contact.html:160
 msgid "&nbsp;&quest;"
 msgstr "&nbsp;&quest;"
 
@@ -636,6 +649,54 @@ msgstr ""
 #: templates/main/portfolio.html:10
 msgid "ABOUT: "
 msgstr "關於："
+
+#: templates/main/portfolio.html:12
+msgid "Powered by: "
+msgstr "Powered by: "
+
+#: views/auth.py:48
+msgid "Login successful"
+msgstr "登錄成功。"
+
+#: views/auth.py:52
+msgid "Incorrect password"
+msgstr "密碼錯誤。"
+
+#: views/auth.py:55
+msgid "User not found"
+msgstr "沒有找到該用戶。"
+
+#: views/auth.py:81
+msgid "User already exists. Try a different one or log in."
+msgstr "該用戶已存在。請嘗試使用其他用戶名或登錄。"
+
+#: views/auth.py:84
+msgid "Email already exists. Try a different one or log in."
+msgstr "該郵箱已存在。請嘗試使用其他郵箱或登錄。"
+
+#: views/auth.py:91
+msgid "Account created. You can now log in."
+msgstr "賬戶已創建。您現在可以登錄。"
+
+#: views/auth.py:95
+msgid "Username must be between 4 and 32 characters"
+msgstr "用戶名必須在 4 到 32 個字符之間。"
+
+#: views/auth.py:97
+msgid "Password must be between 6 and 64 characters"
+msgstr "密碼必須在 6 到 64 個字符之間。"
+
+#: views/auth.py:99
+msgid "Passwords must match"
+msgstr "密碼必須匹配。"
+
+#: views/auth.py:101
+msgid "Invalid email address"
+msgstr "無效的郵箱地址。"
+
+#: views/auth.py:116
+msgid "You have been logged out."
+msgstr "您已註銷。"
 
 #~ msgid ""
 #~ "User not found. <a href=\"{{ "

@@ -63,35 +63,70 @@
                                                href="{{ url_for('main.contact_page') }}">{{ _("Contact") }}</a>
                                         </li>
                                         <!-- Nav Log/Sign -->
-                                        <li class="nav-item flex-inline mx-0 mx-xl-1" style="min-width: 10%">
-                                            {% if current_user.is_authenticated %}
-                                                {% if page != 'user_profile' %}
-                                                    <a class="nav-link" title="{{ _("User Profile") }}"
-                                                       href="{{ url_for('auth.user_page', uid=current_user.uid) }}">
-                                                        <i class="fa-regular fa-user"></i>
-                                                    </a>
+                                        <li class="nav-item dropdown mx-0 mx-xl-1" style="min-width: 10%">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuth"
+                                               role="button" title="" data-bs-toggle="dropdown"
+                                               aria-expanded="false">
+                                                {% if current_user.is_authenticated %}
+                                                    <i class="fa-solid fa-user-circle fa-lg"></i>
                                                 {% else %}
-                                                    <a class="nav-link" href="{{ url_for('auth.logout_page') }}"
-                                                       title="{{ _("Log Out") }}">
-                                                        <i class="fa-solid fa-right-from-bracket"></i>
-                                                    </a>
+                                                    <i class="fa-solid fa-user-circle fa-lg"></i>
                                                 {% endif %}
-                                            {% else %}
-                                                <a class="nav-link" href="{{ url_for('auth.login_page') }}"
-                                                   title="{{ _("Log In") }}">
-                                                    <i class="fa-solid fa-right-to-bracket"></i>
-                                                </a>
-                                            {% endif %}
+                                            </a>
+                                            <ul class="dropdown-menu w-50" aria-labelledby="navbarDropdownAuth"
+                                                style="left: 50%; min-width: max-content;">
+                                                {% if current_user.is_authenticated %}
+                                                    {# UserPage, Dashboard, LogOut | NAS #}
+                                                    <li class="d-flex justify-content-center">
+                                                        <a class="link" title="{{ _("User Profile") }}"
+                                                           href="{{ url_for('auth.user_page', uid=current_user.uid) }}"
+                                                           style="text-decoration: none">
+                                                            <i class="fa-solid fa-user-tie"></i>&nbsp;{{ _("User Profile") }}
+                                                        </a></li>
+                                                    {% if current_user.belong_to_group(g_name='admin') %}
+                                                        <li class="d-flex justify-content-center">
+                                                            <a class="link" href="{{ url_for('auth.dashboard_page') }}"
+                                                               title="{{ _("Dashboard") }}"
+                                                               style="text-decoration: none">
+                                                                <i class="fa-solid fa-gauge-high"></i>&nbsp;{{ _("Dashboard") }}
+                                                            </a></li>
+                                                    {% endif %}
+                                                    <li class="d-flex justify-content-center">
+                                                        <a class="link" href="{{ url_for('auth.logout_page') }}"
+                                                           title="{{ _("Log Out") }}" style="text-decoration: none">
+                                                            <i class="fa-solid fa-right-from-bracket"></i>&nbsp;{{ _("Log Out") }}
+                                                        </a></li>
+                                                {% else %}
+                                                    {# Login, SignUp | NAS #}
+                                                    <li class="d-flex justify-content-center">
+                                                        <a class="link" href="{{ url_for('auth.login_page') }}"
+                                                           title="{{ _("Log In") }}" style="text-decoration: none">
+                                                            <i class="fa-solid fa-right-to-bracket fa-lg"></i>&nbsp;{{ _("Log In") }}
+                                                        </a></li>
+                                                    <li class="d-flex justify-content-center">
+                                                        <a class="link" href="{{ url_for('auth.signup_page') }}"
+                                                           title="{{ _("Sign Up") }}" style="text-decoration: none">
+                                                            <i class="fa-solid fa-user-plus"></i>&nbsp;{{ _("Sign Up") }}
+                                                        </a></li>
+                                                {% endif %}
+                                                {# horizontal line #}
+                                                <hr class="dropdown-divider p-0 m-0">
+                                                <li class="d-flex justify-content-center">
+                                                    <a class="link" href="https://nas.joshuaziyiliu.com"
+                                                       title="{{ _("NAS") }}" style="text-decoration: none">
+                                                        <i class="fa-regular fa-hard-drive"></i>&nbsp;{{ _("NAS") }}
+                                                    </a></li>
+                                            </ul>
                                         </li>
                                         <!-- Nav Language -->
                                         <li class="nav-item dropdown mx-0 mx-xl-1" style="min-width: 10%">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLang"
                                                role="button" title="中/粤/EN/FR" data-bs-toggle="dropdown"
                                                aria-expanded="false">
-                                                <i class="fa-solid fa-language align-self-center"></i>
+                                                <i class="fa-solid fa-language fa-lg"></i>
                                             </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
-                                                style="left: 50%;">
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownLang"
+                                                style="left: 50%; min-width: max-content;">
                                                 <li class="d-flex justify-content-center">
                                                     <a class="link" style="text-decoration: none"
                                                        href="{{ url_for('ip.set_locale', language='zh_Hans') }}">中文(简体)</a>
@@ -111,27 +146,6 @@
                                             </ul>
                                         </li>
                                     </ul>
-                                    <style>.dropdown-toggle::after {
-                                        display: none;
-                                    }
-
-                                    .dropdown-menu {
-                                        width: 60pt;
-                                        transform: translateX(-50%);
-                                        @media (max-width: 767px) {
-                                            transform: none;
-                                        }
-
-                                        & a {
-                                            padding: 0.1rem 0.5rem;
-
-                                            &:hover {
-                                                background-color: #697584;
-                                                /* Add padding and rounded corners to the solid bg */
-                                                border-radius: 0.25rem;
-                                            }
-                                        }
-                                    }</style>
                                 </div>
                             </div>
                         </div>
@@ -189,4 +203,32 @@
         }, 5000); // 5 seconds in milliseconds
     });
 </script>
+<style>
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        padding: 0;
+        transform: translateX(-50%);
+        @media (max-width: 767px) {
+            transform: none;
+        }
+    }
+
+    .dropdown-menu li {
+        padding: 0.4rem 0.5rem;
+        border-radius: 0.3rem;
+        position: relative;
+        transition: background-color 300ms ease-out;
+
+        &:hover {
+            background-color: rgba(154, 171, 192, 0.5);
+        }
+    }
+</style>
 </html>

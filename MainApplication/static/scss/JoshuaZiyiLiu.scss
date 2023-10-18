@@ -129,16 +129,21 @@ $theme-colors: (
         "dark": $dark,
 ) !default;
 // scss-docs-end theme-color-map
-$body-bg: #e3d1c6 !default;
+$html-bg: #e3d1c6 !default;
 html {
-  background: $body-bg;
+  background: $html-bg;
   font-family: "HarmonyOS", SansSerif, sans-serif;
-    z-index: -100;
+  font-weight: normal;
+  font-style: normal;
+  z-index: -100;
 }
 
 body {
-  z-index: -10;
   background-color: $light;
+  font-family: "HarmonyOS", SansSerif, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  z-index: -10;
 }
 
 .y-border {
@@ -146,18 +151,18 @@ body {
   left: 0;
   width: 100vw;
   height: 2vmin;
-  background-color: $body-bg;
-  z-index: 0;
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
-  }
+  background-color: $html-bg;
+  z-index: 10;
+  display: block;
+  //@media (min-width: 768px) {
+  //  display: block;
+  //}
 }
 
 
 main, footer {
   background-color: $light;
-  font-family: "HarmonyOS", serif;
+  font-family: "HarmonyOS", SanSerif, sans-serif;
 }
 
 
@@ -173,10 +178,6 @@ header.at-top {
 footer {
   //font size change by screen size
   font-size: 10pt;
-  //~font-size: 0.4em;
-  //~@media (min-width: 768px) {
-  //~  font-size: 0.8em;
-  //~}
 }
 
 .nav-link {
@@ -187,6 +188,8 @@ footer {
 .pre-description {
   background-color: $light;
 }
+
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 .highlight-half {
   position: relative;
@@ -207,7 +210,6 @@ footer {
   z-index: -1;
   transform: rotate(-3deg);
 }
-
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 

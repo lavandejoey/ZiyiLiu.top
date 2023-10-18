@@ -12,6 +12,12 @@
                             <li class="list-group-item">{{ _("Username: ") }}{{ user.username }}</li>
                             <li class="list-group-item">{{ _("Email: ") }}{{ user.email }}</li>
                             <li class="list-group-item">{{ _("Phone: ") }}{{ user.phone }}</li>
+                            {# groups #}
+                            <li class="list-group-item">{{ _("Groups: ") }}
+                                {% for group in groups %}
+                                    <br>{{ group.id }} - {{ group.name }}
+                                {% endfor %}
+                            </li>
                             <li class="list-group-item">{{ _("Created At: ") }}{{ user.created_at }}</li>
                             <li class="list-group-item">{{ _("Updated At: ") }}{{ user.updated_at }}</li>
                         </ul>

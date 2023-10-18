@@ -7,12 +7,12 @@ __version__ = "0.0.1"
 __maintainer__ = ""
 __email__ = "lavandejoey@outlook.com"
 
-from flask import current_app
+from datetime import datetime
+
 from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError
-from datetime import datetime
 from flask_login import UserMixin
-from werkzeug.security import generate_password_hash, check_password_hash
+
 from .base import *
 
 ph = PasswordHasher()
@@ -45,6 +45,26 @@ class User(Base, UserMixin):
 
     def get_id(self):
         return str(self.uid)
+
+    def get_groups(self) -> dict:
+        # Get all groups the user belongs to
+        rst = {
+            'msg': 'fail',
+            'cnt': 0,
+            'groups': []
+        }
+        group_relationships = db.session.query(AccountGroupRelationship).filter(
+            AccountGroupRelationship.account_id == self.uid).all()
+        for group_relationship in group_relationships:
+            group = db.session.query(Group).filter(Group.group_id == group_relationship.group_id).first()
+            rst['groups'].append({
+                'id': group.group_id,
+                'name': group.group_name
+            })
+        rst['groups'] = sorted(rst['groups'], key=lambda x: x['id'])
+        rst['msg'] = 'success'
+        rst['cnt'] = len(rst['groups'])
+        return rst
 
     def belong_to_group(self, g_id="", g_name=""):
         # Check if the user belongs to the specified group

@@ -38,7 +38,7 @@
                         </div>
                         {# Additional information #}
                         <div class="container">
-                            {{ _("<span>Or you can find me on</span><div class=\'d-inline\' id=\'social\'></div><span>as well!</span>") }}
+                            {{ _("<span>Or you can find me on</span><div class='d-inline' id='social' style='position: relative;bottom: -3px;'></div><span>as well!</span>") }}
                         </div>
                     </div>
                     {#Forms and submit#}
@@ -50,24 +50,34 @@
                                 {{ form.csrf_token }}
                                 <div class="row">
                                     <div class="col form-group my-4">
-                                        <div class="input-group">
+                                        <div class="form-floating">
                                             {#<input type="text" class="form-control" id="name" name="name"#}
                                             {#placeholder="Your preferred name?" required>#}
                                             {{ form.name(type="text", class="form-control", id="name", placeholder=_("Your preferred name&quest;"), required=True) }}
+                                            <label for="name"
+                                                   style="font-size: medium;">{{ _("Your preferred name&quest;") }}</label>
                                         </div>
                                     </div>
                                     <div class="col form-group my-4">
-                                        {#<input type="email" class="form-control" id="email" name="email"#}
-                                        {#placeholder="Where can I reach you via email?" required>#}
-                                        {{ form.email(type="email", class="form-control", id="email",placeholder=_("Where can I reach you via email?"), required=True) }}
+                                        <div class="form-floating">
+                                            {#<input type="email" class="form-control" id="email" name="email"#}
+                                            {#placeholder="Where can I reach you via email?" required>#}
+                                            {{ form.email(type="email", class="form-control", id="email",placeholder=_("Where can I reach you via email?"), required=True) }}
+                                            <label for="email"
+                                                   style="font-size: medium;">{{ _("Where can I reach you via email?") }}</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col form-group my-4 position-relative">
-                                        {#<textarea class="form-control" id="message" name="message" rows="5" required#}
-                                        {#placeholder="Plz feel free to send whatever you want to talk with me!"></textarea>#}
-                                        {{ form.message(class="form-control", id="message", rows="5", required=True,
+                                    <div class="col form-group my-2 position-relative">
+                                        <div class="form-floating">
+                                            {#<textarea class="form-control" id="message" name="message"#}
+                                            {#placeholder="请写下你的来信内容！" required="" rows="5"></textarea>#}
+                                            {{ form.message(class="form-control", id="message", rows="5", required=True, style="height: 200px",
                                         placeholder=_("Plz feel free to send whatever you want to talk with me!")) }}
+                                            <label for="message"
+                                                   style="font-size: medium;">{{ _("Plz feel free to send whatever you want to talk with me!") }}</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
@@ -104,16 +114,32 @@
             line-height: 20px;
             color: #333;
         }
+
+        .qrcode-container {
+            display: none;
+            position: absolute;
+            top: 150%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+        }
+
+        .social-media-icon:hover + .qrcode-container,
+        .qrcode-container:hover {
+            display: block;
+        }
     </style>
     <script>
         // insert icons to <div class="d-inline" id="social"></div>
         const socialElement = document.getElementById('social');
         const socialList = [
-            '<a class="mx-1 align-self-end" href="https://instagram.com/lavandecn?igshid=MzMyNGUyNmU2YQ=="><i class="fa-brands fa-instagram fa-sm"></i></a>',
-            '<a class="mx-1 align-self-end" href="https://x.com/lanvande_0528?t=GGTYEhGtLHDQe-uaFc26xg&s=09"><i class="fa-brands fa-x-twitter fa-sm"></i></a>',
-            '<a class="mx-1 align-self-end" href="https://www.facebook.com/profile.php?id=100011578249275&mibextid=ZbWKwL"><i class="fa-brands fa-facebook fa-sm"></i></a>',
-            '<a class="mx-1 align-self-end" href="https://www.linkedin.com/in/%E5%AD%90%E8%89%BA-%E5%88%98-88b872179/"><i class="fa-brands fa-linkedin fa-sm"></i></a>',
-            '<a class="mx-1 align-self-end" href="https://github.com/lavandejoey/"><i class="fa-brands fa-github fa-sm"></i></a>'
+            '<div class="d-inline mx-1 align-self-end" style="position: relative;"><i class="social-media-icon fa-brands fa-weixin fa-xs"></i><div class="qrcode-container"><img src="../../static/files/qrcode_gh_258.jpg" alt="QR Code" style="width: 120px; height: 120px;"></div></div>',
+            '<a class="mx-1 align-self-end" href="https://b23.tv/10p2yVp"><i class="fa-brands fa-bilibili fa-xs"></i>',
+            '<a class="mx-1 align-self-end" href="https://instagram.com/lavandecn?igshid=MzMyNGUyNmU2YQ=="><i class="fa-brands fa-instagram fa-xs"></i></a>',
+            '<a class="mx-1 align-self-end" href="https://x.com/lanvande_0528?t=GGTYEhGtLHDQe-uaFc26xg&s=09"><i class="fa-brands fa-x-twitter fa-xs"></i></a>',
+            '<a class="mx-1 align-self-end" href="https://facebook.com/profile.php?id=100011578249275&mibextid=ZbWKwL"><i class="fa-brands fa-facebook fa-xs"></i></a>',
+            '<a class="mx-1 align-self-end" href="https://linkedin.com/in/%E5%AD%90%E8%89%BA-%E5%88%98-88b872179/"><i class="fa-brands fa-linkedin fa-xs"></i></a>',
+            '<a class="mx-1 align-self-end" href="https://github.com/lavandejoey/"><i class="fa-brands fa-github fa-xs"></i></a>'
         ]
         socialElement.innerHTML = socialList.join('');
 
