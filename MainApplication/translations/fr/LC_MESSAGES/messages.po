@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-15 19:01+0800\n"
+"POT-Creation-Date: 2023-10-19 00:59+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -17,10 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-
-#: templates/TEST.html:13 templates/main/portfolio.html:12
-msgid "Powered by: "
-msgstr "Propulsé par: "
 
 #: templates/base.html:30 templates/base_old.html:33
 msgid "Hi, I'm"
@@ -46,19 +42,33 @@ msgstr "À propos"
 msgid "Contact"
 msgstr "Contact"
 
-#: templates/auth/user.html:8 templates/base.html:69 templates/base_old.html:72
+#: templates/auth/user.html:8 templates/base.html:81 templates/base.html:84
+#: templates/base_old.html:72
 msgid "User Profile"
 msgstr "Profil d'utilisateur"
 
-#: templates/base.html:75 templates/base_old.html:78
+#: templates/base.html:89 templates/base.html:91
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: templates/base.html:96 templates/base.html:97 templates/base_old.html:78
 msgid "Log Out"
 msgstr "Déconnexion"
 
-#: templates/base.html:81 templates/base_old.html:84
+#: templates/base.html:103 templates/base.html:104 templates/base_old.html:84
 msgid "Log In"
 msgstr "Connexion"
 
-#: templates/base.html:166 templates/base_old.html:196
+#: templates/auth/signup.html:6 templates/auth/signup.html:51
+#: templates/base.html:108 templates/base.html:109
+msgid "Sign Up"
+msgstr "S'inscrire"
+
+#: templates/base.html:116 templates/base.html:117
+msgid "NAS"
+msgstr "NAS"
+
+#: templates/base.html:180 templates/base_old.html:196
 msgid "All Rights Reserved"
 msgstr "Tous les droits sont réservés"
 
@@ -66,7 +76,7 @@ msgstr "Tous les droits sont réservés"
 msgid "Ziyi Joshua LIU"
 msgstr "Ziyi Joshua LIU"
 
-#: templates/auth/login.html:6
+#: templates/auth/login.html:6 templates/auth/login.html:42
 msgid "Login"
 msgstr "Connexion"
 
@@ -74,61 +84,60 @@ msgstr "Connexion"
 msgid "User not found. "
 msgstr "L'utilisateur n'a pas été trouvé. "
 
-#: templates/auth/login.html:9
+#: templates/auth/login.html:10
 msgid "Sign up here"
 msgstr "S'inscrire ici"
 
-#: templates/auth/login.html:13
+#: templates/auth/login.html:14
 msgid "Login failed. Please check your credentials."
 msgstr ""
 "Échec de la connexion. Veuillez vérifier vos informations "
 "d'identification."
 
-#: templates/auth/login.html:30
-msgid "Username/Email/Phone: "
+#: templates/auth/login.html:32 templates/auth/login.html:33
+msgid "Username / Email / Phone: "
 msgstr "Utilisateur/E-mail/Téléphone: "
 
-#: templates/auth/login.html:34 templates/auth/signup.html:31
+#: templates/auth/login.html:38 templates/auth/login.html:39
+#: templates/auth/signup.html:35 templates/auth/signup.html:36
 msgid "Password: "
 msgstr "Mot de passe: "
 
-#: templates/auth/login.html:39
+#: templates/auth/login.html:44
 msgid "Don't have an account? "
 msgstr "Vous n'avez pas de compte? "
 
-#: templates/auth/login.html:40
+#: templates/auth/login.html:45
 msgid "Sign up here!"
 msgstr "Inscrivez-vous ici!"
-
-#: templates/auth/signup.html:6
-msgid "Sign Up"
-msgstr "S'inscrire"
 
 #: templates/auth/signup.html:9
 msgid "User already exists. Try a different one or "
 msgstr "Cet utilisateur existe déjà. Essayez-en un autre ou "
 
-#: templates/auth/signup.html:9
+#: templates/auth/signup.html:10
 msgid "login"
 msgstr "connectez-vous."
 
-#: templates/auth/signup.html:27 templates/auth/user.html:12
+#: templates/auth/signup.html:29 templates/auth/signup.html:30
+#: templates/auth/user.html:12
 msgid "Username: "
 msgstr "Utilisateur: "
 
-#: templates/auth/signup.html:35
+#: templates/auth/signup.html:41 templates/auth/signup.html:42
 msgid "Confirm Password: "
 msgstr "Confirmez le mot de passe: "
 
-#: templates/auth/signup.html:39 templates/auth/user.html:13
+#: templates/auth/signup.html:47 templates/auth/signup.html:48
+#: templates/auth/user.html:13
 msgid "Email: "
 msgstr "E-mail: "
 
-#: templates/auth/signup.html:44
+#: templates/auth/signup.html:53
 msgid "Already have an account? "
 msgstr "Vous avez déjà un compte? "
 
-#: templates/auth/signup.html:44
+#: templates/auth/signup.html:54
 msgid "Log in here"
 msgstr "Connectez-vous ici"
 
@@ -136,11 +145,15 @@ msgstr "Connectez-vous ici"
 msgid "Phone: "
 msgstr "Téléphone: "
 
-#: templates/auth/user.html:15
+#: templates/auth/user.html:16
+msgid "Groups: "
+msgstr "Groupes: "
+
+#: templates/auth/user.html:21
 msgid "Created At: "
 msgstr "Créé à: "
 
-#: templates/auth/user.html:16
+#: templates/auth/user.html:22
 msgid "Updated At: "
 msgstr "Mis à jour à: "
 
@@ -176,29 +189,30 @@ msgstr ""
 
 #: templates/main/contact.html:41
 msgid ""
-"<span>Or you can find me on</span><div class='d-inline' "
-"id='social'></div><span>as well!</span>"
+"<span>Or you can find me on</span><div class='d-inline' id='social' "
+"style='position: relative;bottom: -3px;'></div><span>as well!</span>"
 msgstr ""
 "<span>Ou vous pouvez me trouver sur</span><div class='d-inline' "
-"id='social'></div><span>aussi!</span>"
+"id='social' style='position: relative;bottom: "
+"-3px;'></div><span>aussi!</span>"
 
-#: templates/main/contact.html:56
+#: templates/main/contact.html:56 templates/main/contact.html:58
 msgid "Your preferred name&quest;"
 msgstr "Votre nom préféré&quest;"
 
-#: templates/main/contact.html:62
+#: templates/main/contact.html:65 templates/main/contact.html:67
 msgid "Where can I reach you via email?"
 msgstr "Où puis-je vous joindre par e-mail?"
 
-#: templates/main/contact.html:70
+#: templates/main/contact.html:77 templates/main/contact.html:79
 msgid "Plz feel free to send whatever you want to talk with me!"
 msgstr "N'hésitez pas à envoyer tout ce dont vous voulez parler avec moi&nbsp;!"
 
-#: templates/main/contact.html:75
+#: templates/main/contact.html:85
 msgid "Say Hello"
 msgstr "Salut~"
 
-#: templates/main/contact.html:134
+#: templates/main/contact.html:160
 msgid "&nbsp;&quest;"
 msgstr "&nbsp;&quest;"
 
@@ -750,6 +764,54 @@ msgstr ""
 #: templates/main/portfolio.html:10
 msgid "ABOUT: "
 msgstr "À PROPOS: "
+
+#: templates/main/portfolio.html:12
+msgid "Powered by: "
+msgstr "Propulsé par: "
+
+#: views/auth.py:48
+msgid "Login successful"
+msgstr "Connexion réussie"
+
+#: views/auth.py:52
+msgid "Incorrect password"
+msgstr "Mot de passe incorrect"
+
+#: views/auth.py:55
+msgid "User not found"
+msgstr "L'utilisateur n'a pas été trouvé. "
+
+#: views/auth.py:81
+msgid "User already exists. Try a different one or log in."
+msgstr "Cet utilisateur existe déjà. Essayez-en un autre ou "
+
+#: views/auth.py:84
+msgid "Email already exists. Try a different one or log in."
+msgstr "L'e-mail existe déjà. Essayez-en un autre ou "
+
+#: views/auth.py:91
+msgid "Account created. You can now log in."
+msgstr "Compte créé. Vous pouvez maintenant vous connecter."
+
+#: views/auth.py:95
+msgid "Username must be between 4 and 32 characters"
+msgstr "Le nom d'utilisateur doit comporter entre 4 et 32 caractères"
+
+#: views/auth.py:97
+msgid "Password must be between 6 and 64 characters"
+msgstr "Le mot de passe doit comporter entre 6 et 64 caractères"
+
+#: views/auth.py:99
+msgid "Passwords must match"
+msgstr "Les mots de passe doivent correspondre"
+
+#: views/auth.py:101
+msgid "Invalid email address"
+msgstr "Adresse e-mail invalide"
+
+#: views/auth.py:116
+msgid "You have been logged out."
+msgstr "Vous avez été déconnecté."
 
 #~ msgid ""
 #~ "User not found. <a href=\"{{ "

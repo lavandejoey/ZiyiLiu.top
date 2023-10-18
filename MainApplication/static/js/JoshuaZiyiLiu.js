@@ -1,5 +1,5 @@
 // auto fresh the page in 2seconds
-num_second = 5;
+num_second = 2;
 // timeout = num_second * 1000;
 // for (let i = 1; i < 100; i++) {
 //     setTimeout(function () {

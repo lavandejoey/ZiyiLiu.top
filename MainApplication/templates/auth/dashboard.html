@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ g.current_lang }}" class="d-flex flex-column min-vh-100 w-100">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <!-- SEO -->
+    <meta name="google-site-verification" content="E1oXCV_ANCQB2muNUGwjvj5K2ujmRwxgBEFkymx7k8w"/>
+    <meta name="msvalidate.01" content="D7C86AD854C0633A47D3D617B8C75BFC"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- External CSS & JS Files -->
+    <link type="text/css" rel="stylesheet"
+          href="{{ url_for('static', filename='node_modules/@fortawesome/fontawesome-free/css/all.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='scss/JoshuaZiyiLiu.css') }}">
+</head>
+<body class="d-flex flex-column flex-grow-1" style="margin: 2vmin">
+<div class="y-border fixed-top"></div>
+<div class="d-flex flex-column flex-grow-1 container-fluid position-relative bg-light">
+    <!-- Main Content -->
+    <main class="my-3 border border-danger d-flex flex-column flex-shrink-0 flex-grow-1 m-0 container-fluid opacity-50">
+
+        <div class="bg-white" style="width: 100px;height: 100px;"></div>
+
+    </main>
+</div>
+<div class="y-border fixed-bottom"></div>
+</body>
+<script src="{{ url_for('static', filename='js/JoshuaZiyiLiu.js') }}"></script>
+<script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
+<script src="{{ url_for('static', filename='node_modules/@fortawesome/fontawesome-free/js/all.js') }}"></script>
+</html>

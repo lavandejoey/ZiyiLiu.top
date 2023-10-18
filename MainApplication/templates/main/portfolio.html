@@ -2,8 +2,8 @@
 {% block content %}
     <div class="row p-0">
         {% for repo in repos %}
-            <div class="repo-card col-12 col-md-6 col-xl-4">
-                <div class="m-2 p-2 border border-1">
+            <div class="repo-card col-12 col-md-6 col-xl-4 d-flex align-items-stretch">
+                <div class="m-2 p-2 border border-1 flex-grow-1">
                     <div class="repo-name">
                         <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a>
                     </div>
