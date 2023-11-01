@@ -58,6 +58,7 @@ MainApplication: Contains the main application files.
 
 ## Update History
 
+- [2023-11-02] Build API blueprint for **_authentication_** and **_user_**; add **_user_** model. Driven by JWT.
 - [2023-10-13] Add a new blueprint for **_authentication_**, added login/signup/logout pages; connected to **_MySql_** database
 - [2023-10-12] **_Internationalization_** (i18n) support (EN-UK, ZH-CN, YUE-HK, FR-FR)
 - [2023-02-12] Signin/up pages

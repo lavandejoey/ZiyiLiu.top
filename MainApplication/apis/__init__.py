@@ -7,6 +7,7 @@ __version__ = "0.0.1"
 __maintainer__ = ""
 __email__ = "lavandejoey@outlook.com"
 
+from .db import *  # db apis
 # standard library
 # 3rd party packages
 # local source
