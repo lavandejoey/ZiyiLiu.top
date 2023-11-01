@@ -16,7 +16,7 @@ from sqlalchemy import or_
 
 # local source
 from MainApplication.forms import LoginForm, SignupForm
-from MainApplication.models import User, AccountGroupRelationship
+from MainApplication.models import User, UserGroupRelationship
 
 auth_blueprint = Blueprint(name="auth", import_name=__name__, static_folder="static", url_prefix="/auth",
                            template_folder="templates")
@@ -46,7 +46,11 @@ def login_page():
                 # Log the user in
                 login_user(user)
                 flash(gettext('Login successful'), 'success')
-                return redirect(url_for('auth.user_page', uid=user.uid))
+                # If next param exists, redirect to that page
+                if 'next' in request.args:
+                    return redirect(request.args.get('next'))
+                else:
+                    return redirect(url_for('auth.user_page', uid=user.uid))
             else:
                 password_error = True
                 flash(gettext('Incorrect password'), 'danger')
@@ -54,12 +58,8 @@ def login_page():
             user_not_found = True
             flash(gettext('User not found'), 'danger')
 
-    # If next param exists, redirect to that page
-    if 'next' in request.args:
-        return redirect(request.args.get('next'))
-    else:
-        return render_template('auth/login.html', title="Login", page="login",
-                               form=form, user_not_found=user_not_found, password_error=password_error)
+    return render_template('auth/login.html', title="Login", page="login",
+                           form=form, user_not_found=user_not_found, password_error=password_error)
 
 
 @auth_blueprint.route('/signup', methods=['GET', 'POST'])
@@ -85,7 +85,7 @@ def signup_page():
         else:
             user = User(username=username, email=email, phone=phone)
             user.set_password(password)
-            user_group = AccountGroupRelationship(account_id=user.uid, group_id=1)
+            user_group = UserGroupRelationship(user_id=user.uid, group_id=10)
             user.add_commit()
             user_group.add_commit()
             flash(gettext('Account created. You can now log in.'), 'success')

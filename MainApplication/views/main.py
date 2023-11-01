@@ -14,7 +14,7 @@ import os
 # 3rd party packages
 import requests
 from flask import Blueprint, render_template, flash, request, current_app, redirect, url_for
-from flask_babel import get_locale
+from flask_babel import get_locale, gettext
 from flask_login import login_required, current_user
 from flask_mail import Message
 
@@ -111,16 +111,10 @@ def directory_page(filename=""):
     # Check if the user is logged in and belongs to the file manager group (1)
     if not current_user.is_authenticated:
         # en, zh_Hans, zh_Hant, yue, fr
-        flash("您必须登录才能访问此页面。", "danger") if get_locale() == 'zh_Hans' else None
-        flash("您必須登錄才能訪問此頁面。", "danger") if get_locale() == 'zh_Hant' or get_locale() == 'yue' else None
-        flash("Vous devez être connecté pour accéder à cette page.", "danger") if get_locale() == 'fr' else None
-        flash("You must be logged in to access this page.", "danger") if get_locale() == 'en' else None
+        flash(gettext("You must be logged in to access this page."), "danger")
         return redirect(request.referrer or url_for('main.index_page'))
-    elif not current_user.belong_to_group(1):
-        flash("您无权访问此页面。", "danger") if get_locale() == 'zh_Hans' else None
-        flash("您無權訪問此頁面。", "danger") if get_locale() == 'zh_Hant' or get_locale() == 'yue' else None
-        flash("Vous n'êtes pas autorisé à accéder à cette page.", "danger") if get_locale() == 'fr' else None
-        flash("You are not authorized to access this page.", "danger") if get_locale() == 'en' else None
+    elif not current_user.belong_to_group("fileBrowser"):
+        flash(gettext("You are not authorized to access this page."), "danger")
         return redirect(request.referrer or url_for('main.index_page'))
     root_path = os.path.join(current_app.root_path, "static", "files")
     # Ensure filename is a valid path within the root directory

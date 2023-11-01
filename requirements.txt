@@ -9,7 +9,9 @@ dnspython>=2.3.0
 email-validator>=2.0.0.post2
 Flask>=2.3.2
 Flask-Admin>=1.6.1
-flask_babel
+flask-babel
+Flask-Caching
+Flask-JWT-Extended
 Flask-Login>=0.6.2
 Flask-Mail>=0.9.1
 Flask-Migrate>=4.0.4
@@ -31,5 +33,5 @@ sqlalchemy>=2.0.20
 toml>=0.10.2
 typing_extensions>=4.5.0
 urllib3>=2.0.2
-Werkzeug>=2.3.4
+Werkzeug
 WTForms>=3.0.1

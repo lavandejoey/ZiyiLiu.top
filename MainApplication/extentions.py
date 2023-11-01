@@ -16,6 +16,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_sitemap import Sitemap
 from flask_wtf.csrf import CSRFProtect
+from flask_jwt_extended import JWTManager
 
 # local source
 
@@ -28,3 +29,4 @@ cache = Cache()
 # Initialize the login manager
 login_manager = LoginManager()
 login_manager.login_view = "auth.login_page"
+jwt = JWTManager()

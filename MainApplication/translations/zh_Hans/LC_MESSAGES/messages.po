@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-19 00:59+0800\n"
+"POT-Creation-Date: 2023-10-22 19:38+0800\n"
 "PO-Revision-Date: 2023-05-24 18:16+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hans\n"
@@ -658,11 +658,11 @@ msgstr "Powered by: "
 msgid "Login successful"
 msgstr "登录成功"
 
-#: views/auth.py:52
+#: views/auth.py:56
 msgid "Incorrect password"
 msgstr "密码错误"
 
-#: views/auth.py:55
+#: views/auth.py:59
 msgid "User not found"
 msgstr "没有找到该用户。"
 
@@ -697,6 +697,14 @@ msgstr "无效的邮箱地址"
 #: views/auth.py:116
 msgid "You have been logged out."
 msgstr "您已注销。"
+
+#: views/main.py:117
+msgid "You must be logged in to access this page."
+msgstr "您必须登录才能访问此页面。"
+
+#: views/main.py:120
+msgid "You are not authorized to access this page."
+msgstr "您无权访问此页面。"
 
 #~ msgid ""
 #~ "User not found. <a href=\"{{ "

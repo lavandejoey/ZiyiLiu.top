@@ -18,7 +18,7 @@ from flask_wtf.csrf import CSRFProtect
 from MainApplication.apis import get_locale
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Replace with a secure secret key
+# app.secret_key = 'your_secret_key'  # Replace with a secure secret key
 csrf = CSRFProtect(app)
 
 

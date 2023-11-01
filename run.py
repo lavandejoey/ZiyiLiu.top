@@ -21,6 +21,7 @@ logging.debug("Debug mode is on.")
 
 # Create the main application
 debug = os.environ.get("APP_DEBUG", True)
-host = os.environ.get("APP_HOST", "localhost")
+# host = os.environ.get("APP_HOST", "localhost")
+host = os.environ.get("APP_HOST", "192.168.3.8")
 port = os.environ.get("APP_PORT", 1211)
 main_app.run(debug=debug, host=host, port=port)

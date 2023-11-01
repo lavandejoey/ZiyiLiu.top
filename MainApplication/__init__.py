@@ -39,6 +39,7 @@ cache.init_app(app=main_app,
                        "CACHE_DEFAULT_TIMEOUT": main_app.config["CACHE_DEFAULT_TIMEOUT"],
                        "CACHE_THRESHOLD": main_app.config["CACHE_THRESHOLD"],
                        "CACHE_NO_NULL_WARNING": main_app.config["CACHE_NO_NULL_WARNING"]})
+jwt.init_app(app=main_app)
 
 
 @login_manager.user_loader
@@ -53,7 +54,7 @@ main_app.register_blueprint(blueprint=ip_blueprint)
 main_app.register_blueprint(blueprint=main_blueprint)
 main_app.register_blueprint(blueprint=auth_blueprint)
 main_app.register_blueprint(blueprint=apis_blueprint)
-
+csrf.exempt(apis_blueprint)
 
 @main_app.route("/test")
 def test_page():

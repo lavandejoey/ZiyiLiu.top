@@ -13,4 +13,13 @@ from flask import Blueprint
 
 # local source
 
-apis_blueprint = Blueprint(name="apis", import_name=__name__, url_prefix="/api")
+apis_blueprint = Blueprint(name="apis", import_name=__name__, static_folder="static", static_url_path="/static",
+                           url_prefix="/r", subdomain=None)
+
+
+@apis_blueprint.route('/')
+def api_index():
+    return {
+        'status': 'success',
+        'msg': 'api index'
+    }
