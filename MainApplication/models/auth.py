@@ -7,7 +7,7 @@ __version__ = "0.0.1"
 __maintainer__ = ""
 __email__ = "lavandejoey@outlook.com"
 
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError
