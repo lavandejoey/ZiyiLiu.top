@@ -8,13 +8,12 @@ __maintainer__ = ""
 __email__ = "lavandejoey@outlook.com"
 
 # standard library
-import requests
-from datetime import datetime
 import re
+from datetime import datetime
+
 # 3rd party packages
-from flask import current_app
-from flask import jsonify, request, url_for
-from flask_jwt_extended import jwt_required, get_jwt_identity, create_access_token
+from flask import jsonify, request
+from flask_jwt_extended import jwt_required, create_access_token
 
 # local source
 from MainApplication.models import User
@@ -90,7 +89,6 @@ def db_user_count():
                     "count": user_count}), 200
 
 
-@jwt_required()
 @apis_blueprint.route("/db/auth", methods=["POST"])
 def db_auth():
     # Parse args
