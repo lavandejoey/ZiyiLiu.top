@@ -21,8 +21,8 @@ from .base import apis_blueprint
 
 
 # User inquiry
-@jwt_required()
 @apis_blueprint.route("/db/user", methods=["GET", "POST", "PUT"])
+@jwt_required()
 def db_user():
     # GET
     if request.method == "GET":
