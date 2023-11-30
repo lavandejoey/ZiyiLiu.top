@@ -20,8 +20,28 @@ from MainApplication.models import User
 from .base import apis_blueprint
 
 
-# User inquiry
-@apis_blueprint.route("/db/user", methods=["GET", "POST", "PUT"])
+# User existence
+@apis_blueprint.route("/db/user-exist", methods=["GET"])
+def db_user_exist():
+    # Parse arg
+    uid = request.args.get("uid").replace("\"", "") if request.args.get("uid") else None
+    username = request.args.get("username").replace("\"", "") if request.args.get("username") else None
+    email = request.args.get("email").replace("\"", "") if request.args.get("email") else None
+    # Enquiry the user intersection list of uid, username, email
+    users_list = [user.to_dict(with_groups=True) for user in User.query.filter(
+        # remove 0 at start
+        User.uid == re.sub(r"^0+", "", uid) if uid else True,
+        User.username == username if username else True,
+        User.email == email if email else True).all()]
+    if len(users_list) == 0:
+        return jsonify({"status": "failed", "msg": "no user found", "exists": False}), 404
+    else:
+        return jsonify({"status": "success", "msg": f"{len(users_list)} user(s) found", "exists": True,
+                        "count": len(users_list), "users": users_list}), 200
+
+
+# User inquiry and update
+@apis_blueprint.route("/db/user", methods=["GET", "POST"])
 @jwt_required()
 def db_user():
     # GET
@@ -63,22 +83,29 @@ def db_user():
                 {"status": "success", "msg": f"Update user {user.uid} successful", "user": user.to_dict()}), 200
         else:
             return jsonify({"status": "failed", "msg": "No user found"}), 404
-    # PUT create a new one
-    elif request.method == "PUT":
-        # Enquiry the user intersection list of uid, username, email
-        user = User.query.filter(
-            User.username == username if username else True,
-            User.email == email if email else True).first()
-        if user:
-            return jsonify({"status": "failed", "msg": "User already exist"}), 409
-        else:
-            phone = request.json.get("phone").replace("\"", "") if request.json.get("phone") else None
-            user = User(username=username, email=email, phone=phone)
-            user.set_password(password) if password else None
-            user.created_at, user.updated_at = datetime.now(), datetime.now()
-            user.add_commit()
-            return jsonify({"status": "success", "msg": f"Create user {user.uid} successful",
-                            "user": user.to_dict()}), 200
+
+# PUT create a new one
+@apis_blueprint.route("/db/user", methods=["PUT"])
+def db_user_add():
+    # Parse body
+    uid = request.json.get("uid").replace("\"", "") if request.json.get("uid") else None
+    username = request.json.get("username").replace("\"", "") if request.json.get("username") else None
+    email = request.json.get("email").replace("\"", "") if request.json.get("email") else None
+    password = request.json.get("password").replace("\"", "") if request.json.get("password") else None
+    # Enquiry the user intersection list of uid, username, email
+    user = User.query.filter(
+        User.username == username if username else True,
+        User.email == email if email else True).first()
+    if user:
+        return jsonify({"status": "failed", "msg": "User already exist"}), 409
+    else:
+        phone = request.json.get("phone").replace("\"", "") if request.json.get("phone") else None
+        user = User(username=username, email=email, phone=phone)
+        user.set_password(password) if password else None
+        user.created_at, user.updated_at = datetime.now(), datetime.now()
+        user.add_commit()
+        return jsonify({"status": "success", "msg": f"Create user {user.uid} successful",
+                        "user": user.to_dict()}), 200
 
 
 # User inquiry
