@@ -45,7 +45,7 @@ def login_page():
             if user.check_password(password):
                 # Log the user in
                 login_user(user)
-                flash(gettext('Login successful'), 'success')
+                # flash(gettext('Login successful'), 'success')
                 # If next param exists, redirect to that page
                 if 'next' in request.args:
                     return redirect(request.args.get('next'))
@@ -85,8 +85,9 @@ def signup_page():
         else:
             user = User(username=username, email=email, phone=phone)
             user.set_password(password)
-            user_group = UserGroupRelationship(account_id=user.uid, group_id=10)
             user.add_commit()
+            user.uid = user.get_id()
+            user_group = UserGroupRelationship(account_id=user.uid, group_id=10)
             user_group.add_commit()
             flash(gettext('Account created. You can now log in.'), 'success')
             signup_finished = True
