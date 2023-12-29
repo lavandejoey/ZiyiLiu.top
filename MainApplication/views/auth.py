@@ -85,7 +85,7 @@ def signup_page():
         else:
             user = User(username=username, email=email, phone=phone)
             user.set_password(password)
-            user_group = UserGroupRelationship(user_id=user.uid, group_id=10)
+            user_group = UserGroupRelationship(account_id=user.uid, group_id=10)
             user.add_commit()
             user_group.add_commit()
             flash(gettext('Account created. You can now log in.'), 'success')
