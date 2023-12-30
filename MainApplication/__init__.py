@@ -58,7 +58,7 @@ csrf.exempt(apis_blueprint)
 
 @main_app.route("/test")
 def test_page():
-    return render_template("TEST.html", title="TEST", page="test")
+    return render_template("TEST.html", title=gettext("TEST"), page="test")
 
 
 # sitemap generator

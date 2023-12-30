@@ -14,12 +14,11 @@ import os
 # 3rd party packages
 import requests
 from flask import Blueprint, render_template, flash, request, current_app, redirect, url_for
-from flask_babel import get_locale, gettext
+from flask_babel import gettext
 from flask_login import login_required, current_user
 from flask_mail import Message
 
 # local source
-from MainApplication.apis import get_locale
 from MainApplication.extentions import cache
 from MainApplication.forms import ContactForm
 
@@ -33,7 +32,7 @@ main_blueprint = Blueprint(name="main", import_name=__name__, static_folder="sta
 @main_blueprint.route('/home')
 @main_blueprint.route('/')
 def index_page():
-    return render_template("main/index.html", title="Joshua Ziyi Liu", page="index")
+    return render_template("main/index.html", title=gettext("Joshua Ziyi Liu"), page="index")
 
 
 @main_blueprint.route('/portfolio')
@@ -65,17 +64,13 @@ def portfolio_page():
     repos_json = []
     for repo_name in current_app.config["GITHUB_REPO_NAMES"]:
         repos_json.append(get_github_data(repo_name))
-    return render_template("main/portfolio.html", title="Portfolio", page="portfolio", repos=repos_json)
-
-
-# def portfolio_page():
-#     return render_template("main/portfolio.html", title="Portfolio", page="portfolio")
+    return render_template("main/portfolio.html", title=gettext("Portfolio"), page="portfolio", repos=repos_json)
 
 
 # Curriculum Vitae
 @main_blueprint.route('/cv')
 def cv_page():
-    return render_template("main/cv.html", title="Curriculum Vitae", page="cv")
+    return render_template("main/cv.html", title=gettext("Curriculum Vitae"), page="cv")
 
 
 # Contact me page
@@ -84,7 +79,7 @@ def contact_page():
     contact_form = ContactForm()
     csrf_token = request.form.get('csrf_token')
     if request.method == 'GET':
-        return render_template("main/contact.html", title="Contact Me", page="contact", form=contact_form,
+        return render_template("main/contact.html", title=gettext("Contact Me"), page="contact", form=contact_form,
                                msg_sent=False)
     elif request.method == 'POST' and contact_form.validate_on_submit():
         # send email
@@ -96,11 +91,11 @@ def contact_page():
                       reply_to=contact_form.email.data)
         current_app.extensions['mail'].send(msg)
         contact_form = ContactForm()
-        return render_template("main/contact.html", title="Contact Me", page="contact", form=contact_form,
+        return render_template("main/contact.html", title=gettext("Contact Me"), page="contact", form=contact_form,
                                msg_sent=True)
     else:
         flash("Please check your input.")
-        return render_template("main/contact.html", title="Contact Me", page="contact", form=contact_form,
+        return render_template("main/contact.html", title=gettext("Contact Me"), page="contact", form=contact_form,
                                msg_sent=False)
 
 
@@ -152,6 +147,6 @@ def directory_page(filename=""):
     dir_dict.sort(key=lambda x: x["name"])
     file_dict.sort(key=lambda x: x["name"])
     return render_template("main/files.html",
-                           title="Files", page="files",
+                           title=gettext("Files"), page="files",
                            cur_dir_name=cur_dir_name, par_dir_name=par_dir_name, at_root=at_root,
                            dir_dict=dir_dict, file_dict=file_dict)

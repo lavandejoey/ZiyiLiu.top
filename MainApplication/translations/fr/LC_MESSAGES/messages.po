@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-22 19:38+0800\n"
+"POT-Creation-Date: 2023-12-30 17:31+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
+
+#: __init__.py:61
+msgid "TEST"
+msgstr "TEST"
 
 #: templates/base.html:30 templates/base_old.html:33
 msgid "Hi, I'm"
@@ -30,7 +34,7 @@ msgstr "Joshua LIU"
 msgid "Home"
 msgstr "Accueil"
 
-#: templates/base.html:51 templates/base_old.html:54
+#: templates/base.html:51 templates/base_old.html:54 views/main.py:67
 msgid "Portfolio"
 msgstr "Portefeuille"
 
@@ -43,11 +47,11 @@ msgid "Contact"
 msgstr "Contact"
 
 #: templates/auth/user.html:8 templates/base.html:81 templates/base.html:84
-#: templates/base_old.html:72
+#: templates/base_old.html:72 views/auth.py:135
 msgid "User Profile"
 msgstr "Profil d'utilisateur"
 
-#: templates/base.html:89 templates/base.html:91
+#: templates/base.html:89 templates/base.html:91 views/auth.py:144
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
@@ -60,7 +64,7 @@ msgid "Log In"
 msgstr "Connexion"
 
 #: templates/auth/signup.html:6 templates/auth/signup.html:51
-#: templates/base.html:108 templates/base.html:109
+#: templates/base.html:108 templates/base.html:109 views/auth.py:110
 msgid "Sign Up"
 msgstr "S'inscrire"
 
@@ -76,7 +80,7 @@ msgstr "Tous les droits sont réservés"
 msgid "Ziyi Joshua LIU"
 msgstr "Ziyi Joshua LIU"
 
-#: templates/auth/login.html:6 templates/auth/login.html:42
+#: templates/auth/login.html:6 templates/auth/login.html:42 views/auth.py:61
 msgid "Login"
 msgstr "Connexion"
 
@@ -157,7 +161,7 @@ msgstr "Créé à: "
 msgid "Updated At: "
 msgstr "Mis à jour à: "
 
-#: templates/error/error.html:8
+#: templates/error/error.html:8 views/error.py:28
 msgid "Error"
 msgstr "Erreur"
 
@@ -769,10 +773,6 @@ msgstr "À PROPOS: "
 msgid "Powered by: "
 msgstr "Propulsé par: "
 
-#: views/auth.py:48
-msgid "Login successful"
-msgstr "Connexion réussie"
-
 #: views/auth.py:56
 msgid "Incorrect password"
 msgstr "Mot de passe incorrect"
@@ -789,37 +789,65 @@ msgstr "Cet utilisateur existe déjà. Essayez-en un autre ou "
 msgid "Email already exists. Try a different one or log in."
 msgstr "L'e-mail existe déjà. Essayez-en un autre ou "
 
-#: views/auth.py:91
+#: views/auth.py:92
 msgid "Account created. You can now log in."
 msgstr "Compte créé. Vous pouvez maintenant vous connecter."
 
-#: views/auth.py:95
+#: views/auth.py:96
 msgid "Username must be between 4 and 32 characters"
 msgstr "Le nom d'utilisateur doit comporter entre 4 et 32 caractères"
 
-#: views/auth.py:97
+#: views/auth.py:98
 msgid "Password must be between 6 and 64 characters"
 msgstr "Le mot de passe doit comporter entre 6 et 64 caractères"
 
-#: views/auth.py:99
+#: views/auth.py:100
 msgid "Passwords must match"
 msgstr "Les mots de passe doivent correspondre"
 
-#: views/auth.py:101
+#: views/auth.py:102
 msgid "Invalid email address"
 msgstr "Adresse e-mail invalide"
 
-#: views/auth.py:116
+#: views/auth.py:117
 msgid "You have been logged out."
 msgstr "Vous avez été déconnecté."
 
-#: views/main.py:117
+#: views/error.py:36
+msgid "Internal Server Error"
+msgstr "Erreur interne du serveur"
+
+#: views/error.py:44
+msgid "Not Implemented"
+msgstr "Non implémenté"
+
+#: views/error.py:52
+msgid "Bad Gateway"
+msgstr "Passerelle incorrecte"
+
+#: views/main.py:35
+msgid "Joshua Ziyi Liu"
+msgstr "Ziyi Liu Joshua"
+
+#: views/main.py:73
+msgid "Curriculum Vitae"
+msgstr "Curriculum Vitae"
+
+#: views/main.py:82 views/main.py:94 views/main.py:98
+msgid "Contact Me"
+msgstr "Me contacter"
+
+#: views/main.py:109
 msgid "You must be logged in to access this page."
 msgstr "Vous devez être connecté pour accéder à cette page."
 
-#: views/main.py:120
+#: views/main.py:112
 msgid "You are not authorized to access this page."
 msgstr "Vous n'êtes pas autorisé à accéder à cette page."
+
+#: views/main.py:150
+msgid "Files"
+msgstr "Fichiers"
 
 #~ msgid ""
 #~ "User not found. <a href=\"{{ "
@@ -850,4 +878,7 @@ msgstr "Vous n'êtes pas autorisé à accéder à cette page."
 
 #~ msgid "Current language is %(language)s"
 #~ msgstr "La langue actuelle est %(language)s"
+
+#~ msgid "Login successful"
+#~ msgstr "Connexion réussie"
 

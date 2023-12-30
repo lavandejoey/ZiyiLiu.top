@@ -9,6 +9,9 @@
                     </div>
                     <div class="card-body">
                         <p><strong>{{ _("Sorry, something went wrong. Please check the URL or try again later.")}}</strong></p>
+                        {% if error_code and error_name %}
+                            <p>Error Code: {{ error_code }}, Error Name: {{ error_name }}</p>
+                        {% endif %}
                         <a href="javascript:window.history.back();" class="btn btn-primary mt-3">Go Back</a>
                     </div>
                 </div>

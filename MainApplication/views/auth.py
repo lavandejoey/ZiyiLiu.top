@@ -58,7 +58,7 @@ def login_page():
             user_not_found = True
             flash(gettext('User not found'), 'danger')
 
-    return render_template('auth/login.html', title="Login", page="login",
+    return render_template('auth/login.html', title=gettext("Login"), page="login",
                            form=form, user_not_found=user_not_found, password_error=password_error)
 
 
@@ -107,7 +107,7 @@ def signup_page():
     elif signup_finished:
         return redirect(url_for('auth.login_page'))
     else:
-        return render_template('auth/signup.html', form=form, user_exists=user_exists, title="Sign Up", page="signup")
+        return render_template('auth/signup.html', form=form, user_exists=user_exists, title=gettext("Sign Up"), page="signup")
 
 
 @auth_blueprint.route('/logout')
@@ -132,7 +132,7 @@ def user_page(uid):
         group_relationships = group_relationship_json['groups']
     else:
         group_relationships = []
-    return render_template('auth/user.html', title="User Profile", page="user_profile",
+    return render_template('auth/user.html', title=gettext("User Profile"), page="user_profile",
                            user=user, groups=group_relationships)
 
 
@@ -141,4 +141,4 @@ def user_page(uid):
 @auth_blueprint.route('/dashboard')
 @login_required
 def dashboard_page():
-    return render_template('auth/dashboard.html', title="Dashboard", page="dashboard")
+    return render_template('auth/dashboard.html', title=gettext("Dashboard"), page="dashboard")
