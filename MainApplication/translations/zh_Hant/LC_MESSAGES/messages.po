@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-22 19:38+0800\n"
+"POT-Creation-Date: 2023-12-30 17:31+0800\n"
 "PO-Revision-Date: 2023-05-24 21:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hant\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
+
+#: __init__.py:61
+msgid "TEST"
+msgstr "TEST"
 
 #: templates/base.html:30 templates/base_old.html:33
 msgid "Hi, I'm"
@@ -30,7 +34,7 @@ msgstr "劉子藝&nbsp;(Joshua)"
 msgid "Home"
 msgstr "首頁"
 
-#: templates/base.html:51 templates/base_old.html:54
+#: templates/base.html:51 templates/base_old.html:54 views/main.py:67
 msgid "Portfolio"
 msgstr "作品集"
 
@@ -43,11 +47,11 @@ msgid "Contact"
 msgstr "與我聯繫"
 
 #: templates/auth/user.html:8 templates/base.html:81 templates/base.html:84
-#: templates/base_old.html:72
+#: templates/base_old.html:72 views/auth.py:135
 msgid "User Profile"
 msgstr "個人資料"
 
-#: templates/base.html:89 templates/base.html:91
+#: templates/base.html:89 templates/base.html:91 views/auth.py:144
 msgid "Dashboard"
 msgstr "控製台"
 
@@ -60,7 +64,7 @@ msgid "Log In"
 msgstr "登入"
 
 #: templates/auth/signup.html:6 templates/auth/signup.html:51
-#: templates/base.html:108 templates/base.html:109
+#: templates/base.html:108 templates/base.html:109 views/auth.py:110
 msgid "Sign Up"
 msgstr "註冊"
 
@@ -76,7 +80,7 @@ msgstr "版權所有"
 msgid "Ziyi Joshua LIU"
 msgstr "劉子藝"
 
-#: templates/auth/login.html:6 templates/auth/login.html:42
+#: templates/auth/login.html:6 templates/auth/login.html:42 views/auth.py:61
 msgid "Login"
 msgstr "登入"
 
@@ -155,7 +159,7 @@ msgstr "創建於："
 msgid "Updated At: "
 msgstr "更新於："
 
-#: templates/error/error.html:8
+#: templates/error/error.html:8 views/error.py:28
 msgid "Error"
 msgstr "錯誤"
 
@@ -654,10 +658,6 @@ msgstr "關於："
 msgid "Powered by: "
 msgstr "Powered by: "
 
-#: views/auth.py:48
-msgid "Login successful"
-msgstr "登錄成功。"
-
 #: views/auth.py:56
 msgid "Incorrect password"
 msgstr "密碼錯誤。"
@@ -674,37 +674,65 @@ msgstr "該用戶已存在。請嘗試使用其他用戶名或登錄。"
 msgid "Email already exists. Try a different one or log in."
 msgstr "該郵箱已存在。請嘗試使用其他郵箱或登錄。"
 
-#: views/auth.py:91
+#: views/auth.py:92
 msgid "Account created. You can now log in."
 msgstr "賬戶已創建。您現在可以登錄。"
 
-#: views/auth.py:95
+#: views/auth.py:96
 msgid "Username must be between 4 and 32 characters"
 msgstr "用戶名必須在 4 到 32 個字符之間。"
 
-#: views/auth.py:97
+#: views/auth.py:98
 msgid "Password must be between 6 and 64 characters"
 msgstr "密碼必須在 6 到 64 個字符之間。"
 
-#: views/auth.py:99
+#: views/auth.py:100
 msgid "Passwords must match"
 msgstr "密碼必須匹配。"
 
-#: views/auth.py:101
+#: views/auth.py:102
 msgid "Invalid email address"
 msgstr "無效的郵箱地址。"
 
-#: views/auth.py:116
+#: views/auth.py:117
 msgid "You have been logged out."
 msgstr "您已註銷。"
 
-#: views/main.py:117
+#: views/error.py:36
+msgid "Internal Server Error"
+msgstr "內部伺服器錯誤"
+
+#: views/error.py:44
+msgid "Not Implemented"
+msgstr "未有實現"
+
+#: views/error.py:52
+msgid "Bad Gateway"
+msgstr "網關錯誤"
+
+#: views/main.py:35
+msgid "Joshua Ziyi Liu"
+msgstr "劉子藝 Joshua"
+
+#: views/main.py:73
+msgid "Curriculum Vitae"
+msgstr "履歷"
+
+#: views/main.py:82 views/main.py:94 views/main.py:98
+msgid "Contact Me"
+msgstr "與我聯繫"
+
+#: views/main.py:109
 msgid "You must be logged in to access this page."
 msgstr "您必須登錄才能訪問該頁面。"
 
-#: views/main.py:120
+#: views/main.py:112
 msgid "You are not authorized to access this page."
 msgstr "您無權訪問該頁面。"
+
+#: views/main.py:150
+msgid "Files"
+msgstr "文件"
 
 #~ msgid ""
 #~ "User not found. <a href=\"{{ "
@@ -726,4 +754,7 @@ msgstr "您無權訪問該頁面。"
 
 #~ msgid "Current language is %(language)s"
 #~ msgstr "現在的語言是 %(language)s"
+
+#~ msgid "Login successful"
+#~ msgstr "登錄成功。"
 
