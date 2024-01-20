@@ -141,3 +141,6 @@ Designs/
 MainApplication/static/files/
 
 *tmp*
+
+.limiter/
+Documentation/

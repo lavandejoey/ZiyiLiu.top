@@ -2,7 +2,7 @@
 # __init__.py
 __author__ = "lavandejoey, Ziyi LIU"
 __copyright__ = "Copyright 2021-2023"
-__license__ = ""
+__license__ = "Apache 2.0"
 __version__ = "0.0.1"
 __maintainer__ = "lavandejoey"
 __email__ = "lavandejoey@outlook.com"
@@ -40,6 +40,7 @@ cache.init_app(app=main_app,
                        "CACHE_THRESHOLD": main_app.config["CACHE_THRESHOLD"],
                        "CACHE_NO_NULL_WARNING": main_app.config["CACHE_NO_NULL_WARNING"]})
 jwt.init_app(app=main_app)
+limiter.init_app(app=main_app)
 
 
 @login_manager.user_loader
@@ -55,6 +56,7 @@ main_app.register_blueprint(blueprint=main_blueprint)
 main_app.register_blueprint(blueprint=auth_blueprint)
 main_app.register_blueprint(blueprint=apis_blueprint)
 csrf.exempt(apis_blueprint)
+
 
 @main_app.route("/test")
 def test_page():
