@@ -15,15 +15,15 @@ import jwt
 from flask import request, current_app, jsonify
 from flask_jwt_extended import jwt_required, create_access_token
 
-from MainApplication.extentions import limiter
 # local source
+from MainApplication.extentions import limiter
 from .base import apis_blueprint, preprocess_request
 
 
-@limiter.limit("1 per minute")
 @apis_blueprint.route("/jwt")
 @jwt_required(optional=True)
-def jwt_parse():
+@limiter.limit("1 per second")
+def jwt_parse() -> jsonify:
     """
     Parse jwt token from header or cookie into dict, and check if it is valid.
     :argument: jwt token from header or cookie
@@ -62,7 +62,7 @@ def jwt_parse():
 
 
 @apis_blueprint.route("/jwt/create", methods=["GET"])
-def jwt_creation():
+def jwt_creation() -> jsonify:
     """
     Create a jwt token with given parameters.
     :argument: identity (opt) A string or object representing the identity of the user.

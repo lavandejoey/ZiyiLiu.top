@@ -10,8 +10,9 @@ __email__ = "lavandejoey@outlook.com"
 # standard library
 # 3rd party packages
 # local source
-from .jwt import *
 from .db import *  # db apis
-from .ip import ip_blueprint, get_ip, get_locale, get_timezone, set_locale
+from .ip import ip_blueprint, get_client_ip, get_client_locale, get_client_timezone, set_client_locale
+from .jwt import *
 from .repos import apis_blueprint
 from .sitemap_register import register_generator
+from .users import *

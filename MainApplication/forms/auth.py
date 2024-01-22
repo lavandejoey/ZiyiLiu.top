@@ -15,7 +15,7 @@ from wtforms import StringField, PasswordField, SubmitField, validators, EmailFi
 from wtforms.validators import DataRequired, Length, EqualTo
 from flask_wtf.csrf import CSRFProtect
 # local source
-from MainApplication.apis import get_locale
+from MainApplication.apis import get_client_locale
 
 app = Flask(__name__)
 # app.secret_key = 'your_secret_key'  # Replace with a secure secret key

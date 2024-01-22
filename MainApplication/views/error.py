@@ -30,6 +30,14 @@ def handle_error(error):
                            error_name=error.name), error.code
 
 
+@error_blueprint.errorhandler(429)
+def ratelimit_handler(error):
+    return render_template('error/error.html',
+                           title=gettext("Too Many Requests, Please Try Again Later"),
+                           error_code=error.code,
+                           error_name=error.name), error.code
+
+
 @error_blueprint.app_errorhandler(500)
 def internal_error(error):
     return render_template('error/error.html',

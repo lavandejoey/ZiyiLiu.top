@@ -13,10 +13,10 @@ __email__ = "lavandejoey@outlook.com"
 from flask import Flask
 
 # local source
-from .apis import *
-from .extentions import *
-from .models import *
-from .views import *
+from MainApplication.apis import *
+from MainApplication.extentions import *
+from MainApplication.models import *
+from MainApplication.views import *
 
 # def create_main_app():
 main_app = Flask(__name__, instance_relative_config=True, )
@@ -26,7 +26,7 @@ main_app.config.from_pyfile("config.py")
 email.init_app(app=main_app, )
 sitemap.init_app(app=main_app)
 csrf.init_app(app=main_app, )
-babel.init_app(app=main_app, locale_selector=get_locale, timezone_selector=get_timezone)
+babel.init_app(app=main_app, locale_selector=get_client_locale, timezone_selector=get_client_timezone)
 db.init_app(app=main_app)
 with main_app.app_context():
     db.create_all()
@@ -60,22 +60,7 @@ csrf.exempt(apis_blueprint)
 
 @main_app.route("/test")
 def test_page():
+    if not main_app.debug:
+        # if not debug mode, return 404
+        return jsonify({"status": "failed", "message": "Not Found"}), 404
     return render_template("TEST.html", title=gettext("TEST"), page="test")
-
-
-# sitemap generator
-@sitemap.register_generator
-def sitemap_generator():
-    yield 'main.index_page', {}
-    yield 'main.portfolio_page', {}
-    yield 'main.cv_page', {}
-    yield 'main.contact_page', {}
-    yield 'main.directory_page', {}
-    yield 'auth.login_page', {}
-    yield 'auth.signup_page', {}
-    yield 'auth.logout_page', {}
-    yield 'ip.set_locale', {"language": "en"}
-    yield 'ip.set_locale', {"language": "zh_Hans"}
-    yield 'ip.set_locale', {"language": "zh_Hant"}
-    yield 'ip.set_locale', {"language": "yue"}
-    yield 'ip.set_locale', {"language": "fr"}

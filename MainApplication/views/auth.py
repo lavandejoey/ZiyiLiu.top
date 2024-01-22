@@ -127,11 +127,7 @@ def user_page(uid):
         # Handle the case where the user doesn't exist
         return "User not found", 404
     # query the AccountGroupRelationship table for the user's account_id and the group's group_id
-    group_relationship_json = user.get_groups()
-    if group_relationship_json['msg'] == 'success':
-        group_relationships = group_relationship_json['groups']
-    else:
-        group_relationships = []
+    group_relationships = user.get_user_groups()
     return render_template('auth/user.html', title=gettext("User Profile"), page="user_profile",
                            user=user, groups=group_relationships)
 

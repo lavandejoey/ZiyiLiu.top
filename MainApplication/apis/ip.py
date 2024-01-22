@@ -14,7 +14,7 @@ import logging
 from flask import blueprints, request, current_app, redirect
 
 # Define a language mapping or fallback mechanism
-language_mapping = {
+LANGUAGE_MAPPING = {
     "zh_Hans": ["zh", "zh_Hans_HK", "zh_Hans_MO", "zh_Hans_SG"],
     "yue": ["yue_Hant", "yue_Hant_HK", "yue_Hantyue_MO", "zh_Hant", "zh_Hant_HK", "zh_Hant_MO", "zh_Hant_TW", "zh_HK"],
     "fr": ["fr_BE", "fr_BF", "fr_BI", "fr_BJ", "fr_BL", "fr_CA", "fr_CD", "fr_CF", "fr_CG", "fr_CH", "fr_CI", "fr_CM",
@@ -37,38 +37,57 @@ ip_blueprint = blueprints.Blueprint(name="ip", import_name=__name__, static_fold
                                     cli_group=None)
 
 
-def get_ip():
+def get_client_ip() -> str:
+    """
+    Get the client's IP address, considering proxy headers.
+    :return: client's IP address
+    """
     if request.headers.getlist("X-Forwarded-For"):
-        ipa_addr = request.headers.getlist("X-Forwarded-For")[0]
+        client_ip = request.headers.getlist("X-Forwarded-For")[0]
     else:
-        ipa_addr = request.remote_addr
-    return ipa_addr
+        client_ip = request.remote_addr
+    return client_ip
 
 
-def get_timezone():
+def get_client_timezone() -> str:
+    """
+    Get the client's timezone.
+    :return: client's timezone
+    """
     return request.headers.get("Time-Zone")
 
 
-def get_locale():
+def get_client_locale() -> str:
+    """
+    Get the client's locale.
+    :return: client's locale
+    """
     locale = request.cookies.get('locale')
-    logging.info("The current locale is: %s" % locale)
+    logging.debug("The current locale is: %s" % locale)
+
     # Check if the provided locale is in the list of supported languages
     if locale in current_app.config.get('LANGUAGES'):
         return locale
 
     # Check if the provided locale is in the language mapping
-    # Iterate through the language mapping
-    for main_language, related_languages in language_mapping.items():
+    for main_language, related_languages in LANGUAGE_MAPPING.items():
         if locale in related_languages:
             return main_language
+
     # If no matching language is found, use the default locale
-    return request.accept_languages.best_match(current_app.config.get('BABEL_DEFAULT_LOCALE'))  # 没有cookie时，默认为 en
+    return request.accept_languages.best_match(current_app.config.get('BABEL_DEFAULT_LOCALE')) or 'en'
 
 
 @ip_blueprint.route('/set-locale/<language>')
-def set_locale(language):
-    resp = redirect(request.referrer)
+def set_client_locale(language):
+    """
+    Set the client's preferred language by storing it in a cookie.
+    Redirect the user back to the previous page.
+    :param language: the language to set
+    :return: redirect to the previous page
+    """
+    response = redirect(request.referrer)
     if language:
-        # The language is stored in a cookie that is valid for 30 days
-        resp.set_cookie('locale', language, max_age=30 * 24 * 60 * 60)
-    return resp
+        # Store the language in a cookie that is valid for 30 days
+        response.set_cookie('locale', language, max_age=30 * 24 * 60 * 60)
+    return response

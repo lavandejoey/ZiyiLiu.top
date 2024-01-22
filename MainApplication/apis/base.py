@@ -41,7 +41,7 @@ def preprocess_request():
 
 
 @apis_blueprint.route('/', methods=['GET'])
-def welcome_api():
+def welcome_api() -> jsonify:
     """
     Welcome API
     :return: welcome message, 200
@@ -58,7 +58,7 @@ def welcome_api():
 
 @apis_blueprint.route('/test', methods=['GET'])
 @jwt_required(optional=True)
-def test_api():
+def test_api() -> jsonify:
     """
     Test API, only available in debug mode.
     :return: test message, 200

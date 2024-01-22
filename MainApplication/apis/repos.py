@@ -10,40 +10,47 @@ __email__ = "lavandejoey@outlook.com"
 # standard library
 import requests
 # 3rd party packages
-from flask import request, jsonify, current_app
+from flask import jsonify, current_app
+
 # local source
-from .base import apis_blueprint
+from .base import apis_blueprint, preprocess_request
 
 
 @apis_blueprint.route('/repos', methods=['GET'])
-def github_repo_data() -> (dict, int):
-    repo_url = request.args.get('url')
-    name = request.args.get('name')
-    repo = request.args.get('repo')
-    name_repo = name + '/' + repo if name and repo else None
+def github_repo_data() -> jsonify:
+    """
+    Get GitHub repository data
+    :argument: url, name, repo
+    :return: GitHub repository data, 200 if success, 400 if missing parameter, 404 if not found
+    """
+    # Parse the arguments
+    request_args = preprocess_request()
+    repo_url = request_args.get('url')
+    name = request_args.get('name')
+    repo = request_args.get('repo')
+    name_repo = f"{name}/{repo}" if name and repo else None
 
     if not repo_url and not name_repo:
-        return jsonify({'error': 'Missing repository URL parameter'}), 400
+        return jsonify({'status': 'error', 'message': 'Missing repository URL parameter'}), 400
 
     # Extract username and reponame from the GitHub URL
     if not name_repo:
         parts = repo_url.strip('/').split('/')
         if len(parts) < 3 or parts[-2] != 'github.com':
-            return jsonify({'error': 'Invalid GitHub repository URL'}), 400
+            return jsonify({'status': 'error', 'message': 'Invalid GitHub repository URL'}), 400
 
         username = parts[-3]
         reponame = parts[-1]
     else:
         if '/' not in name_repo or name_repo.count('/') > 1:
-            return jsonify({'error': 'Invalid GitHub repository name'}), 400
+            return jsonify({'status': 'error', 'message': 'Invalid GitHub repository name'}), 400
 
-        username = name_repo[:name_repo.index('/')]
-        reponame = name_repo[name_repo.index('/') + 1:]
+        username, reponame = name_repo.split('/')
+
     # Construct the GitHub API URL
     api_url = f'https://api.github.com/repos/{username}/{reponame}'
 
     # Include your GitHub API token for authentication
-    # headers = {'Authorization': f'token {GITHUB_API_TOKEN}'}
     headers = {
         'Authorization': f'token {current_app.config["GITHUB_API_TOKEN"]}'
     }
@@ -52,6 +59,6 @@ def github_repo_data() -> (dict, int):
 
     if response.status_code == 200:
         repo_data = response.json()
-        return jsonify(repo_data)
+        return jsonify({'status': 'success', 'message': 'GitHub repository data retrieved', 'data': repo_data})
     else:
-        return jsonify({'error': 'GitHub repository not found'}), 404
+        return jsonify({'status': 'error', 'message': 'GitHub repository not found'}), 404
