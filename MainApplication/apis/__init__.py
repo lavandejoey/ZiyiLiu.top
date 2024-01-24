@@ -16,3 +16,4 @@ from .jwt import *
 from .repos import apis_blueprint
 from .sitemap_register import register_generator
 from .users import *
+from .country import *

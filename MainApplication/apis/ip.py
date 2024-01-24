@@ -11,7 +11,7 @@ __email__ = "lavandejoey@outlook.com"
 import logging
 
 # 3rd party packages
-from flask import blueprints, request, current_app, redirect
+from flask import Blueprint, request, current_app, redirect
 
 # Define a language mapping or fallback mechanism
 LANGUAGE_MAPPING = {
@@ -32,7 +32,7 @@ LANGUAGE_MAPPING = {
            "en_US", "en_USyue_POSIX", "en_VC", "en_VG", "en_VI", "en_VU", "en_WS", "en_ZA", "en_ZM", "en_ZW"],
 }
 
-ip_blueprint = blueprints.Blueprint(name="ip", import_name=__name__, static_folder="static", static_url_path="/static",
+ip_blueprint = Blueprint(name="ip", import_name=__name__, static_folder="static", static_url_path="/static",
                                     template_folder="templates", url_prefix="/", subdomain=None, url_defaults=None,
                                     cli_group=None)
 

@@ -166,11 +166,10 @@ class Token(Base):
     __tablename__ = 'tokens'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('accounts.uid'), nullable=False)
     create_date = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
-    expire_date = db.Column(db.DateTime, nullable=True)
+    expire_date = db.Column(db.DateTime, nullable=False)
     notes = db.Column(db.String(255), nullable=True)
-    valid_days = db.Column(db.Integer, nullable=True)
+    valid_days = db.Column(db.Integer, nullable=False)
 
     def __init__(self, user, expire_date=None, valid_days=None, notes=None):
         """

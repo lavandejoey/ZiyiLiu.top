@@ -9,13 +9,13 @@ __email__ = "lavandejoey@outlook.com"
 
 # standard library
 # 3rd party packages
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, validators, EmailField, TelField
-from wtforms.validators import DataRequired, Length, EqualTo
 from flask_wtf.csrf import CSRFProtect
+from wtforms import StringField, PasswordField, SubmitField, EmailField, TelField
+from wtforms.validators import DataRequired, Length, EqualTo
+
 # local source
-from MainApplication.apis import get_client_locale
 
 app = Flask(__name__)
 # app.secret_key = 'your_secret_key'  # Replace with a secure secret key

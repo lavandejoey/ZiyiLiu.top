@@ -7,5 +7,5 @@ __version__ = "0.0.1"
 __maintainer__ = ""
 __email__ = "lavandejoey@outlook.com"
 
-from .base import *
-from .auth import *
+from MainApplication.models.auth import *
+from MainApplication.models.base import *

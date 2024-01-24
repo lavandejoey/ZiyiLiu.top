@@ -16,7 +16,7 @@ from flask_jwt_extended import jwt_required, create_access_token
 
 # local source
 
-apis_blueprint = Blueprint(name="apis", import_name=__name__, static_folder="static", static_url_path="/static",
+apis_blueprint = Blueprint(name="apis", import_name=__name__, static_folder="static", #static_url_path="/static",
                            url_prefix="/r", subdomain=None)
 
 

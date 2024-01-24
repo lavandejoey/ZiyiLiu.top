@@ -133,7 +133,7 @@
         // insert icons to <div class="d-inline" id="social"></div>
         const socialElement = document.getElementById('social');
         const socialList = [
-            '<div class="d-inline mx-1 align-self-end" style="position: relative;"><i class="social-media-icon fa-brands fa-weixin fa-xs"></i><div class="qrcode-container"><img src="../../static/files/qrcode_gh_258.jpg" alt="QR Code" style="width: 120px; height: 120px;"></div></div>',
+            '<div class="d-inline mx-1 align-self-end" style="position: relative;"><i class="social-media-icon fa-brands fa-weixin fa-xs"></i><div class="qrcode-container"><img src={{ url_for('static', filename='files/qrcode_gh_258.jpg') }} alt="QR Code" style="width: 120px; height: 120px;"></div></div>',
             '<a class="mx-1 align-self-end" href="https://b23.tv/10p2yVp"><i class="fa-brands fa-bilibili fa-xs"></i>',
             '<a class="mx-1 align-self-end" href="https://instagram.com/lavandecn?igshid=MzMyNGUyNmU2YQ=="><i class="fa-brands fa-instagram fa-xs"></i></a>',
             '<a class="mx-1 align-self-end" href="https://x.com/lanvande_0528?t=GGTYEhGtLHDQe-uaFc26xg&s=09"><i class="fa-brands fa-x-twitter fa-xs"></i></a>',
