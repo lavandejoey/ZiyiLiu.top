@@ -27,8 +27,8 @@ msgid "Hi, I'm"
 msgstr "妳好，我是"
 
 #: templates/base.html:31
-msgid "Joshua LIU"
-msgstr "劉子藝&nbsp;(Joshua)"
+msgid "Ziyi LIU"
+msgstr "劉子藝"
 
 #: templates/base.html:45 templates/base_old.html:48
 msgid "Home"
@@ -77,7 +77,7 @@ msgid "All Rights Reserved"
 msgstr "版權所有"
 
 #: templates/base_old.html:34 templates/main/cv.html:14
-msgid "Ziyi Joshua LIU"
+msgid "Ziyi Ziyi LIU"
 msgstr "劉子藝"
 
 #: templates/auth/login.html:6 templates/auth/login.html:42 views/auth.py:61
@@ -711,8 +711,8 @@ msgid "Bad Gateway"
 msgstr "網關錯誤"
 
 #: views/main.py:35
-msgid "Joshua Ziyi Liu"
-msgstr "劉子藝 Joshua"
+msgid "Ziyi Liu"
+msgstr "劉子藝"
 
 #: views/main.py:73
 msgid "Curriculum Vitae"

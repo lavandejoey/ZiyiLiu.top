@@ -15,7 +15,7 @@ import logging
 # local source
 from MainApplication import main_app
 
-# Init console debug log "JoshuaZiyiLiu"
+# Init console debug log "ZiyiLiu"
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logging.debug("Debug mode is on.")
 

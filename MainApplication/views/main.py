@@ -32,7 +32,7 @@ main_blueprint = Blueprint(name="main", import_name=__name__, static_folder="sta
 @main_blueprint.route('/home')
 @main_blueprint.route('/')
 def index_page():
-    return render_template("main/index.html", title=gettext("Joshua Ziyi Liu"), page="index")
+    return render_template("main/index.html", title=gettext("Ziyi Liu"), page="index")
 
 
 @main_blueprint.route('/portfolio')
@@ -83,7 +83,7 @@ def contact_page():
                                msg_sent=False)
     elif request.method == 'POST' and contact_form.validate_on_submit():
         # send email
-        msg = Message(subject='JoshuaZiyiLiu.com Contact Form Submission',
+        msg = Message(subject='ZiyiLiu.com Contact Form Submission',
                       recipients=[current_app.config["MAIL_DEFAULT_RECIPIENT"], ],
                       body=contact_form.format(),
                       charset="utf-8",

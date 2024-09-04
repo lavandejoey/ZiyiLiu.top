@@ -27,8 +27,8 @@ msgid "Hi, I'm"
 msgstr "Bonjour, je suis"
 
 #: templates/base.html:31
-msgid "Joshua LIU"
-msgstr "Joshua LIU"
+msgid "Ziyi LIU"
+msgstr "Ziyi LIU"
 
 #: templates/base.html:45 templates/base_old.html:48
 msgid "Home"
@@ -77,8 +77,8 @@ msgid "All Rights Reserved"
 msgstr "Tous les droits sont réservés"
 
 #: templates/base_old.html:34 templates/main/cv.html:14
-msgid "Ziyi Joshua LIU"
-msgstr "Ziyi Joshua LIU"
+msgid "Ziyi Ziyi LIU"
+msgstr "Ziyi Ziyi LIU"
 
 #: templates/auth/login.html:6 templates/auth/login.html:42 views/auth.py:61
 msgid "Login"
@@ -826,8 +826,8 @@ msgid "Bad Gateway"
 msgstr "Passerelle incorrecte"
 
 #: views/main.py:35
-msgid "Joshua Ziyi Liu"
-msgstr "Ziyi Liu Joshua"
+msgid "Ziyi Liu"
+msgstr "Ziyi Liu"
 
 #: views/main.py:73
 msgid "Curriculum Vitae"

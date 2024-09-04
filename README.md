@@ -1,14 +1,14 @@
-# [JoshuaZiyiLiu.com Site](https://github.com/lavandejoey/JoshuaZiyiLiu.com)
+# [ZiyiLiu.top Site](https://github.com/lavandejoey/ZiyiLiu.top)
 
 [//]: # (Badges)
-[![stars](https://img.shields.io/github/stars/lavandejoey/JoshuaZiyiLiu.com.svg)]()
-[![license](https://img.shields.io/github/license/lavandejoey/JoshuaZiyiLiu.com.svg)]()
+[![stars](https://img.shields.io/github/stars/lavandejoey/ZiyiLiu.top.svg)]()
+[![license](https://img.shields.io/github/license/lavandejoey/ZiyiLiu.top.svg)]()
 [![Python](https://img.shields.io/badge/python-3.10.13-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![Flask](https://img.shields.io/badge/flask-2.3.2-blue.svg)](https://flask.palletsprojects.com/en/1.1.x/)
 [![Mysql](https://img.shields.io/badge/mysql-8.0.34-blue.svg)](https://dev.mysql.com/downloads/mysql/)
 
-This repository contains the source code and files for [www.JoshuaZiyiLiu.com](https://www.JoshuaZiyiLiu.com), a
-personal website developed by Joshua Ziyi Liu. The website showcases Joshua's portfolio, provides contact information,
+This repository contains the source code and files for [www.ZiyiLiu.top](https://www.ZiyiLiu.top), a
+personal website developed by Ziyi Liu. The website showcases Ziyi's portfolio, provides contact information,
 and includes a CV (Curriculum Vitae).
 
 ## Directory Structure
